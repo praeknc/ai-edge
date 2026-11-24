@@ -89,12 +89,19 @@ class PredictPrice(unittest.TestCase):
 
 class WhatIf(unittest.TestCase):
     def test_contributions_add_up_to_total_change(self):
-        r = what_if(SAMPLE, add=["hot tub", "free parking", "balcony"], remove=["dishwasher"])
+        r = what_if(SAMPLE, add=["hot tub", "dishwasher", "balcony"], remove=["tv"])
         self.assertEqual(r["component"], "whatif_panel")
         d = r["data"]
-        total = sum(c["contribution"] for c in d["contributions"])
-        self.assertLessEqual(abs(total - d["delta"]), len(d["contributions"]))   # rounding: <= $1 per item
+        parts = [c["contribution"] for c in d["contributions"]]
+        if d["no_reliable_effect"]:
+            parts.append(d["no_reliable_effect"]["contribution"])
+        self.assertLessEqual(abs(sum(parts) - d["delta"]), 4)          # rounding: <= $1 per change
         self.assertEqual(d["new"]["price"] - d["base"]["price"], d["delta"])
+
+    def test_only_substantial_changes_are_listed(self):
+        d = what_if(SAMPLE, add=["hot tub", "dishwasher"])["data"]
+        self.assertEqual([c["amenity"] for c in d["contributions"]], ["am_dishwasher"])   # substantial in South End
+        self.assertEqual([m["amenity"] for m in d["no_reliable_effect"]["items"]], ["am_hot_tub"])
 
     def test_already_present_amenity_changes_nothing(self):
         d = what_if(SAMPLE, add=["tv"])["data"]
@@ -109,17 +116,19 @@ class WhatIf(unittest.TestCase):
 
     def test_add_then_remove_is_symmetric(self):
         # the total amenity count moves with the change (36 -> 37), so state it explicitly
-        up = what_if({**SAMPLE, "amenity_count": 36}, add=["hot tub"])["data"]
-        listing2 = {**SAMPLE, "amenities": SAMPLE["amenities"] + ["hot tub"], "amenity_count": 37}
-        down = what_if(listing2, remove=["hot tub"])["data"]
+        up = what_if({**SAMPLE, "amenity_count": 36}, add=["dishwasher"])["data"]
+        listing2 = {**SAMPLE, "amenities": SAMPLE["amenities"] + ["dishwasher"], "amenity_count": 37}
+        down = what_if(listing2, remove=["dishwasher"])["data"]
         self.assertEqual(up["new"]["price"], down["base"]["price"])
         self.assertEqual(up["base"]["price"], down["new"]["price"])
 
-    def test_single_change_contribution_equals_alone(self):
-        d = what_if(SAMPLE, add=["hot tub"])["data"]
+    def test_single_change_contribution_equals_alone_and_has_cost(self):
+        d = what_if(SAMPLE, add=["dishwasher"])["data"]
         c = d["contributions"][0]
         self.assertEqual(c["contribution"], c["alone"])
         self.assertEqual(c["contribution"], d["delta"])
+        self.assertEqual(d["upfront_cost"], 1300)                       # midpoint of the $800-1,800 assumption
+        self.assertAlmostEqual(d["payback_months"], round(1300 / (d["delta"] * 200 / 12), 1))
 
 
 class Vocabulary(unittest.TestCase):

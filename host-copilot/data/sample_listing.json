@@ -7,8 +7,18 @@
   "beds": 2,
   "baths": 1,
   "baths_shared": false,
-  "amenities": ["in-unit washer", "dryer", "dishwasher", "central ac", "kitchen", "tv", "self check-in", "workspace"],
-  "title_keywords": ["luxury"],
+  "amenities": [
+    "in-unit washer",
+    "dryer",
+    "central ac",
+    "kitchen",
+    "tv",
+    "self check-in",
+    "workspace"
+  ],
+  "title_keywords": [
+    "luxury"
+  ],
   "season": "fall",
   "night_of_week": "friday",
   "minimum_nights": 2,

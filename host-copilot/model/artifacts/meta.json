@@ -213,5 +213,15 @@
    3.03264
   ]
  ],
+ "zone_names": {
+  "0": "Downtown / Beacon Hill",
+  "1": "Dorchester / Mattapan",
+  "2": "Roxbury / Jamaica Plain",
+  "3": "Brighton / Allston",
+  "4": "Roslindale / West Roxbury",
+  "5": "Dorchester / South Boston",
+  "6": "Back Bay / South End",
+  "7": "East Boston / Charlestown"
+ },
  "notebook_gap_log": 0.0
 }

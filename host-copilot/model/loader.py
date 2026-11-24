@@ -220,6 +220,11 @@ class PricingModel:
             parts.append(X)
         return pd.concat(parts).sort_index()
 
+    def zone_name(self, X):
+        """Name of the model's location zone for each feature row (e.g. 'Back Bay / South End')."""
+        zone_cols = [f"zone_{z}" for z in range(len(self.meta["zone_names"]))]
+        return [self.meta["zone_names"][str(z)] for z in X[zone_cols].values.argmax(1)]
+
     # ---- predictions
     def predict_log(self, X):
         """Log nightly price for a feature frame."""

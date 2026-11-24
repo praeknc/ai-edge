@@ -142,7 +142,7 @@ def main():
             "n_hosts": int(len(set(groups))), "oof_mae": mae, "interval": {"90": i90, "80": i80},
             "interval_method": "Empirical quantiles of out-of-fold log-price residuals (5-fold CV, hosts held out). "
                                "Same multiplier for every listing.",
-            "snapshot_dates": SNAPDATE, "zones_km": zones, "notebook_gap_log": gap}
+            "snapshot_dates": SNAPDATE, "zones_km": zones, "zone_names": bundle["quarterly"]["zones"]["names"], "notebook_gap_log": gap}
     (ART / "meta.json").write_text(json.dumps(meta, indent=1))
     supply_table().to_csv(ART / "supply.csv.gz", index=False)
     segment_defaults(A, X).to_csv(ART / "segments.csv")

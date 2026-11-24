@@ -1,0 +1,21 @@
+name,model_key,cost_low,cost_high,monthly_cost,notes
+Hot tub,am_hot_tub,6000,12000,40,PLACEHOLDER ASSUMPTION. Outdoor tub incl. electrical work; monthly = power and chemicals
+EV charger,am_ev_charger,1200,2500,0,PLACEHOLDER ASSUMPTION. Level 2 charger installed; needs a parking spot
+Fast WiFi,,0,300,40,PLACEHOLDER ASSUMPTION. Not in the model's vocabulary (almost every listing has WiFi)
+Dedicated workspace,am_workspace,300,900,0,PLACEHOLDER ASSUMPTION. Desk; chair; monitor
+Air conditioning,am_any_ac,500,4500,0,PLACEHOLDER ASSUMPTION. Window unit to ductless mini-split
+Central air conditioning,am_central_ac,6000,15000,0,PLACEHOLDER ASSUMPTION. Ducted system; depends on the building
+Fire pit,,200,1500,0,PLACEHOLDER ASSUMPTION. Not in the model's vocabulary; check local fire rules
+Self check-in,am_self_checkin,150,400,0,PLACEHOLDER ASSUMPTION. Smart lock or keypad
+Dishwasher,am_dishwasher,800,1800,0,PLACEHOLDER ASSUMPTION. Installed; needs plumbing access
+In-unit washer,am_washer_in_unit,800,2500,0,PLACEHOLDER ASSUMPTION. Incl. hookups where missing
+Dryer,am_dryer,600,1500,0,PLACEHOLDER ASSUMPTION. Incl. venting where missing
+TV,am_tv,300,800,0,PLACEHOLDER ASSUMPTION
+Streaming services,am_streaming,0,50,20,PLACEHOLDER ASSUMPTION. Subscription
+Sound system,am_sound_system,50,300,0,PLACEHOLDER ASSUMPTION. Bluetooth speaker
+Game console,am_game_console,300,600,0,PLACEHOLDER ASSUMPTION
+Crib,am_crib,100,300,0,PLACEHOLDER ASSUMPTION. Travel crib and bedding
+BBQ grill,am_bbq,200,800,0,PLACEHOLDER ASSUMPTION. Needs outdoor space
+Pets allowed,am_pets,0,0,25,PLACEHOLDER ASSUMPTION. Policy change; monthly = extra cleaning
+Long-term stays allowed,am_long_term,0,0,0,PLACEHOLDER ASSUMPTION. Policy change
+Luggage drop-off,am_luggage,0,0,0,PLACEHOLDER ASSUMPTION. Policy change

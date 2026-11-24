@@ -94,3 +94,22 @@ def resolve_many(names):
         else:
             unknown.append({"name": str(nm), "suggestions": [{"key": k, "label": label(k)} for k in suggest(nm)]})
     return known, unknown
+
+
+# How a host could add each amenity. goal_seek and roi_rank plan only with "purchase" and "policy";
+# "building" features (elevator, pool, garage...) are shown as context, not as something to buy.
+KIND = {
+    "am_washer_in_unit": "purchase", "am_dryer": "purchase", "am_dishwasher": "purchase", "am_central_ac": "purchase",
+    "am_any_ac": "purchase", "am_hot_tub": "purchase", "am_workspace": "purchase", "am_self_checkin": "purchase",
+    "am_ev_charger": "purchase", "am_crib": "purchase", "am_bbq": "purchase", "am_tv": "purchase",
+    "am_streaming": "purchase", "am_game_console": "purchase", "am_sound_system": "purchase",
+    "am_pets": "policy", "am_long_term": "policy", "am_luggage": "policy",
+    "am_free_parking": "building", "am_paid_parking": "building", "am_gym": "building", "am_pool": "building",
+    "am_elevator": "building", "am_balcony_patio": "building", "am_view": "building", "am_kitchen": "building",
+    "am_bathtub": "building", "am_fireplace": "building", "am_private_entry": "building", "am_backyard": "building",
+}
+
+
+def kind(key):
+    """'purchase', 'policy' (free rule change) or 'building' (not realistically added by a host)."""
+    return KIND[key]
