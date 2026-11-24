@@ -1,0 +1,11 @@
+# Host Copilot (Python 3.10+)
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+lightgbm>=4.3        # the pricing model; its pred_contrib gives exact TreeSHAP, so the shap package is not needed
+streamlit>=1.38
+plotly>=5.20
+anthropic>=0.40
+# review search (step 6)
+fastembed>=0.4
+faiss-cpu>=1.8
