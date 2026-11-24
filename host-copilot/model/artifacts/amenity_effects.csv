@@ -1,0 +1,987 @@
+level,area,amenity,label,n_area,n_with,n_without,lift_pct,lift_usd,lift_pct_q25,lift_pct_q75,share_positive,fold_min_pct,fold_max_pct,sign_agree,raw_gap_pct
+boston,Boston,am_any_ac,Air conditioning,7039,5713,1326,0.0064,1.2402,0.0002,0.0157,0.7549,0.0037,0.0095,5,0.1305
+boston,Boston,am_backyard,Backyard,7039,1242,5797,0.0019,0.4206,-0.0037,0.009,0.5912,-0.0013,0.0063,4,-0.0819
+boston,Boston,am_balcony_patio,Patio or balcony,7039,1732,5307,0.0082,1.7786,0.001,0.0177,0.7841,0.0043,0.0132,5,0.0404
+boston,Boston,am_bathtub,Bathtub,7039,2719,4320,-0.0038,-0.711,-0.0118,0.0056,0.3887,-0.0078,-0.0002,5,-0.0252
+boston,Boston,am_bbq,BBQ grill,7039,827,6212,0.0077,1.6499,0.0001,0.0175,0.7529,-0.0015,0.0163,4,0.2171
+boston,Boston,am_central_ac,Central air conditioning,7039,793,6246,0.0129,2.9719,0.0033,0.0242,0.8282,0.0027,0.0203,5,0.2856
+boston,Boston,am_crib,Crib,7039,1625,5414,0.008,1.6367,-0.0005,0.0175,0.7366,0.0056,0.0124,5,0.1456
+boston,Boston,am_dishwasher,Dishwasher,7039,3618,3421,0.0272,5.7497,0.0094,0.0501,0.8588,0.014,0.0366,5,0.1531
+boston,Boston,am_dryer,Dryer,7039,6541,498,0.0148,2.3173,-0.0032,0.031,0.7229,0.0063,0.0175,5,0.3493
+boston,Boston,am_elevator,Elevator,7039,1140,5899,0.0237,5.3714,0.0037,0.0847,0.8315,0.016,0.034,5,0.39
+boston,Boston,am_ev_charger,EV charger,7039,231,6808,0.0117,2.5418,0.0022,0.022,0.8115,0.0,0.0162,4,0.1901
+boston,Boston,am_fireplace,Indoor fireplace,7039,607,6432,0.0291,7.587,0.0118,0.0538,0.91,0.0228,0.0395,5,0.1764
+boston,Boston,am_free_parking,Free parking,7039,2958,4081,0.0,0.007,-0.0048,0.0046,0.5013,-0.0043,0.0019,2,-0.2131
+boston,Boston,am_game_console,Game console,7039,58,6981,0.0007,0.1423,-0.0012,0.0042,0.5579,-0.0007,0.002,2,-0.0403
+boston,Boston,am_gym,Gym,7039,722,6317,0.0122,2.5642,0.0021,0.0304,0.8089,0.0044,0.0307,5,0.5101
+boston,Boston,am_hot_tub,Hot tub,7039,92,6947,0.0046,1.147,0.001,0.0088,0.8038,0.003,0.0088,5,-0.175
+boston,Boston,am_kitchen,Kitchen,7039,5723,1316,0.002,0.3865,-0.0063,0.0083,0.5775,-0.0009,0.0056,4,-0.2826
+boston,Boston,am_long_term,Long-term stays allowed,7039,3950,3089,-0.0036,-0.7113,-0.0126,0.0038,0.3652,-0.0086,-0.0009,5,0.0568
+boston,Boston,am_luggage,Luggage drop-off,7039,2031,5008,-0.0058,-1.2089,-0.0158,0.0025,0.3159,-0.0098,-0.0036,5,0.118
+boston,Boston,am_paid_parking,Paid parking,7039,2208,4831,0.021,3.9137,0.0043,0.0452,0.8187,0.013,0.0241,5,0.3258
+boston,Boston,am_pets,Pets allowed,7039,2418,4621,0.0059,1.295,-0.0018,0.0196,0.6901,0.0031,0.0097,5,0.1081
+boston,Boston,am_pool,Pool,7039,444,6595,0.0168,3.9726,0.0052,0.0343,0.8587,0.0101,0.0268,5,0.3057
+boston,Boston,am_private_entry,Private entrance,7039,2017,5022,0.0105,2.2922,0.0023,0.0203,0.8098,0.0065,0.0156,5,-0.0141
+boston,Boston,am_self_checkin,Self check-in,7039,4828,2211,0.0016,0.2922,-0.0051,0.0084,0.5658,0.0003,0.0041,5,0.1
+boston,Boston,am_sound_system,Sound system,7039,240,6799,0.0232,5.2829,0.0101,0.0401,0.9013,0.007,0.0341,5,0.3002
+boston,Boston,am_streaming,Streaming services,7039,899,6140,0.0,0.0,-0.005,0.0054,0.4958,-0.0031,0.0026,0,0.1874
+boston,Boston,am_tv,TV,7039,6231,808,0.0303,3.5503,0.0176,0.0478,0.9455,0.0183,0.0464,5,0.666
+boston,Boston,am_view,View,7039,442,6597,0.0045,1.0487,-0.0009,0.0136,0.698,-0.0027,0.0083,4,0.2692
+boston,Boston,am_washer_in_unit,In-unit washer,7039,3791,3248,0.0046,0.9767,-0.0007,0.0117,0.7152,0.004,0.0055,5,0.0004
+boston,Boston,am_workspace,Dedicated workspace,7039,4917,2122,0.0132,2.6224,0.0018,0.0282,0.7837,0.0094,0.0206,5,0.1298
+neighbourhood,Allston,am_any_ac,Air conditioning,271,230,41,0.0064,1.0585,0.003,0.0119,0.8537,0.0037,0.0124,5,0.2904
+neighbourhood,Allston,am_backyard,Backyard,271,52,219,0.0011,0.2732,-0.0029,0.0061,0.6027,-0.003,0.005,3,-0.3574
+neighbourhood,Allston,am_balcony_patio,Patio or balcony,271,66,205,0.0092,1.7946,0.0027,0.02,0.8439,0.004,0.0179,5,0.2461
+neighbourhood,Allston,am_bathtub,Bathtub,271,152,119,-0.0026,-0.412,-0.0118,0.0052,0.4202,-0.0089,0.0036,4,-0.0625
+neighbourhood,Allston,am_bbq,BBQ grill,271,42,229,0.0081,1.1295,-0.0008,0.016,0.7249,-0.0023,0.0171,4,0.2834
+neighbourhood,Allston,am_central_ac,Central air conditioning,271,32,239,0.0132,2.4306,0.0042,0.0232,0.8452,0.0066,0.0272,5,0.6774
+neighbourhood,Allston,am_crib,Crib,271,68,203,0.0073,1.3675,-0.0012,0.0181,0.6897,0.0013,0.0204,5,0.5524
+neighbourhood,Allston,am_dishwasher,Dishwasher,271,154,117,0.0196,2.8394,0.0076,0.036,0.906,0.0095,0.0334,5,-0.0084
+neighbourhood,Allston,am_dryer,Dryer,271,240,31,0.027,3.7749,0.0096,0.0322,0.9032,0.0123,0.027,5,0.256
+neighbourhood,Allston,am_elevator,Elevator,271,77,194,0.066,6.514,0.0087,0.1118,0.8608,0.0561,0.0655,5,1.1298
+neighbourhood,Allston,am_ev_charger,EV charger,271,3,268,0.0077,1.1114,0.0,0.0154,0.7351,0.0,0.0109,4,
+neighbourhood,Allston,am_fireplace,Indoor fireplace,271,13,258,0.0322,7.1047,0.0123,0.0648,0.907,0.0226,0.0354,5,0.8679
+neighbourhood,Allston,am_free_parking,Free parking,271,157,114,0.0001,0.0312,-0.0054,0.0064,0.5,-0.004,0.0027,2,-0.1725
+neighbourhood,Allston,am_game_console,Game console,271,0,271,0.0,0.0,-0.0028,0.0023,0.4354,-0.0012,0.002,2,
+neighbourhood,Allston,am_gym,Gym,271,45,226,0.0088,1.1823,-0.0001,0.0214,0.7389,0.0004,0.0268,5,2.1844
+neighbourhood,Allston,am_hot_tub,Hot tub,271,2,269,0.0015,0.3465,-0.0027,0.0063,0.6097,-0.0002,0.0072,4,
+neighbourhood,Allston,am_kitchen,Kitchen,271,209,62,-0.0034,-0.3677,-0.0307,0.0043,0.3871,-0.0078,0.0016,4,-0.7968
+neighbourhood,Allston,am_long_term,Long-term stays allowed,271,164,107,-0.0097,-1.1883,-0.0184,-0.0031,0.1589,-0.0166,-0.0044,5,0.1714
+neighbourhood,Allston,am_luggage,Luggage drop-off,271,64,207,-0.0055,-1.1124,-0.0127,0.0013,0.285,-0.0098,-0.0002,5,0.4867
+neighbourhood,Allston,am_paid_parking,Paid parking,271,77,194,0.0238,4.6029,0.0076,0.0424,0.866,0.0195,0.0387,5,1.5233
+neighbourhood,Allston,am_pets,Pets allowed,271,94,177,0.0053,1.0804,-0.0056,0.0233,0.6384,-0.002,0.0117,4,0.9448
+neighbourhood,Allston,am_pool,Pool,271,17,254,0.015,2.4768,0.0054,0.0309,0.811,0.0094,0.0302,5,0.7354
+neighbourhood,Allston,am_private_entry,Private entrance,271,59,212,0.0041,0.647,-0.002,0.0109,0.6745,0.0019,0.0069,5,-0.3619
+neighbourhood,Allston,am_self_checkin,Self check-in,271,203,68,-0.0094,-1.5088,-0.0258,-0.0025,0.1471,-0.0098,-0.0007,5,-0.4473
+neighbourhood,Allston,am_sound_system,Sound system,271,0,271,0.0264,5.0132,0.0097,0.0421,0.9004,0.0077,0.0411,5,
+neighbourhood,Allston,am_streaming,Streaming services,271,24,247,-0.0002,-0.0419,-0.0048,0.0048,0.4656,-0.0012,0.0027,3,0.2765
+neighbourhood,Allston,am_tv,TV,271,210,61,0.0338,4.5848,0.0213,0.047,0.9672,0.0093,0.0552,5,0.5173
+neighbourhood,Allston,am_view,View,271,18,253,0.0003,0.072,-0.0063,0.0085,0.5217,-0.0068,0.0064,4,0.3309
+neighbourhood,Allston,am_washer_in_unit,In-unit washer,271,161,110,0.0013,0.156,-0.0046,0.0065,0.5545,-0.0009,0.0051,3,-0.4647
+neighbourhood,Allston,am_workspace,Dedicated workspace,271,212,59,-0.0011,-0.2096,-0.0084,0.0059,0.4576,-0.0027,0.0014,3,-0.3542
+neighbourhood,Back Bay,am_any_ac,Air conditioning,545,443,102,0.0075,2.4598,0.001,0.016,0.8333,0.0042,0.0208,5,-0.0048
+neighbourhood,Back Bay,am_backyard,Backyard,545,4,541,0.0062,1.8376,-0.0,0.0134,0.7486,0.0015,0.0115,5,
+neighbourhood,Back Bay,am_balcony_patio,Patio or balcony,545,49,496,0.0142,4.0394,0.0045,0.026,0.8468,0.0047,0.0246,5,0.3427
+neighbourhood,Back Bay,am_bathtub,Bathtub,545,211,334,-0.007,-1.836,-0.0149,0.0021,0.3204,-0.0142,-0.0007,5,0.1711
+neighbourhood,Back Bay,am_bbq,BBQ grill,545,14,531,0.0107,3.049,0.0032,0.0191,0.8456,0.0014,0.0237,5,0.1365
+neighbourhood,Back Bay,am_central_ac,Central air conditioning,545,33,512,0.0275,8.554,0.0184,0.044,0.9746,0.0178,0.0609,5,1.0073
+neighbourhood,Back Bay,am_crib,Crib,545,158,387,0.012,3.1233,0.0024,0.0225,0.8036,0.0082,0.0217,5,0.2961
+neighbourhood,Back Bay,am_dishwasher,Dishwasher,545,232,313,0.0492,14.3339,0.0299,0.0674,0.9169,0.03,0.0634,5,0.1577
+neighbourhood,Back Bay,am_dryer,Dryer,545,530,15,0.0305,6.9591,0.02,0.0378,0.9333,0.0232,0.0624,5,0.4275
+neighbourhood,Back Bay,am_elevator,Elevator,545,99,446,0.009,2.9378,0.0018,0.0222,0.8274,0.0031,0.0174,5,0.0406
+neighbourhood,Back Bay,am_ev_charger,EV charger,545,2,543,0.01,3.1105,0.0013,0.0206,0.7901,0.0008,0.0171,5,
+neighbourhood,Back Bay,am_fireplace,Indoor fireplace,545,51,494,0.0292,9.4793,0.0126,0.0542,0.9312,0.0153,0.0509,5,0.1211
+neighbourhood,Back Bay,am_free_parking,Free parking,545,13,532,-0.0014,-0.4503,-0.0069,0.0037,0.4267,-0.0051,0.0017,3,-0.4158
+neighbourhood,Back Bay,am_game_console,Game console,545,2,543,0.0007,0.262,-0.0011,0.0047,0.582,0.0,0.0028,4,
+neighbourhood,Back Bay,am_gym,Gym,545,76,469,0.0212,5.5613,0.0075,0.0418,0.8827,0.0075,0.0567,5,0.0574
+neighbourhood,Back Bay,am_hot_tub,Hot tub,545,7,538,0.0057,1.7298,0.0032,0.01,0.8643,0.0033,0.0104,5,-0.2726
+neighbourhood,Back Bay,am_kitchen,Kitchen,545,375,170,0.0023,0.7379,-0.0062,0.0103,0.6,-0.0028,0.0115,4,0.077
+neighbourhood,Back Bay,am_long_term,Long-term stays allowed,545,398,147,-0.0005,-0.1304,-0.0123,0.0074,0.4762,-0.0036,0.0023,2,0.3657
+neighbourhood,Back Bay,am_luggage,Luggage drop-off,545,172,373,0.0005,0.1436,-0.0064,0.0075,0.5147,-0.0032,0.0023,2,0.3694
+neighbourhood,Back Bay,am_paid_parking,Paid parking,545,266,279,0.06,15.7984,0.0378,0.097,0.9642,0.0374,0.068,5,0.3593
+neighbourhood,Back Bay,am_pets,Pets allowed,545,310,235,0.0047,1.6473,-0.0034,0.0151,0.6553,0.0015,0.0107,5,-0.0968
+neighbourhood,Back Bay,am_pool,Pool,545,16,529,0.0224,7.1865,0.0077,0.0425,0.8715,0.0148,0.0383,5,0.3628
+neighbourhood,Back Bay,am_private_entry,Private entrance,545,67,478,0.0191,6.0439,0.0094,0.0313,0.9351,0.0125,0.0283,5,0.1667
+neighbourhood,Back Bay,am_self_checkin,Self check-in,545,330,215,0.0055,1.6543,0.0011,0.0159,0.786,0.0031,0.0135,5,0.3023
+neighbourhood,Back Bay,am_sound_system,Sound system,545,5,540,0.0243,6.7176,0.0115,0.0391,0.9019,0.0073,0.0343,5,-0.1279
+neighbourhood,Back Bay,am_streaming,Streaming services,545,85,460,0.0007,0.1694,-0.0045,0.0066,0.5348,-0.0019,0.0029,2,0.4607
+neighbourhood,Back Bay,am_tv,TV,545,534,11,0.0178,4.3789,0.011,0.0288,1.0,0.0186,0.0501,5,0.4032
+neighbourhood,Back Bay,am_view,View,545,20,525,0.0075,2.4017,0.0003,0.0176,0.7657,0.0006,0.0168,5,-0.0318
+neighbourhood,Back Bay,am_washer_in_unit,In-unit washer,545,175,370,0.0097,2.5988,0.0027,0.0171,0.827,0.0071,0.0139,5,0.1637
+neighbourhood,Back Bay,am_workspace,Dedicated workspace,545,325,220,0.0029,0.8019,-0.0037,0.0108,0.6091,0.002,0.0094,5,0.0112
+neighbourhood,Bay Village,am_any_ac,Air conditioning,175,167,8,0.0064,1.8065,0.0041,0.0353,1.0,-0.0014,0.0128,4,-0.1856
+neighbourhood,Bay Village,am_backyard,Backyard,175,5,170,0.0042,1.4582,-0.0002,0.0125,0.7353,-0.0004,0.0155,4,0.2956
+neighbourhood,Bay Village,am_balcony_patio,Patio or balcony,175,12,163,0.0046,1.5002,0.0003,0.0098,0.7546,0.0006,0.0204,5,0.7568
+neighbourhood,Bay Village,am_bathtub,Bathtub,175,78,97,-0.0019,-0.4383,-0.0078,0.0055,0.433,-0.0024,0.012,1,0.6667
+neighbourhood,Bay Village,am_bbq,BBQ grill,175,7,168,0.0044,1.0749,-0.0013,0.0138,0.631,-0.0025,0.0178,4,0.5518
+neighbourhood,Bay Village,am_central_ac,Central air conditioning,175,10,165,0.016,5.2577,0.0093,0.0254,0.9879,0.0107,0.0285,5,0.9356
+neighbourhood,Bay Village,am_crib,Crib,175,23,152,0.0034,0.8195,-0.0003,0.0105,0.7303,-0.0014,0.0104,4,-0.1235
+neighbourhood,Bay Village,am_dishwasher,Dishwasher,175,29,146,0.0116,3.8129,0.0001,0.0245,0.7534,0.004,0.027,5,0.5967
+neighbourhood,Bay Village,am_dryer,Dryer,175,174,1,0.0367,13.1291,0.0367,0.0367,1.0,0.0367,0.2212,5,
+neighbourhood,Bay Village,am_elevator,Elevator,175,11,164,0.0116,3.3105,-0.0035,0.0276,0.6585,0.0051,0.021,5,0.3135
+neighbourhood,Bay Village,am_ev_charger,EV charger,175,2,173,0.0111,3.8166,0.0,0.0184,0.6763,0.0,0.0173,4,
+neighbourhood,Bay Village,am_fireplace,Indoor fireplace,175,18,157,0.0389,8.2346,0.0088,0.0829,0.9299,0.0087,0.0892,5,0.1069
+neighbourhood,Bay Village,am_free_parking,Free parking,175,16,159,0.0004,0.2094,-0.0026,0.0031,0.5849,-0.0035,0.0038,2,-0.1555
+neighbourhood,Bay Village,am_game_console,Game console,175,2,173,0.0011,0.4232,0.0001,0.002,0.7514,-0.0015,0.0015,2,
+neighbourhood,Bay Village,am_gym,Gym,175,63,112,0.0204,5.1299,0.0101,0.0403,0.9375,0.0113,0.0397,5,0.3135
+neighbourhood,Bay Village,am_hot_tub,Hot tub,175,3,172,0.0049,1.5666,0.0014,0.007,0.8372,0.0011,0.0073,5,
+neighbourhood,Bay Village,am_kitchen,Kitchen,175,44,131,0.0021,0.5491,-0.0047,0.0071,0.5802,-0.0033,0.005,4,0.4982
+neighbourhood,Bay Village,am_long_term,Long-term stays allowed,175,76,99,-0.0006,-0.1416,-0.0046,0.0037,0.404,-0.0027,0.0051,4,0.4888
+neighbourhood,Bay Village,am_luggage,Luggage drop-off,175,23,152,0.001,0.2619,-0.0075,0.0063,0.5461,-0.0041,0.0016,1,0.5818
+neighbourhood,Bay Village,am_paid_parking,Paid parking,175,78,97,0.0453,10.4562,0.0348,0.0593,0.9691,0.0234,0.0572,5,0.9777
+neighbourhood,Bay Village,am_pets,Pets allowed,175,75,100,0.0066,1.675,0.0018,0.0137,0.79,0.0047,0.0115,5,0.3506
+neighbourhood,Bay Village,am_pool,Pool,175,1,174,0.0068,1.5561,-0.0007,0.0138,0.7299,-0.0008,0.0174,4,
+neighbourhood,Bay Village,am_private_entry,Private entrance,175,28,147,0.0149,4.1626,0.0089,0.0225,0.9184,0.0025,0.0236,5,0.6407
+neighbourhood,Bay Village,am_self_checkin,Self check-in,175,109,66,0.0072,1.5379,0.0024,0.0117,0.8333,0.0036,0.0075,5,0.2048
+neighbourhood,Bay Village,am_sound_system,Sound system,175,4,171,0.0241,5.7166,0.0154,0.0397,0.9532,0.0025,0.0287,5,1.2322
+neighbourhood,Bay Village,am_streaming,Streaming services,175,12,163,-0.0002,-0.0296,-0.0031,0.0023,0.4908,-0.0039,0.0018,2,0.5445
+neighbourhood,Bay Village,am_tv,TV,175,173,2,0.0212,7.1145,0.0192,0.0232,1.0,-0.0016,0.0651,4,
+neighbourhood,Bay Village,am_view,View,175,8,167,0.0024,0.7239,-0.001,0.0074,0.6587,-0.0053,0.0119,4,0.4187
+neighbourhood,Bay Village,am_washer_in_unit,In-unit washer,175,101,74,0.0048,2.9741,0.0014,0.0128,0.8243,0.0029,0.0088,5,-0.2364
+neighbourhood,Bay Village,am_workspace,Dedicated workspace,175,162,13,0.0226,6.3956,0.0099,0.0357,0.9231,-0.0058,0.0221,4,-0.1325
+neighbourhood,Beacon Hill,am_any_ac,Air conditioning,386,275,111,-0.0011,-0.1468,-0.0084,0.0054,0.4595,-0.0024,0.0054,2,0.0888
+neighbourhood,Beacon Hill,am_backyard,Backyard,386,13,373,0.0016,0.3521,-0.0025,0.0071,0.5791,-0.0011,0.0076,4,0.2733
+neighbourhood,Beacon Hill,am_balcony_patio,Patio or balcony,386,46,340,0.006,0.8138,-0.0007,0.0133,0.7265,-0.0002,0.0094,4,1.5227
+neighbourhood,Beacon Hill,am_bathtub,Bathtub,386,99,287,0.0054,0.7663,-0.0011,0.0106,0.7108,-0.004,0.0064,3,1.4619
+neighbourhood,Beacon Hill,am_bbq,BBQ grill,386,7,379,0.0084,1.3488,0.0014,0.0149,0.8021,-0.0017,0.0142,4,0.3891
+neighbourhood,Beacon Hill,am_central_ac,Central air conditioning,386,25,361,0.0212,4.0112,0.0103,0.0299,0.9335,0.0071,0.0289,5,2.645
+neighbourhood,Beacon Hill,am_crib,Crib,386,46,340,0.0133,2.3298,0.0047,0.0226,0.8824,0.0042,0.0174,5,1.2776
+neighbourhood,Beacon Hill,am_dishwasher,Dishwasher,386,121,265,0.0433,7.5874,0.0266,0.0664,0.9811,0.0331,0.0621,5,1.6235
+neighbourhood,Beacon Hill,am_dryer,Dryer,386,380,6,0.0247,4.3366,0.0196,0.0447,1.0,0.0172,0.0598,5,-0.072
+neighbourhood,Beacon Hill,am_elevator,Elevator,386,34,352,0.0538,8.9502,0.0212,0.0958,0.9858,0.0316,0.0763,5,2.7221
+neighbourhood,Beacon Hill,am_ev_charger,EV charger,386,0,386,0.0136,2.2369,0.0041,0.0185,0.8705,0.0,0.0147,4,
+neighbourhood,Beacon Hill,am_fireplace,Indoor fireplace,386,16,370,0.0105,1.5468,0.0015,0.0374,0.7865,0.0088,0.0262,5,1.299
+neighbourhood,Beacon Hill,am_free_parking,Free parking,386,3,383,0.0003,0.1034,-0.0025,0.0035,0.564,-0.0048,0.0012,3,
+neighbourhood,Beacon Hill,am_game_console,Game console,386,0,386,0.0,0.0074,0.0,0.0032,0.5,-0.0012,0.002,2,
+neighbourhood,Beacon Hill,am_gym,Gym,386,10,376,0.0277,5.4815,0.0148,0.0588,0.9548,0.0126,0.069,5,7.4358
+neighbourhood,Beacon Hill,am_hot_tub,Hot tub,386,2,384,0.0054,0.9738,0.0022,0.0094,0.8698,0.0021,0.009,5,
+neighbourhood,Beacon Hill,am_kitchen,Kitchen,386,363,23,-0.0111,-2.8361,-0.0548,-0.0025,0.1739,-0.0072,0.0068,2,-0.8231
+neighbourhood,Beacon Hill,am_long_term,Long-term stays allowed,386,196,190,-0.0013,-0.1858,-0.0076,0.0054,0.4421,-0.0102,-0.0009,5,1.036
+neighbourhood,Beacon Hill,am_luggage,Luggage drop-off,386,86,300,0.0009,0.1554,-0.006,0.0069,0.5267,-0.0052,0.0022,2,1.4302
+neighbourhood,Beacon Hill,am_paid_parking,Paid parking,386,116,270,0.0574,9.9633,0.027,0.0863,0.9667,0.0453,0.0765,5,1.7136
+neighbourhood,Beacon Hill,am_pets,Pets allowed,386,52,334,0.0265,4.1492,0.0067,0.0578,0.8802,0.0086,0.0479,5,1.0351
+neighbourhood,Beacon Hill,am_pool,Pool,386,6,380,0.0372,5.935,0.0146,0.0769,0.9395,0.0139,0.0491,5,2.3735
+neighbourhood,Beacon Hill,am_private_entry,Private entrance,386,145,241,0.0146,2.5833,0.0074,0.0256,0.9419,0.0059,0.0231,5,-0.4228
+neighbourhood,Beacon Hill,am_self_checkin,Self check-in,386,166,220,0.0027,0.4191,-0.0009,0.0085,0.6591,0.0026,0.0094,5,1.1316
+neighbourhood,Beacon Hill,am_sound_system,Sound system,386,3,383,0.0215,3.7506,0.0086,0.0377,0.8956,0.0064,0.0302,5,8.6314
+neighbourhood,Beacon Hill,am_streaming,Streaming services,386,45,341,-0.001,-0.1399,-0.0038,0.0029,0.4428,-0.0051,0.0023,3,1.578
+neighbourhood,Beacon Hill,am_tv,TV,386,315,71,0.0325,2.9167,0.0269,0.0409,0.9718,0.0032,0.0363,5,1.4822
+neighbourhood,Beacon Hill,am_view,View,386,17,369,0.0141,2.4716,0.003,0.0249,0.813,-0.0068,0.0183,4,2.4844
+neighbourhood,Beacon Hill,am_washer_in_unit,In-unit washer,386,132,254,0.0109,2.0766,0.0039,0.0187,0.9094,0.0028,0.0213,5,0.9571
+neighbourhood,Beacon Hill,am_workspace,Dedicated workspace,386,282,104,0.0016,0.1862,-0.0055,0.0103,0.5577,-0.0008,0.007,3,-0.2485
+neighbourhood,Brighton,am_any_ac,Air conditioning,460,402,58,0.0103,1.6022,0.001,0.0242,0.7931,0.0062,0.0158,5,0.185
+neighbourhood,Brighton,am_backyard,Backyard,460,82,378,0.0009,0.2057,-0.0053,0.0078,0.5529,-0.0064,0.0033,2,-0.0431
+neighbourhood,Brighton,am_balcony_patio,Patio or balcony,460,175,285,0.0104,1.6118,0.0017,0.0207,0.8105,0.0037,0.0176,5,0.1239
+neighbourhood,Brighton,am_bathtub,Bathtub,460,156,304,-0.0066,-1.3024,-0.0137,0.0008,0.2697,-0.0079,-0.0031,5,-0.1411
+neighbourhood,Brighton,am_bbq,BBQ grill,460,123,337,0.0093,1.5265,-0.0003,0.0199,0.7418,-0.0006,0.0243,4,0.1772
+neighbourhood,Brighton,am_central_ac,Central air conditioning,460,38,422,0.011,1.8794,0.0014,0.0184,0.8081,-0.0035,0.0114,4,0.1091
+neighbourhood,Brighton,am_crib,Crib,460,76,384,0.0054,0.9975,-0.0052,0.0137,0.638,-0.0026,0.0128,4,0.0058
+neighbourhood,Brighton,am_dishwasher,Dishwasher,460,272,188,0.0063,1.0455,-0.0046,0.0277,0.6383,0.008,0.0302,5,-0.0964
+neighbourhood,Brighton,am_dryer,Dryer,460,388,72,0.0294,4.1901,0.017,0.0362,0.9028,0.019,0.0328,5,0.5198
+neighbourhood,Brighton,am_elevator,Elevator,460,148,312,0.0746,6.7974,0.0148,0.1406,0.9006,0.0574,0.0868,5,0.6761
+neighbourhood,Brighton,am_ev_charger,EV charger,460,79,381,0.0067,1.0259,-0.0,0.0213,0.6772,0.0,0.0207,4,0.2698
+neighbourhood,Brighton,am_fireplace,Indoor fireplace,460,23,437,0.0252,5.5385,0.0102,0.0446,0.9016,0.0174,0.0322,5,0.26
+neighbourhood,Brighton,am_free_parking,Free parking,460,312,148,-0.0044,-0.5651,-0.0128,0.0026,0.3446,-0.0024,0.0059,3,-0.2442
+neighbourhood,Brighton,am_game_console,Game console,460,4,456,0.0007,0.1139,-0.0028,0.0038,0.5439,-0.0012,0.002,2,-0.6299
+neighbourhood,Brighton,am_gym,Gym,460,45,415,0.0101,1.4352,0.0,0.0237,0.747,0.0011,0.0215,5,-0.053
+neighbourhood,Brighton,am_hot_tub,Hot tub,460,10,450,0.0024,0.4648,-0.002,0.006,0.6689,-0.0001,0.007,4,-0.4086
+neighbourhood,Brighton,am_kitchen,Kitchen,460,351,109,-0.0025,-0.328,-0.0285,0.0048,0.4587,-0.0179,0.003,3,-0.5381
+neighbourhood,Brighton,am_long_term,Long-term stays allowed,460,303,157,-0.0075,-1.3017,-0.0166,-0.0002,0.2484,-0.0141,-0.0013,5,0.1907
+neighbourhood,Brighton,am_luggage,Luggage drop-off,460,52,408,-0.0144,-3.0401,-0.026,-0.0073,0.0858,-0.0375,-0.0071,5,-0.1421
+neighbourhood,Brighton,am_paid_parking,Paid parking,460,203,257,0.0333,4.6683,0.0146,0.0576,0.93,0.0227,0.0527,5,0.8383
+neighbourhood,Brighton,am_pets,Pets allowed,460,122,338,0.0009,0.2171,-0.0069,0.0096,0.5444,-0.0031,0.0056,2,-0.2117
+neighbourhood,Brighton,am_pool,Pool,460,88,372,0.01,1.6238,-0.0007,0.0272,0.7204,0.0057,0.0232,5,0.243
+neighbourhood,Brighton,am_private_entry,Private entrance,460,237,223,0.0026,0.4309,-0.0056,0.0132,0.5785,-0.0002,0.0087,4,0.4589
+neighbourhood,Brighton,am_self_checkin,Self check-in,460,318,142,-0.0077,-1.3229,-0.0167,0.0004,0.2535,-0.0143,-0.0009,5,-0.4746
+neighbourhood,Brighton,am_sound_system,Sound system,460,21,439,0.0292,5.9219,0.0101,0.0444,0.9066,0.0089,0.042,5,0.0852
+neighbourhood,Brighton,am_streaming,Streaming services,460,40,420,0.0005,0.1043,-0.0059,0.0061,0.5238,-0.003,0.0027,2,0.0051
+neighbourhood,Brighton,am_tv,TV,460,374,86,0.0499,6.2107,0.0302,0.0707,0.9419,0.0467,0.0965,5,0.756
+neighbourhood,Brighton,am_view,View,460,32,428,0.0017,0.3316,-0.0041,0.0081,0.5818,-0.0049,0.0061,3,0.1137
+neighbourhood,Brighton,am_washer_in_unit,In-unit washer,460,240,220,0.0021,0.3025,-0.0045,0.0076,0.6091,-0.0012,0.0032,4,-0.053
+neighbourhood,Brighton,am_workspace,Dedicated workspace,460,364,96,0.0046,0.644,-0.002,0.0135,0.6875,-0.0004,0.0089,4,0.0437
+neighbourhood,Charlestown,am_any_ac,Air conditioning,124,103,21,0.0077,1.8111,0.0028,0.0178,0.9048,0.0017,0.0105,5,0.296
+neighbourhood,Charlestown,am_backyard,Backyard,124,22,102,-0.0005,-0.1864,-0.006,0.0024,0.3627,-0.0035,0.0022,3,-0.4195
+neighbourhood,Charlestown,am_balcony_patio,Patio or balcony,124,40,84,0.0062,1.3747,-0.0015,0.0145,0.7024,0.004,0.0149,5,0.1346
+neighbourhood,Charlestown,am_bathtub,Bathtub,124,51,73,-0.0054,-1.799,-0.0138,0.0002,0.2603,-0.0164,-0.0039,5,-0.3984
+neighbourhood,Charlestown,am_bbq,BBQ grill,124,26,98,0.0068,1.4854,0.0,0.0156,0.7551,-0.0014,0.0223,4,0.2049
+neighbourhood,Charlestown,am_central_ac,Central air conditioning,124,20,104,0.0071,1.9145,0.0022,0.0177,0.8365,-0.0042,0.0135,4,0.4934
+neighbourhood,Charlestown,am_crib,Crib,124,24,100,0.004,0.7123,-0.006,0.0115,0.59,0.0042,0.0115,5,-0.2294
+neighbourhood,Charlestown,am_dishwasher,Dishwasher,124,61,63,0.0218,6.949,0.0105,0.0329,0.8571,0.0122,0.0293,5,-0.3774
+neighbourhood,Charlestown,am_dryer,Dryer,124,117,7,-0.0081,-1.0463,-0.0111,-0.0022,0.2857,-0.0456,-0.0096,5,-0.6887
+neighbourhood,Charlestown,am_elevator,Elevator,124,4,120,0.0271,7.6988,0.0064,0.0772,0.9083,0.0083,0.0466,5,
+neighbourhood,Charlestown,am_ev_charger,EV charger,124,2,122,0.0087,2.2888,0.0031,0.0178,0.8689,0.0,0.0146,4,
+neighbourhood,Charlestown,am_fireplace,Indoor fireplace,124,10,114,0.0297,10.9137,0.0134,0.046,0.8772,0.0235,0.0364,5,0.0894
+neighbourhood,Charlestown,am_free_parking,Free parking,124,27,97,-0.0,-0.0125,-0.0038,0.003,0.4948,-0.0062,0.0015,3,-0.2057
+neighbourhood,Charlestown,am_game_console,Game console,124,5,119,0.0,0.0,-0.0013,0.0024,0.4706,-0.0012,0.0013,2,
+neighbourhood,Charlestown,am_gym,Gym,124,2,122,0.0092,1.6678,-0.0003,0.0238,0.6967,-0.0008,0.0264,4,
+neighbourhood,Charlestown,am_hot_tub,Hot tub,124,0,124,0.0043,1.3437,0.0014,0.0081,0.8226,0.0026,0.0102,5,
+neighbourhood,Charlestown,am_kitchen,Kitchen,124,99,25,-0.0067,-2.7063,-0.0185,-0.0009,0.24,-0.0102,0.0057,2,-0.7615
+neighbourhood,Charlestown,am_long_term,Long-term stays allowed,124,42,82,-0.0069,-1.2069,-0.0135,0.0,0.2561,-0.0089,0.0002,4,-0.2961
+neighbourhood,Charlestown,am_luggage,Luggage drop-off,124,47,77,-0.0065,-2.3622,-0.0167,0.002,0.2857,-0.015,-0.0019,5,-0.0269
+neighbourhood,Charlestown,am_paid_parking,Paid parking,124,42,82,0.0332,7.9546,0.0127,0.0595,0.8902,0.021,0.0474,5,0.142
+neighbourhood,Charlestown,am_pets,Pets allowed,124,27,97,0.0046,1.1812,-0.0031,0.0152,0.6289,-0.0011,0.0124,4,0.2825
+neighbourhood,Charlestown,am_pool,Pool,124,17,107,0.0219,6.9236,0.0072,0.0354,0.8692,0.0054,0.031,5,3.9424
+neighbourhood,Charlestown,am_private_entry,Private entrance,124,37,87,0.0076,1.7352,0.0005,0.0139,0.7586,0.0004,0.011,5,-0.0827
+neighbourhood,Charlestown,am_self_checkin,Self check-in,124,74,50,0.0019,0.3337,-0.0062,0.0067,0.58,-0.0033,0.0049,3,-0.5104
+neighbourhood,Charlestown,am_sound_system,Sound system,124,8,116,0.0153,3.6475,0.005,0.0303,0.8879,0.0034,0.0358,5,0.3303
+neighbourhood,Charlestown,am_streaming,Streaming services,124,17,107,-0.0006,-0.0997,-0.0038,0.0032,0.4486,-0.0032,0.0014,3,0.394
+neighbourhood,Charlestown,am_tv,TV,124,114,10,0.0237,3.1525,0.0159,0.0601,1.0,0.0158,0.0631,5,0.2644
+neighbourhood,Charlestown,am_view,View,124,40,84,0.0065,1.7013,0.0,0.0156,0.7381,-0.0032,0.0091,4,0.8573
+neighbourhood,Charlestown,am_washer_in_unit,In-unit washer,124,74,50,0.0022,0.5825,-0.0038,0.0058,0.62,0.0012,0.0057,5,-0.3917
+neighbourhood,Charlestown,am_workspace,Dedicated workspace,124,74,50,0.0089,2.5576,-0.0018,0.021,0.64,0.0051,0.0279,5,-0.4833
+neighbourhood,Chinatown,am_backyard,Backyard,69,0,69,0.0147,4.5097,0.0074,0.025,0.8261,0.0063,0.0237,5,
+neighbourhood,Chinatown,am_balcony_patio,Patio or balcony,69,4,65,0.008,2.2134,0.0032,0.0201,0.8462,0.0082,0.0227,5,
+neighbourhood,Chinatown,am_bathtub,Bathtub,69,18,51,0.0052,1.3564,0.0006,0.0153,0.8039,0.0064,0.0224,5,-0.0253
+neighbourhood,Chinatown,am_bbq,BBQ grill,69,5,64,0.0027,0.7241,-0.0017,0.0081,0.6719,0.0007,0.0178,5,
+neighbourhood,Chinatown,am_central_ac,Central air conditioning,69,7,62,0.017,4.3555,0.0038,0.0242,0.8387,0.0005,0.0186,5,0.3735
+neighbourhood,Chinatown,am_crib,Crib,69,53,16,0.0114,2.512,0.0076,0.0166,1.0,0.0042,0.013,5,0.2668
+neighbourhood,Chinatown,am_dishwasher,Dishwasher,69,62,7,0.0168,4.8709,0.0106,0.0224,1.0,0.0091,0.0797,5,0.1995
+neighbourhood,Chinatown,am_elevator,Elevator,69,58,11,0.0154,4.7095,0.013,0.0721,1.0,0.0077,0.0538,5,0.3771
+neighbourhood,Chinatown,am_ev_charger,EV charger,69,2,67,0.0045,1.2905,0.0018,0.013,0.7761,0.0028,0.0132,5,
+neighbourhood,Chinatown,am_fireplace,Indoor fireplace,69,0,69,0.0214,6.3664,0.0122,0.0323,0.9565,0.0126,0.0363,5,
+neighbourhood,Chinatown,am_free_parking,Free parking,69,10,59,0.0024,0.7021,-0.0012,0.0066,0.661,0.0004,0.0058,5,0.2634
+neighbourhood,Chinatown,am_game_console,Game console,69,0,69,0.0038,1.2949,0.0,0.0086,0.6957,0.0023,0.0061,5,
+neighbourhood,Chinatown,am_gym,Gym,69,18,51,0.0693,19.1471,0.0366,0.0878,0.9804,0.0149,0.0819,5,0.2823
+neighbourhood,Chinatown,am_hot_tub,Hot tub,69,0,69,0.0082,2.1444,0.0066,0.011,0.971,0.007,0.0128,5,
+neighbourhood,Chinatown,am_kitchen,Kitchen,69,68,1,-0.0075,-1.3213,-0.0075,-0.0075,0.0,-0.0167,0.0199,3,
+neighbourhood,Chinatown,am_long_term,Long-term stays allowed,69,61,8,0.0073,1.2454,-0.0002,0.0094,0.75,0.0005,0.0079,5,0.5338
+neighbourhood,Chinatown,am_luggage,Luggage drop-off,69,9,60,-0.0069,-1.9126,-0.0118,-0.0019,0.2,-0.0131,-0.003,5,-0.2131
+neighbourhood,Chinatown,am_paid_parking,Paid parking,69,52,17,0.0384,7.4067,0.0172,0.0497,0.7647,0.0227,0.0463,5,0.1423
+neighbourhood,Chinatown,am_pets,Pets allowed,69,18,51,0.0302,8.4388,0.0097,0.0471,0.8824,0.0231,0.0703,5,0.0392
+neighbourhood,Chinatown,am_pool,Pool,69,6,63,0.029,8.4646,0.0161,0.0562,0.9841,0.0164,0.0825,5,
+neighbourhood,Chinatown,am_private_entry,Private entrance,69,14,55,0.0115,3.1068,0.0075,0.0179,0.9636,0.0067,0.0287,5,-0.1355
+neighbourhood,Chinatown,am_self_checkin,Self check-in,69,66,3,0.0159,8.7666,0.0127,0.0235,1.0,0.0088,0.0424,5,0.2708
+neighbourhood,Chinatown,am_sound_system,Sound system,69,0,69,0.0232,6.307,0.013,0.0376,0.9275,0.0057,0.0271,5,
+neighbourhood,Chinatown,am_streaming,Streaming services,69,4,65,-0.0011,-0.3679,-0.0065,0.0041,0.4308,-0.0044,0.0044,1,
+neighbourhood,Chinatown,am_view,View,69,5,64,0.0159,3.9992,0.0068,0.0245,0.8594,-0.0024,0.0239,4,
+neighbourhood,Chinatown,am_washer_in_unit,In-unit washer,69,62,7,0.0025,0.4815,-0.0003,0.0084,0.7143,0.0025,0.0131,5,0.1995
+neighbourhood,Chinatown,am_workspace,Dedicated workspace,69,57,12,0.0166,3.7567,0.0117,0.0206,1.0,0.0125,0.0459,5,0.1978
+neighbourhood,Dorchester,am_any_ac,Air conditioning,993,803,190,0.0078,0.8707,0.0011,0.0201,0.7895,0.0032,0.013,5,0.1798
+neighbourhood,Dorchester,am_backyard,Backyard,993,336,657,-0.0003,-0.0407,-0.0072,0.0066,0.4795,-0.0051,0.0026,2,0.0927
+neighbourhood,Dorchester,am_balcony_patio,Patio or balcony,993,425,568,0.0066,0.8956,0.0003,0.0155,0.7641,0.0046,0.0122,5,0.1777
+neighbourhood,Dorchester,am_bathtub,Bathtub,993,496,497,-0.0058,-0.7996,-0.0157,0.0046,0.3441,-0.0087,0.0,4,0.1709
+neighbourhood,Dorchester,am_bbq,BBQ grill,993,120,873,0.0085,1.2661,-0.0003,0.0217,0.7388,-0.0029,0.0245,4,0.6078
+neighbourhood,Dorchester,am_central_ac,Central air conditioning,993,115,878,0.0059,0.8012,-0.0011,0.0143,0.7312,-0.0068,0.0096,4,0.13
+neighbourhood,Dorchester,am_crib,Crib,993,262,731,0.0093,1.1644,0.0006,0.0195,0.7551,0.0041,0.0162,5,0.2087
+neighbourhood,Dorchester,am_dishwasher,Dishwasher,993,516,477,0.014,1.4346,0.0018,0.0292,0.7757,0.0044,0.0303,5,0.1272
+neighbourhood,Dorchester,am_dryer,Dryer,993,902,91,0.0081,1.3958,-0.0147,0.0258,0.6374,-0.0083,0.0138,3,0.133
+neighbourhood,Dorchester,am_elevator,Elevator,993,3,990,0.0575,5.4197,0.0036,0.1162,0.8141,0.0502,0.0767,5,0.1646
+neighbourhood,Dorchester,am_ev_charger,EV charger,993,30,963,0.0205,2.6206,0.006,0.0345,0.8525,0.0,0.0297,4,0.5707
+neighbourhood,Dorchester,am_fireplace,Indoor fireplace,993,75,918,0.0289,5.1707,0.0127,0.0572,0.9096,0.0187,0.0384,5,0.1057
+neighbourhood,Dorchester,am_free_parking,Free parking,993,810,183,-0.0016,-0.219,-0.0065,0.0056,0.4481,-0.0005,0.0053,1,0.092
+neighbourhood,Dorchester,am_game_console,Game console,993,4,989,0.0007,0.0569,-0.0014,0.0035,0.5369,-0.0003,0.002,2,
+neighbourhood,Dorchester,am_gym,Gym,993,20,973,0.0086,1.5754,0.0015,0.023,0.7955,0.0047,0.0188,5,0.358
+neighbourhood,Dorchester,am_hot_tub,Hot tub,993,24,969,0.0038,0.6551,0.0,0.008,0.7534,0.0009,0.0068,5,-0.2026
+neighbourhood,Dorchester,am_kitchen,Kitchen,993,886,107,0.0012,0.1493,-0.0036,0.0047,0.5514,0.0003,0.0049,5,0.0163
+neighbourhood,Dorchester,am_long_term,Long-term stays allowed,993,533,460,-0.0051,-0.8638,-0.0146,0.0027,0.3174,-0.0107,0.0001,4,-0.1112
+neighbourhood,Dorchester,am_luggage,Luggage drop-off,993,404,589,-0.0099,-1.498,-0.019,-0.0018,0.2088,-0.0196,-0.0046,5,0.0354
+neighbourhood,Dorchester,am_paid_parking,Paid parking,993,143,850,0.0104,1.5621,-0.0001,0.0264,0.7459,0.0048,0.0185,5,0.1604
+neighbourhood,Dorchester,am_pets,Pets allowed,993,332,661,0.0076,1.0861,-0.0017,0.0227,0.6989,0.001,0.0166,5,0.0185
+neighbourhood,Dorchester,am_pool,Pool,993,40,953,0.0146,2.5169,0.0045,0.0299,0.8541,0.0069,0.0221,5,0.0869
+neighbourhood,Dorchester,am_private_entry,Private entrance,993,340,653,0.0042,0.579,-0.0036,0.0135,0.6432,0.0045,0.0086,5,0.1163
+neighbourhood,Dorchester,am_self_checkin,Self check-in,993,708,285,0.0002,0.0182,-0.0054,0.0053,0.5053,-0.004,0.0008,2,0.3562
+neighbourhood,Dorchester,am_sound_system,Sound system,993,15,978,0.0228,3.0207,0.0082,0.0426,0.9029,0.011,0.0385,5,0.4503
+neighbourhood,Dorchester,am_streaming,Streaming services,993,93,900,-0.0002,-0.0366,-0.0056,0.0051,0.4844,-0.0037,0.0029,2,0.1089
+neighbourhood,Dorchester,am_tv,TV,993,802,191,0.0198,1.3006,0.0073,0.0283,0.8953,0.0062,0.0356,5,0.3873
+neighbourhood,Dorchester,am_view,View,993,55,938,0.0036,0.5709,-0.0012,0.0115,0.6588,-0.0009,0.0078,4,0.1061
+neighbourhood,Dorchester,am_washer_in_unit,In-unit washer,993,612,381,-0.0006,-0.0699,-0.0059,0.0045,0.4646,-0.0014,0.0029,1,0.0954
+neighbourhood,Dorchester,am_workspace,Dedicated workspace,993,706,287,0.0262,4.8125,0.0165,0.0365,0.9408,0.021,0.0359,5,0.1382
+neighbourhood,Downtown,am_any_ac,Air conditioning,575,509,66,0.0035,1.1152,0.0,0.0067,0.7424,0.0015,0.0092,5,0.0878
+neighbourhood,Downtown,am_backyard,Backyard,575,0,575,0.0016,0.5065,-0.004,0.0083,0.5861,-0.0021,0.0087,4,
+neighbourhood,Downtown,am_balcony_patio,Patio or balcony,575,8,567,0.0019,0.8018,-0.003,0.0101,0.6067,-0.0018,0.0081,4,-0.1667
+neighbourhood,Downtown,am_bathtub,Bathtub,575,111,464,0.0023,0.6721,-0.0062,0.0144,0.5582,-0.0021,0.0036,3,0.3775
+neighbourhood,Downtown,am_bbq,BBQ grill,575,31,544,0.0064,2.0447,0.0,0.013,0.7537,-0.0014,0.0146,3,0.8485
+neighbourhood,Downtown,am_central_ac,Central air conditioning,575,125,450,0.0161,5.6743,0.0059,0.0292,0.9044,0.007,0.023,5,0.2377
+neighbourhood,Downtown,am_crib,Crib,575,91,484,0.0081,2.7825,-0.0004,0.0162,0.7355,0.0061,0.0111,5,0.1638
+neighbourhood,Downtown,am_dishwasher,Dishwasher,575,333,242,0.0342,9.7393,0.0156,0.0495,0.9091,0.008,0.0327,5,-0.0288
+neighbourhood,Downtown,am_dryer,Dryer,575,560,15,0.0225,5.2616,0.0111,0.0343,0.8667,-0.008,0.0181,3,0.332
+neighbourhood,Downtown,am_elevator,Elevator,575,279,296,0.0128,4.9082,0.0018,0.0329,0.8074,0.0085,0.0165,5,0.1968
+neighbourhood,Downtown,am_ev_charger,EV charger,575,6,569,0.0087,2.9508,0.0016,0.0152,0.8243,0.0,0.0134,4,0.0395
+neighbourhood,Downtown,am_fireplace,Indoor fireplace,575,12,563,0.0284,9.8267,0.0125,0.0545,0.9254,0.0132,0.0583,5,-0.0403
+neighbourhood,Downtown,am_free_parking,Free parking,575,32,543,0.0006,0.2143,-0.0021,0.0053,0.6004,-0.004,0.0016,2,0.312
+neighbourhood,Downtown,am_game_console,Game console,575,6,569,0.0009,0.2498,-0.001,0.0047,0.5483,-0.0007,0.0021,2,1.1498
+neighbourhood,Downtown,am_gym,Gym,575,96,479,0.0111,3.7104,0.0034,0.034,0.8706,0.0056,0.0604,5,0.7085
+neighbourhood,Downtown,am_hot_tub,Hot tub,575,0,575,0.0065,2.1451,0.0032,0.0107,0.9148,0.0023,0.01,5,
+neighbourhood,Downtown,am_kitchen,Kitchen,575,474,101,-0.0027,-0.8514,-0.0112,0.0047,0.3762,-0.0197,0.0059,4,-0.0045
+neighbourhood,Downtown,am_long_term,Long-term stays allowed,575,252,323,0.0012,0.3251,-0.0056,0.0084,0.5511,-0.0024,0.0044,2,0.1736
+neighbourhood,Downtown,am_luggage,Luggage drop-off,575,54,521,-0.0047,-1.6304,-0.0157,0.0028,0.3359,-0.0152,-0.0026,5,0.3843
+neighbourhood,Downtown,am_paid_parking,Paid parking,575,245,330,0.0203,7.0888,0.0043,0.0448,0.8333,0.0098,0.0375,5,0.0249
+neighbourhood,Downtown,am_pets,Pets allowed,575,288,287,0.007,2.1633,-0.0016,0.0219,0.6864,0.0028,0.0108,5,0.0782
+neighbourhood,Downtown,am_pool,Pool,575,46,529,0.0104,3.9682,0.0032,0.0269,0.8374,0.0076,0.0298,5,0.2972
+neighbourhood,Downtown,am_private_entry,Private entrance,575,110,465,0.013,4.8553,0.0068,0.0224,0.9333,0.0087,0.0211,5,0.0632
+neighbourhood,Downtown,am_self_checkin,Self check-in,575,414,161,0.0058,1.7926,0.0001,0.015,0.7516,0.0029,0.0111,5,-0.0686
+neighbourhood,Downtown,am_sound_system,Sound system,575,10,565,0.0205,6.9947,0.0097,0.0324,0.885,0.0007,0.0262,5,-0.0749
+neighbourhood,Downtown,am_streaming,Streaming services,575,112,463,0.0005,0.2181,-0.0044,0.0059,0.5227,-0.0046,0.0026,1,-0.0325
+neighbourhood,Downtown,am_tv,TV,575,573,2,0.0061,1.3407,-0.0011,0.0134,0.5,0.0061,0.0468,5,
+neighbourhood,Downtown,am_view,View,575,25,550,0.0062,2.2146,0.0002,0.0155,0.7564,-0.0092,0.0087,4,0.1857
+neighbourhood,Downtown,am_washer_in_unit,In-unit washer,575,264,311,0.0078,2.3567,0.0023,0.014,0.8392,0.0037,0.0094,5,0.2115
+neighbourhood,Downtown,am_workspace,Dedicated workspace,575,465,110,0.0301,8.7431,0.0106,0.0422,0.9182,0.007,0.0357,5,0.146
+neighbourhood,East Boston,am_any_ac,Air conditioning,385,337,48,0.0053,1.048,0.0006,0.0108,0.7917,0.0007,0.0069,5,0.065
+neighbourhood,East Boston,am_backyard,Backyard,385,96,289,-0.001,-0.1187,-0.0053,0.0053,0.4567,-0.0028,0.0029,4,-0.0111
+neighbourhood,East Boston,am_balcony_patio,Patio or balcony,385,109,276,0.0076,1.5665,0.0003,0.0175,0.7572,0.0016,0.0163,5,0.0399
+neighbourhood,East Boston,am_bathtub,Bathtub,385,143,242,-0.0052,-0.8807,-0.0144,0.0009,0.281,-0.0128,-0.0014,5,0.018
+neighbourhood,East Boston,am_bbq,BBQ grill,385,37,348,0.0069,1.5417,-0.0007,0.0183,0.7098,-0.0021,0.0177,4,-0.0409
+neighbourhood,East Boston,am_central_ac,Central air conditioning,385,64,321,0.0066,1.3456,-0.0023,0.0152,0.6822,-0.0065,0.0095,4,0.1148
+neighbourhood,East Boston,am_crib,Crib,385,87,298,0.0114,2.2089,0.0016,0.0203,0.7752,0.0042,0.02,5,0.1563
+neighbourhood,East Boston,am_dishwasher,Dishwasher,385,246,139,0.027,4.3133,0.0116,0.0473,0.8849,0.0136,0.0446,5,0.2851
+neighbourhood,East Boston,am_dryer,Dryer,385,358,27,0.0011,0.1593,-0.0244,0.01,0.5185,-0.0249,0.006,2,0.1639
+neighbourhood,East Boston,am_elevator,Elevator,385,35,350,0.029,7.0485,0.0022,0.1038,0.8057,0.0145,0.0404,5,0.1597
+neighbourhood,East Boston,am_ev_charger,EV charger,385,3,382,0.0103,2.1615,0.0024,0.0197,0.801,0.0,0.0164,4,
+neighbourhood,East Boston,am_fireplace,Indoor fireplace,385,33,352,0.0309,7.3007,0.0162,0.0493,0.9318,0.0227,0.0373,5,0.1911
+neighbourhood,East Boston,am_free_parking,Free parking,385,196,189,0.0002,0.0312,-0.0038,0.006,0.5079,-0.0007,0.0039,3,-0.0109
+neighbourhood,East Boston,am_game_console,Game console,385,4,381,0.0008,0.1515,-0.0013,0.0046,0.5617,0.0,0.002,4,0.2424
+neighbourhood,East Boston,am_gym,Gym,385,20,365,0.0076,1.847,0.0,0.0255,0.7479,0.0016,0.0179,5,0.3477
+neighbourhood,East Boston,am_hot_tub,Hot tub,385,6,379,0.0057,1.4175,0.0021,0.0095,0.8338,0.0031,0.0105,5,
+neighbourhood,East Boston,am_kitchen,Kitchen,385,348,37,-0.0003,-0.0449,-0.0033,0.0027,0.4324,-0.0004,0.0045,1,0.1282
+neighbourhood,East Boston,am_long_term,Long-term stays allowed,385,154,231,-0.0049,-0.887,-0.0117,0.0008,0.2771,-0.0094,-0.0008,5,0.1678
+neighbourhood,East Boston,am_luggage,Luggage drop-off,385,89,296,-0.0104,-2.4575,-0.021,-0.002,0.1824,-0.0153,-0.0035,5,-0.0041
+neighbourhood,East Boston,am_paid_parking,Paid parking,385,62,323,0.0142,3.114,0.0006,0.0397,0.7616,0.0077,0.0287,5,0.1626
+neighbourhood,East Boston,am_pets,Pets allowed,385,104,281,0.0044,0.7652,-0.0023,0.012,0.6441,0.0016,0.0077,5,-0.0578
+neighbourhood,East Boston,am_pool,Pool,385,20,365,0.0096,2.5148,0.0014,0.0252,0.8,0.005,0.0217,5,0.3069
+neighbourhood,East Boston,am_private_entry,Private entrance,385,119,266,0.0046,0.9819,-0.0021,0.0136,0.6729,0.0027,0.0097,5,0.0211
+neighbourhood,East Boston,am_self_checkin,Self check-in,385,320,65,0.003,0.8689,-0.0033,0.0086,0.6308,0.0003,0.0069,5,0.3412
+neighbourhood,East Boston,am_sound_system,Sound system,385,26,359,0.017,3.1239,0.0053,0.0307,0.8691,0.0089,0.0236,5,0.2046
+neighbourhood,East Boston,am_streaming,Streaming services,385,37,348,-0.0001,-0.0267,-0.0049,0.006,0.4943,-0.0033,0.0043,3,0.0799
+neighbourhood,East Boston,am_tv,TV,385,343,42,0.0235,3.3218,0.0165,0.0385,0.9524,0.0084,0.0326,5,0.1228
+neighbourhood,East Boston,am_view,View,385,32,353,0.0058,1.2545,0.0008,0.0134,0.7705,-0.0001,0.0083,4,0.2871
+neighbourhood,East Boston,am_washer_in_unit,In-unit washer,385,221,164,0.0063,1.2523,0.0011,0.0103,0.8293,0.0019,0.0093,5,0.1776
+neighbourhood,East Boston,am_workspace,Dedicated workspace,385,237,148,0.0241,5.7648,0.0154,0.0369,0.9797,0.018,0.0345,5,0.092
+neighbourhood,Fenway,am_any_ac,Air conditioning,389,321,68,0.0049,1.4968,-0.0024,0.0136,0.6324,-0.0006,0.0124,4,0.1423
+neighbourhood,Fenway,am_backyard,Backyard,389,2,387,0.004,1.2251,-0.0005,0.0107,0.7054,0.0011,0.0091,5,
+neighbourhood,Fenway,am_balcony_patio,Patio or balcony,389,20,369,0.0103,3.2254,0.0039,0.0189,0.8835,0.0046,0.0207,5,0.5554
+neighbourhood,Fenway,am_bathtub,Bathtub,389,114,275,-0.0079,-2.5283,-0.0148,-0.0015,0.2109,-0.0142,-0.001,5,-0.0315
+neighbourhood,Fenway,am_bbq,BBQ grill,389,38,351,0.0062,1.9423,-0.0004,0.0164,0.7293,0.0005,0.0185,5,0.1817
+neighbourhood,Fenway,am_central_ac,Central air conditioning,389,30,359,0.0234,7.1909,0.0153,0.0386,0.961,0.0127,0.0567,5,0.3868
+neighbourhood,Fenway,am_crib,Crib,389,110,279,0.0058,1.5483,-0.0071,0.0156,0.6344,0.0,0.0073,5,0.0873
+neighbourhood,Fenway,am_dishwasher,Dishwasher,389,201,188,0.0514,16.1672,0.0349,0.0675,0.9628,0.0304,0.0583,5,0.2333
+neighbourhood,Fenway,am_dryer,Dryer,389,369,20,0.0326,11.349,0.013,0.0407,0.8,-0.0026,0.0367,3,0.1676
+neighbourhood,Fenway,am_elevator,Elevator,389,196,193,0.0083,2.5004,-0.0006,0.0195,0.7358,-0.004,0.0137,4,0.1
+neighbourhood,Fenway,am_ev_charger,EV charger,389,37,352,0.0074,2.1423,0.0,0.0157,0.7301,0.0,0.016,4,0.1006
+neighbourhood,Fenway,am_fireplace,Indoor fireplace,389,59,330,0.0315,11.551,0.0127,0.058,0.9061,0.0215,0.0433,5,0.165
+neighbourhood,Fenway,am_free_parking,Free parking,389,27,362,-0.0026,-0.742,-0.0077,0.0016,0.3122,-0.007,0.0005,4,-0.1078
+neighbourhood,Fenway,am_game_console,Game console,389,0,389,0.0007,0.1742,-0.0013,0.003,0.5296,-0.0008,0.002,2,
+neighbourhood,Fenway,am_gym,Gym,389,93,296,0.0081,2.3944,0.0001,0.0255,0.75,0.0017,0.048,5,0.1707
+neighbourhood,Fenway,am_hot_tub,Hot tub,389,0,389,0.0033,0.914,0.0001,0.0072,0.7763,0.0019,0.0096,5,
+neighbourhood,Fenway,am_kitchen,Kitchen,389,316,73,0.0029,0.8963,-0.0019,0.0081,0.6438,0.0018,0.0138,5,0.1177
+neighbourhood,Fenway,am_long_term,Long-term stays allowed,389,278,111,-0.0027,-0.7641,-0.0098,0.006,0.4054,-0.0083,0.003,3,0.019
+neighbourhood,Fenway,am_luggage,Luggage drop-off,389,63,326,-0.0036,-0.914,-0.0104,0.0032,0.3528,-0.0059,0.0003,4,0.0611
+neighbourhood,Fenway,am_paid_parking,Paid parking,389,189,200,0.0344,10.0243,0.0094,0.0525,0.865,0.0227,0.0455,5,0.0715
+neighbourhood,Fenway,am_pets,Pets allowed,389,193,196,0.0021,0.6526,-0.0039,0.0114,0.5918,-0.0009,0.0129,4,0.0322
+neighbourhood,Fenway,am_pool,Pool,389,49,340,0.0228,7.1614,0.0089,0.0351,0.8529,0.017,0.0307,5,0.0297
+neighbourhood,Fenway,am_private_entry,Private entrance,389,67,322,0.018,5.74,0.0093,0.028,0.9099,0.0079,0.0282,5,0.2185
+neighbourhood,Fenway,am_self_checkin,Self check-in,389,276,113,0.0038,0.8168,-0.0033,0.0127,0.6106,-0.0015,0.0105,4,0.017
+neighbourhood,Fenway,am_sound_system,Sound system,389,8,381,0.0243,7.7228,0.014,0.0366,0.8976,0.0049,0.0312,5,0.2733
+neighbourhood,Fenway,am_streaming,Streaming services,389,33,356,0.0002,0.0643,-0.0046,0.006,0.5169,-0.0023,0.0016,1,0.0386
+neighbourhood,Fenway,am_tv,TV,389,385,4,0.0274,3.8354,0.0147,0.0391,1.0,0.0294,0.0447,5,0.833
+neighbourhood,Fenway,am_view,View,389,41,348,0.0055,1.8093,-0.0001,0.0134,0.7414,-0.0016,0.0116,4,0.2007
+neighbourhood,Fenway,am_washer_in_unit,In-unit washer,389,235,154,0.0049,1.5526,-0.0001,0.0097,0.7468,0.0053,0.007,5,0.0553
+neighbourhood,Fenway,am_workspace,Dedicated workspace,389,243,146,-0.0032,-0.8826,-0.0106,0.0052,0.3973,-0.0062,0.0149,1,0.0483
+neighbourhood,Hyde Park,am_any_ac,Air conditioning,132,120,12,0.0122,2.6298,0.008,0.0156,1.0,0.0124,0.0424,5,0.4472
+neighbourhood,Hyde Park,am_backyard,Backyard,132,46,86,0.0001,0.0061,-0.0079,0.0077,0.5,-0.0031,0.0056,2,-0.1045
+neighbourhood,Hyde Park,am_balcony_patio,Patio or balcony,132,47,85,0.0044,0.8545,-0.0037,0.0154,0.6824,-0.0065,0.0105,4,0.0794
+neighbourhood,Hyde Park,am_bathtub,Bathtub,132,62,70,0.0016,0.3016,-0.0073,0.0118,0.5714,-0.012,0.0056,3,0.3663
+neighbourhood,Hyde Park,am_bbq,BBQ grill,132,31,101,0.0066,1.03,-0.0004,0.0194,0.7426,-0.0015,0.0148,4,0.1895
+neighbourhood,Hyde Park,am_central_ac,Central air conditioning,132,21,111,0.0055,0.8517,-0.0014,0.0132,0.6937,-0.0083,0.0095,4,-0.1928
+neighbourhood,Hyde Park,am_crib,Crib,132,24,108,0.0067,1.4086,0.001,0.0188,0.787,0.0039,0.0215,5,-0.1075
+neighbourhood,Hyde Park,am_dishwasher,Dishwasher,132,79,53,0.0144,2.7069,-0.0011,0.028,0.717,0.0059,0.0199,5,-0.4149
+neighbourhood,Hyde Park,am_dryer,Dryer,132,114,18,0.0151,3.8872,0.0028,0.0299,0.7778,-0.0178,0.0105,4,-0.3684
+neighbourhood,Hyde Park,am_elevator,Elevator,132,0,132,0.0354,4.8263,0.0003,0.107,0.7576,0.0197,0.0491,5,
+neighbourhood,Hyde Park,am_ev_charger,EV charger,132,5,127,0.0158,2.7608,0.0065,0.0258,0.8819,0.0,0.0371,4,0.1523
+neighbourhood,Hyde Park,am_fireplace,Indoor fireplace,132,24,108,0.0233,2.887,0.0025,0.0521,0.7963,0.0084,0.0444,5,-0.083
+neighbourhood,Hyde Park,am_free_parking,Free parking,132,124,8,0.0072,1.546,-0.0071,0.0171,0.75,0.0026,0.0111,5,-0.241
+neighbourhood,Hyde Park,am_game_console,Game console,132,7,125,0.0,0.0,-0.0022,0.0033,0.408,-0.0013,0.0,3,0.1523
+neighbourhood,Hyde Park,am_gym,Gym,132,2,130,0.0114,1.9523,0.0003,0.0321,0.7615,0.0064,0.0251,5,
+neighbourhood,Hyde Park,am_hot_tub,Hot tub,132,0,132,0.0033,0.69,0.0005,0.0071,0.7576,0.0008,0.0056,5,
+neighbourhood,Hyde Park,am_kitchen,Kitchen,132,123,9,0.0034,0.787,-0.0014,0.0051,0.6667,-0.0012,0.0083,3,-0.3268
+neighbourhood,Hyde Park,am_long_term,Long-term stays allowed,132,48,84,-0.0105,-2.209,-0.0177,-0.0023,0.2143,-0.0124,0.0006,4,-0.2745
+neighbourhood,Hyde Park,am_luggage,Luggage drop-off,132,23,109,-0.0039,-0.5779,-0.0098,0.004,0.367,-0.0064,0.0008,4,0.9051
+neighbourhood,Hyde Park,am_paid_parking,Paid parking,132,5,127,0.0144,2.2776,-0.0002,0.0342,0.7323,0.0037,0.0254,5,0.2807
+neighbourhood,Hyde Park,am_pets,Pets allowed,132,27,105,0.0068,1.1737,-0.0008,0.0163,0.7333,-0.0024,0.0108,4,-0.226
+neighbourhood,Hyde Park,am_pool,Pool,132,0,132,0.0142,2.3736,0.0067,0.0277,0.9091,0.0075,0.0275,5,
+neighbourhood,Hyde Park,am_private_entry,Private entrance,132,60,72,0.0119,1.8015,0.007,0.0191,0.8889,0.0026,0.0192,5,0.0945
+neighbourhood,Hyde Park,am_self_checkin,Self check-in,132,71,61,-0.0001,-0.0255,-0.008,0.007,0.4754,-0.0139,0.0009,4,0.0837
+neighbourhood,Hyde Park,am_sound_system,Sound system,132,12,120,0.0285,4.4994,0.0122,0.0435,0.9167,0.0147,0.0363,5,-0.0881
+neighbourhood,Hyde Park,am_streaming,Streaming services,132,17,115,0.0047,0.884,0.0002,0.0108,0.7565,-0.0007,0.0084,4,-0.1518
+neighbourhood,Hyde Park,am_tv,TV,132,129,3,0.0278,7.8856,0.0227,0.0417,1.0,0.0052,0.0431,5,
+neighbourhood,Hyde Park,am_view,View,132,0,132,0.0014,0.1596,-0.0032,0.0068,0.5758,-0.0001,0.0048,4,
+neighbourhood,Hyde Park,am_washer_in_unit,In-unit washer,132,83,49,0.0011,0.182,-0.0031,0.0081,0.5714,-0.0004,0.0061,4,-0.4059
+neighbourhood,Hyde Park,am_workspace,Dedicated workspace,132,82,50,0.0078,0.8871,-0.0015,0.0156,0.72,-0.0029,0.0155,4,0.0395
+neighbourhood,Jamaica Plain,am_any_ac,Air conditioning,281,206,75,0.0068,1.1036,0.0009,0.0153,0.76,0.0022,0.0115,5,0.1948
+neighbourhood,Jamaica Plain,am_backyard,Backyard,281,115,166,-0.001,-0.1518,-0.0063,0.005,0.4699,-0.0049,0.0017,4,0.1482
+neighbourhood,Jamaica Plain,am_balcony_patio,Patio or balcony,281,145,136,0.0091,1.6124,0.0018,0.0176,0.7794,0.0044,0.0132,5,0.1063
+neighbourhood,Jamaica Plain,am_bathtub,Bathtub,281,129,152,-0.0063,-1.0917,-0.0143,-0.0003,0.2303,-0.0144,-0.0041,5,0.0178
+neighbourhood,Jamaica Plain,am_bbq,BBQ grill,281,47,234,0.0104,1.7621,0.0007,0.0205,0.7692,-0.0008,0.0142,4,0.1601
+neighbourhood,Jamaica Plain,am_central_ac,Central air conditioning,281,38,243,0.0101,1.8148,0.002,0.0199,0.7778,-0.0055,0.0153,4,0.0904
+neighbourhood,Jamaica Plain,am_crib,Crib,281,61,220,0.0081,1.484,-0.0013,0.0174,0.7273,0.0019,0.0108,5,0.0558
+neighbourhood,Jamaica Plain,am_dishwasher,Dishwasher,281,152,129,0.0292,5.7585,0.013,0.0478,0.845,0.0162,0.0443,5,0.1402
+neighbourhood,Jamaica Plain,am_dryer,Dryer,281,254,27,0.0184,4.3482,-0.0073,0.0512,0.7037,0.0149,0.0385,5,0.5952
+neighbourhood,Jamaica Plain,am_elevator,Elevator,281,0,281,0.0254,4.6728,0.0026,0.0686,0.8185,0.0058,0.0431,5,
+neighbourhood,Jamaica Plain,am_ev_charger,EV charger,281,7,274,0.0139,2.5863,0.0033,0.0249,0.8248,0.0,0.0215,4,0.2256
+neighbourhood,Jamaica Plain,am_fireplace,Indoor fireplace,281,40,241,0.0357,7.9311,0.0146,0.0596,0.917,0.029,0.0414,5,0.4268
+neighbourhood,Jamaica Plain,am_free_parking,Free parking,281,239,42,0.0012,0.243,-0.0063,0.0065,0.5952,-0.0046,0.0016,3,0.3669
+neighbourhood,Jamaica Plain,am_game_console,Game console,281,4,277,0.0008,0.2122,-0.0005,0.0041,0.5884,-0.0004,0.002,2,
+neighbourhood,Jamaica Plain,am_gym,Gym,281,5,276,0.0072,1.5872,-0.0,0.0166,0.7464,0.0008,0.0156,5,-0.0998
+neighbourhood,Jamaica Plain,am_hot_tub,Hot tub,281,0,281,0.0031,0.6493,-0.0002,0.0086,0.7331,0.0001,0.0089,5,
+neighbourhood,Jamaica Plain,am_kitchen,Kitchen,281,239,42,0.0061,1.4203,0.0009,0.0159,0.7857,0.0027,0.012,5,-0.0071
+neighbourhood,Jamaica Plain,am_long_term,Long-term stays allowed,281,138,143,-0.0049,-0.7876,-0.014,0.003,0.3497,-0.0121,0.0054,4,0.0333
+neighbourhood,Jamaica Plain,am_luggage,Luggage drop-off,281,121,160,-0.0042,-0.4901,-0.0123,0.0032,0.3375,-0.0112,0.0002,4,0.2442
+neighbourhood,Jamaica Plain,am_paid_parking,Paid parking,281,16,265,0.0128,2.5775,0.0029,0.0297,0.8038,0.0021,0.0243,5,-0.2932
+neighbourhood,Jamaica Plain,am_pets,Pets allowed,281,54,227,0.0054,1.2413,-0.0031,0.0167,0.6652,-0.0013,0.0071,4,0.065
+neighbourhood,Jamaica Plain,am_pool,Pool,281,0,281,0.0164,3.1398,0.0062,0.0336,0.9039,0.0098,0.0268,5,
+neighbourhood,Jamaica Plain,am_private_entry,Private entrance,281,122,159,0.0043,0.6041,-0.0038,0.0119,0.5912,-0.0017,0.0047,4,0.2837
+neighbourhood,Jamaica Plain,am_self_checkin,Self check-in,281,199,82,-0.0019,-0.1919,-0.0101,0.0043,0.4146,-0.0056,0.0021,4,0.2623
+neighbourhood,Jamaica Plain,am_sound_system,Sound system,281,16,265,0.0278,5.4819,0.0136,0.0502,0.9396,0.0071,0.0441,5,0.2616
+neighbourhood,Jamaica Plain,am_streaming,Streaming services,281,67,214,0.0018,0.3808,-0.0025,0.0071,0.6168,-0.0016,0.0038,2,0.1371
+neighbourhood,Jamaica Plain,am_tv,TV,281,228,53,0.0364,4.1099,0.0206,0.0545,0.9623,0.0198,0.0556,5,0.2067
+neighbourhood,Jamaica Plain,am_view,View,281,18,263,0.003,0.6148,-0.0003,0.0089,0.6958,-0.0023,0.0061,4,-0.2194
+neighbourhood,Jamaica Plain,am_washer_in_unit,In-unit washer,281,164,117,0.005,0.8716,0.0005,0.0108,0.7521,0.0011,0.0099,5,0.0586
+neighbourhood,Jamaica Plain,am_workspace,Dedicated workspace,281,196,85,0.0147,2.6528,0.0062,0.0272,0.8471,0.0071,0.0207,5,0.1063
+neighbourhood,Longwood Medical Area,am_any_ac,Air conditioning,43,37,6,0.0019,0.5259,-0.003,0.0027,0.6667,-0.0371,0.0019,1,-0.2821
+neighbourhood,Longwood Medical Area,am_backyard,Backyard,43,0,43,0.0032,1.5266,0.0023,0.0059,0.9302,-0.0022,0.0058,3,
+neighbourhood,Longwood Medical Area,am_balcony_patio,Patio or balcony,43,0,43,0.0099,2.9562,0.0079,0.0127,0.9535,0.0063,0.0343,5,
+neighbourhood,Longwood Medical Area,am_bathtub,Bathtub,43,1,42,-0.0091,-3.1895,-0.0151,-0.004,0.1667,-0.0212,-0.0027,5,
+neighbourhood,Longwood Medical Area,am_bbq,BBQ grill,43,3,40,0.0004,0.1157,-0.0026,0.0023,0.575,0.0002,0.0189,5,0.406
+neighbourhood,Longwood Medical Area,am_central_ac,Central air conditioning,43,0,43,0.0125,4.429,0.0069,0.0187,0.9535,0.0118,0.0375,5,
+neighbourhood,Longwood Medical Area,am_crib,Crib,43,27,16,0.0125,3.4456,0.0004,0.0184,0.75,-0.0345,0.0125,1,-0.1864
+neighbourhood,Longwood Medical Area,am_dishwasher,Dishwasher,43,3,40,0.0522,15.1751,0.0235,0.071,0.9,0.0049,0.0538,5,0.2215
+neighbourhood,Longwood Medical Area,am_dryer,Dryer,43,39,4,0.0269,6.8218,0.0252,0.0298,1.0,-0.0198,0.0269,4,-0.2821
+neighbourhood,Longwood Medical Area,am_elevator,Elevator,43,5,38,0.0178,5.9148,0.0067,0.0719,0.8421,-0.0156,0.0178,2,
+neighbourhood,Longwood Medical Area,am_ev_charger,EV charger,43,0,43,0.0096,3.3325,0.0036,0.0145,0.9535,0.0,0.014,4,
+neighbourhood,Longwood Medical Area,am_fireplace,Indoor fireplace,43,0,43,0.1241,45.2016,0.1007,0.1628,1.0,0.0361,0.1241,5,
+neighbourhood,Longwood Medical Area,am_free_parking,Free parking,43,0,43,-0.0005,-0.1274,-0.0022,0.0035,0.4651,-0.0123,0.0004,4,
+neighbourhood,Longwood Medical Area,am_game_console,Game console,43,0,43,0.0007,0.2204,0.0007,0.0007,0.814,-0.0012,0.0015,2,
+neighbourhood,Longwood Medical Area,am_gym,Gym,43,34,9,0.0415,11.3073,0.0011,0.046,0.8889,-0.0095,0.0415,4,-0.0985
+neighbourhood,Longwood Medical Area,am_hot_tub,Hot tub,43,1,42,-0.0001,-0.0372,-0.0004,0.0012,0.381,-0.0001,0.0061,1,
+neighbourhood,Longwood Medical Area,am_kitchen,Kitchen,43,8,35,0.0035,1.333,-0.0087,0.0146,0.6,-0.0119,0.0028,1,
+neighbourhood,Longwood Medical Area,am_long_term,Long-term stays allowed,43,3,40,0.0017,0.6015,-0.0051,0.0044,0.525,-0.0152,0.0032,3,
+neighbourhood,Longwood Medical Area,am_luggage,Luggage drop-off,43,5,38,-0.0038,-1.0053,-0.0096,0.0026,0.3684,-0.0142,-0.0038,5,
+neighbourhood,Longwood Medical Area,am_paid_parking,Paid parking,43,33,10,0.0359,14.6665,0.0281,0.0595,0.9,0.0045,0.0359,5,-0.2821
+neighbourhood,Longwood Medical Area,am_pets,Pets allowed,43,8,35,0.0053,1.7802,0.001,0.0191,0.7714,-0.0007,0.014,4,
+neighbourhood,Longwood Medical Area,am_pool,Pool,43,6,37,0.0316,11.493,0.0111,0.0472,0.8919,0.0035,0.0323,5,
+neighbourhood,Longwood Medical Area,am_private_entry,Private entrance,43,0,43,0.0051,1.4906,0.0005,0.0154,0.814,0.003,0.0094,5,
+neighbourhood,Longwood Medical Area,am_self_checkin,Self check-in,43,37,6,0.0092,5.0556,0.0045,0.018,0.8333,-0.0295,0.0092,1,
+neighbourhood,Longwood Medical Area,am_sound_system,Sound system,43,0,43,0.0666,20.6899,0.0299,0.0729,1.0,0.0219,0.0679,5,
+neighbourhood,Longwood Medical Area,am_streaming,Streaming services,43,0,43,-0.0067,-1.9072,-0.0067,-0.0038,0.1395,-0.0067,0.002,3,
+neighbourhood,Longwood Medical Area,am_tv,TV,43,39,4,0.0721,18.0783,0.0606,0.0826,1.0,0.0255,0.0721,5,-0.2821
+neighbourhood,Longwood Medical Area,am_view,View,43,0,43,-0.0008,-0.3405,-0.0067,0.0039,0.4651,-0.0071,0.0078,2,
+neighbourhood,Longwood Medical Area,am_washer_in_unit,In-unit washer,43,34,9,0.0043,1.6783,-0.0007,0.0115,0.6667,-0.0024,0.0022,2,-0.2821
+neighbourhood,Longwood Medical Area,am_workspace,Dedicated workspace,43,33,10,0.0086,2.6835,-0.0062,0.0457,0.6,-0.0182,0.0086,2,-0.0985
+neighbourhood,Mattapan,am_any_ac,Air conditioning,128,101,27,0.0187,6.3931,0.0098,0.0538,0.9259,0.0146,0.021,5,-0.0804
+neighbourhood,Mattapan,am_backyard,Backyard,128,61,67,-0.0036,-0.7781,-0.0133,0.0027,0.3284,-0.0093,0.0026,4,0.0215
+neighbourhood,Mattapan,am_balcony_patio,Patio or balcony,128,52,76,0.0083,1.608,0.0014,0.0198,0.75,0.0059,0.0126,5,0.244
+neighbourhood,Mattapan,am_bathtub,Bathtub,128,73,55,-0.0096,-1.3794,-0.0171,-0.0012,0.2182,-0.0178,-0.0006,5,-0.303
+neighbourhood,Mattapan,am_bbq,BBQ grill,128,33,95,0.0053,0.9635,-0.001,0.0165,0.7053,-0.0047,0.027,4,0.241
+neighbourhood,Mattapan,am_central_ac,Central air conditioning,128,25,103,0.0065,1.0693,-0.0023,0.0149,0.6699,-0.0059,0.0089,4,-0.2452
+neighbourhood,Mattapan,am_crib,Crib,128,21,107,0.0128,1.9696,0.0031,0.0191,0.8411,0.0068,0.0172,5,0.4565
+neighbourhood,Mattapan,am_dishwasher,Dishwasher,128,72,56,0.0153,2.3344,0.0035,0.0267,0.7857,0.0034,0.0264,5,-0.0453
+neighbourhood,Mattapan,am_dryer,Dryer,128,108,20,0.0035,1.2796,-0.0107,0.01,0.7,-0.0126,0.0274,4,-0.0135
+neighbourhood,Mattapan,am_elevator,Elevator,128,0,128,0.0505,7.7004,0.0034,0.113,0.8203,0.036,0.0642,5,
+neighbourhood,Mattapan,am_ev_charger,EV charger,128,0,128,0.0272,4.9266,0.0142,0.0409,0.8984,0.0,0.0403,4,
+neighbourhood,Mattapan,am_fireplace,Indoor fireplace,128,26,102,0.0265,5.2362,0.0085,0.0448,0.8824,0.0231,0.0475,5,0.6063
+neighbourhood,Mattapan,am_free_parking,Free parking,128,120,8,0.0055,1.9385,0.0,0.019,0.625,-0.001,0.0055,4,0.4062
+neighbourhood,Mattapan,am_game_console,Game console,128,1,127,0.0004,0.0567,-0.0021,0.0056,0.5512,-0.0002,0.0028,2,
+neighbourhood,Mattapan,am_gym,Gym,128,5,123,0.0067,1.4674,-0.001,0.019,0.7073,0.0058,0.0165,5,
+neighbourhood,Mattapan,am_hot_tub,Hot tub,128,0,128,0.0033,0.6704,0.0009,0.007,0.8203,0.002,0.0039,5,
+neighbourhood,Mattapan,am_kitchen,Kitchen,128,97,31,0.0029,0.3865,-0.0028,0.0102,0.6774,-0.0103,0.0057,4,-0.3587
+neighbourhood,Mattapan,am_long_term,Long-term stays allowed,128,83,45,-0.0091,-2.0752,-0.0158,0.0017,0.2667,-0.0166,0.0012,4,-0.1152
+neighbourhood,Mattapan,am_luggage,Luggage drop-off,128,49,79,-0.0111,-2.7807,-0.0194,-0.0033,0.1646,-0.0212,-0.004,5,-0.1429
+neighbourhood,Mattapan,am_paid_parking,Paid parking,128,6,122,0.0086,2.0397,-0.0001,0.0231,0.7377,0.0027,0.0211,5,
+neighbourhood,Mattapan,am_pets,Pets allowed,128,22,106,0.009,1.5972,0.0014,0.0196,0.7925,0.0011,0.0122,5,-0.1257
+neighbourhood,Mattapan,am_pool,Pool,128,0,128,0.012,2.5999,0.0035,0.0293,0.8359,0.0064,0.0222,5,
+neighbourhood,Mattapan,am_private_entry,Private entrance,128,54,74,0.0073,1.6047,0.0021,0.0183,0.8108,0.0045,0.0135,5,-0.2758
+neighbourhood,Mattapan,am_self_checkin,Self check-in,128,90,38,-0.0042,-0.6838,-0.0103,0.0025,0.3684,-0.0112,0.0023,4,-0.0699
+neighbourhood,Mattapan,am_sound_system,Sound system,128,8,120,0.0232,3.7806,0.0118,0.044,0.9333,0.0109,0.0399,5,0.9855
+neighbourhood,Mattapan,am_streaming,Streaming services,128,20,108,0.0033,0.5904,-0.0034,0.0094,0.6481,-0.0017,0.007,4,-0.1742
+neighbourhood,Mattapan,am_tv,TV,128,118,10,0.0543,8.6104,0.0142,0.1048,1.0,0.0095,0.067,5,-0.1944
+neighbourhood,Mattapan,am_view,View,128,6,122,0.0009,0.1745,-0.0034,0.0067,0.5492,-0.0008,0.0046,4,
+neighbourhood,Mattapan,am_washer_in_unit,In-unit washer,128,50,78,-0.0005,-0.0653,-0.0088,0.0075,0.4872,-0.0002,0.0029,1,-0.051
+neighbourhood,Mattapan,am_workspace,Dedicated workspace,128,75,53,0.0251,6.6022,0.0115,0.0408,0.9057,0.0095,0.033,5,0.0215
+neighbourhood,Mission Hill,am_any_ac,Air conditioning,143,94,49,0.0012,0.2844,-0.0027,0.0079,0.6122,0.0004,0.0108,5,-0.0691
+neighbourhood,Mission Hill,am_backyard,Backyard,143,17,126,0.0037,0.754,-0.0016,0.01,0.6667,-0.0007,0.0112,4,0.0519
+neighbourhood,Mission Hill,am_balcony_patio,Patio or balcony,143,23,120,0.0073,1.3074,0.0016,0.0147,0.8167,0.0069,0.0192,5,0.271
+neighbourhood,Mission Hill,am_bathtub,Bathtub,143,93,50,-0.0066,-1.8039,-0.015,0.0006,0.26,-0.013,-0.0021,5,-0.2849
+neighbourhood,Mission Hill,am_bbq,BBQ grill,143,0,143,0.007,1.5152,0.0008,0.0208,0.7972,-0.0033,0.023,4,
+neighbourhood,Mission Hill,am_central_ac,Central air conditioning,143,2,141,0.0101,1.4404,0.0055,0.0145,0.9078,0.0072,0.022,5,
+neighbourhood,Mission Hill,am_crib,Crib,143,20,123,0.0017,0.3828,-0.0025,0.0082,0.5366,-0.0023,0.0141,4,0.1603
+neighbourhood,Mission Hill,am_dishwasher,Dishwasher,143,33,110,0.0385,9.1226,0.0181,0.0524,0.9455,0.0264,0.0769,5,0.1752
+neighbourhood,Mission Hill,am_dryer,Dryer,143,136,7,0.0179,3.1753,0.013,0.0206,1.0,0.0129,0.0429,5,0.1362
+neighbourhood,Mission Hill,am_elevator,Elevator,143,11,132,0.024,5.0463,0.0103,0.0655,0.9091,0.0064,0.0754,5,0.0728
+neighbourhood,Mission Hill,am_ev_charger,EV charger,143,0,143,0.0152,3.0457,0.0066,0.022,0.8811,0.0019,0.0249,5,
+neighbourhood,Mission Hill,am_fireplace,Indoor fireplace,143,2,141,0.0267,6.5943,0.0129,0.0433,0.9149,0.0198,0.0546,5,
+neighbourhood,Mission Hill,am_free_parking,Free parking,143,39,104,-0.0027,-0.5006,-0.0079,0.0006,0.2981,-0.0023,-0.0009,5,0.4466
+neighbourhood,Mission Hill,am_game_console,Game console,143,0,143,0.0001,0.0103,-0.0014,0.0038,0.5035,-0.0012,0.0045,3,
+neighbourhood,Mission Hill,am_gym,Gym,143,9,134,0.0152,1.8919,0.0017,0.0312,0.7836,0.0004,0.0542,5,0.127
+neighbourhood,Mission Hill,am_hot_tub,Hot tub,143,2,141,0.0042,1.0247,0.0013,0.009,0.7872,0.0015,0.0079,5,
+neighbourhood,Mission Hill,am_kitchen,Kitchen,143,125,18,0.0166,3.344,0.0042,0.0386,1.0,0.0039,0.0134,5,-0.2241
+neighbourhood,Mission Hill,am_long_term,Long-term stays allowed,143,98,45,-0.0018,-0.5981,-0.0052,0.0064,0.3778,-0.01,0.0001,4,-0.1982
+neighbourhood,Mission Hill,am_luggage,Luggage drop-off,143,73,70,-0.0047,-1.3148,-0.0151,0.0058,0.3571,-0.0157,-0.0005,5,-0.1642
+neighbourhood,Mission Hill,am_paid_parking,Paid parking,143,52,91,0.0386,4.6092,0.0153,0.0591,0.7912,0.0097,0.0441,5,-0.0732
+neighbourhood,Mission Hill,am_pets,Pets allowed,143,32,111,0.006,1.2242,0.0008,0.0239,0.7658,0.0047,0.0148,5,0.1314
+neighbourhood,Mission Hill,am_pool,Pool,143,7,136,0.0275,4.6726,0.0112,0.0415,0.9044,0.012,0.0399,5,0.5837
+neighbourhood,Mission Hill,am_private_entry,Private entrance,143,13,130,0.0065,0.9824,0.0008,0.0197,0.7846,0.002,0.0202,5,0.4791
+neighbourhood,Mission Hill,am_self_checkin,Self check-in,143,111,32,0.0019,0.2987,-0.0019,0.0082,0.5938,-0.0009,0.0035,4,-0.2544
+neighbourhood,Mission Hill,am_sound_system,Sound system,143,6,137,0.0213,2.1501,0.0019,0.042,0.7956,0.0044,0.0424,5,
+neighbourhood,Mission Hill,am_streaming,Streaming services,143,15,128,-0.0,-0.0029,-0.0046,0.0055,0.4922,-0.0018,0.0025,1,0.0887
+neighbourhood,Mission Hill,am_tv,TV,143,96,47,0.0465,5.3547,0.0263,0.0615,1.0,0.0484,0.0857,5,
+neighbourhood,Mission Hill,am_view,View,143,7,136,0.0054,1.0621,-0.004,0.0189,0.6691,-0.0064,0.0095,4,-0.1354
+neighbourhood,Mission Hill,am_washer_in_unit,In-unit washer,143,53,90,0.0012,0.2665,-0.0016,0.006,0.5889,0.0003,0.0072,5,-0.0477
+neighbourhood,Mission Hill,am_workspace,Dedicated workspace,143,103,40,0.0107,2.6409,0.0021,0.0218,0.85,0.0055,0.0136,5,-0.1106
+neighbourhood,North End,am_any_ac,Air conditioning,195,138,57,0.0078,3.1128,0.0005,0.0321,0.7544,0.0027,0.0168,5,0.2437
+neighbourhood,North End,am_backyard,Backyard,195,0,195,0.0034,1.0169,-0.0031,0.0116,0.6256,-0.0027,0.0092,3,
+neighbourhood,North End,am_balcony_patio,Patio or balcony,195,26,169,0.008,2.4244,-0.0012,0.0165,0.7101,0.0011,0.0103,5,0.4158
+neighbourhood,North End,am_bathtub,Bathtub,195,59,136,0.0014,0.507,-0.0046,0.0123,0.5441,-0.0028,0.0041,2,-0.0049
+neighbourhood,North End,am_bbq,BBQ grill,195,2,193,0.0112,3.6727,0.0018,0.0227,0.7824,-0.0002,0.0189,4,
+neighbourhood,North End,am_central_ac,Central air conditioning,195,20,175,0.0126,4.0991,0.0044,0.0257,0.8286,0.0044,0.0186,5,0.0009
+neighbourhood,North End,am_crib,Crib,195,111,84,0.0046,1.284,-0.0072,0.0142,0.619,0.0015,0.0128,5,0.1569
+neighbourhood,North End,am_dishwasher,Dishwasher,195,127,68,0.0384,10.748,0.0143,0.0577,0.8824,0.0241,0.0488,5,0.3751
+neighbourhood,North End,am_dryer,Dryer,195,189,6,0.0011,0.8142,0.0006,0.0154,0.8333,-0.0697,0.0011,1,
+neighbourhood,North End,am_elevator,Elevator,195,14,181,0.0218,9.0149,0.0111,0.0491,0.9337,0.0145,0.021,5,0.0876
+neighbourhood,North End,am_ev_charger,EV charger,195,2,193,0.0109,3.8327,0.0032,0.0194,0.8705,0.0009,0.0147,5,
+neighbourhood,North End,am_fireplace,Indoor fireplace,195,5,190,0.0319,12.4868,0.0174,0.0545,0.9526,0.0184,0.042,5,0.6068
+neighbourhood,North End,am_free_parking,Free parking,195,6,189,0.0019,0.6024,-0.0017,0.0084,0.6349,-0.0047,0.0037,4,-0.322
+neighbourhood,North End,am_game_console,Game console,195,0,195,0.0019,0.5903,0.0,0.0079,0.6615,-0.0005,0.0026,3,
+neighbourhood,North End,am_gym,Gym,195,8,187,0.0235,7.8166,0.0122,0.05,0.8984,0.0075,0.0298,5,
+neighbourhood,North End,am_hot_tub,Hot tub,195,2,193,0.0084,3.0791,0.0049,0.0143,0.8964,0.0037,0.0102,5,
+neighbourhood,North End,am_kitchen,Kitchen,195,177,18,-0.0148,-3.6313,-0.0242,0.0003,0.2778,-0.0516,0.0046,3,-0.364
+neighbourhood,North End,am_long_term,Long-term stays allowed,195,148,47,-0.0067,-1.9176,-0.0165,0.0004,0.3191,-0.0164,-0.0004,5,0.1466
+neighbourhood,North End,am_luggage,Luggage drop-off,195,82,113,-0.0074,-2.1764,-0.0157,0.0003,0.2655,-0.0111,-0.0045,5,0.0505
+neighbourhood,North End,am_paid_parking,Paid parking,195,132,63,0.0294,8.3497,0.0034,0.0828,0.8413,0.0125,0.0451,5,0.2793
+neighbourhood,North End,am_pets,Pets allowed,195,79,116,0.0009,0.3836,-0.0058,0.0131,0.5431,-0.0025,0.0101,4,-0.228
+neighbourhood,North End,am_pool,Pool,195,0,195,0.0205,7.1361,0.006,0.0354,0.8615,0.0088,0.028,5,
+neighbourhood,North End,am_private_entry,Private entrance,195,51,144,0.0209,6.5376,0.009,0.0353,0.9722,0.0103,0.0321,5,0.106
+neighbourhood,North End,am_self_checkin,Self check-in,195,142,53,0.0066,3.0678,0.001,0.0132,0.7736,0.0028,0.0209,5,0.265
+neighbourhood,North End,am_sound_system,Sound system,195,2,193,0.0229,7.1393,0.0119,0.04,0.9482,0.0058,0.033,5,
+neighbourhood,North End,am_streaming,Streaming services,195,10,185,0.0001,0.0115,-0.0047,0.0069,0.5081,-0.0023,0.0046,2,0.6
+neighbourhood,North End,am_tv,TV,195,189,6,0.0492,20.0846,0.0464,0.0517,1.0,0.0186,0.0567,5,-0.2253
+neighbourhood,North End,am_view,View,195,4,191,0.005,1.8394,0.0,0.0182,0.7382,-0.0049,0.0128,4,0.4381
+neighbourhood,North End,am_washer_in_unit,In-unit washer,195,78,117,0.0055,1.7584,0.0001,0.0125,0.7521,0.0029,0.0071,5,-0.2589
+neighbourhood,North End,am_workspace,Dedicated workspace,195,139,56,0.0183,6.31,0.0071,0.0345,0.7857,0.0151,0.0462,5,0.0299
+neighbourhood,Roslindale,am_any_ac,Air conditioning,181,121,60,0.0129,1.9706,0.0057,0.0246,0.9167,0.0077,0.0265,5,0.2556
+neighbourhood,Roslindale,am_backyard,Backyard,181,104,77,-0.0025,-0.2819,-0.0112,0.0026,0.3896,-0.0091,0.0005,3,0.1363
+neighbourhood,Roslindale,am_balcony_patio,Patio or balcony,181,76,105,0.0071,0.7861,0.0005,0.0167,0.781,0.0045,0.0116,5,0.3546
+neighbourhood,Roslindale,am_bathtub,Bathtub,181,87,94,-0.0026,-0.2452,-0.0126,0.0043,0.3936,-0.0104,0.0018,3,0.3153
+neighbourhood,Roslindale,am_bbq,BBQ grill,181,39,142,0.0048,0.5296,-0.0026,0.0119,0.6338,-0.0051,0.0168,4,0.2663
+neighbourhood,Roslindale,am_central_ac,Central air conditioning,181,29,152,0.0102,1.0875,-0.0005,0.0214,0.7368,-0.0087,0.0161,4,0.3122
+neighbourhood,Roslindale,am_crib,Crib,181,24,157,0.0084,1.3456,-0.0001,0.0261,0.7452,0.0036,0.0171,5,0.1257
+neighbourhood,Roslindale,am_dishwasher,Dishwasher,181,89,92,0.0107,1.2224,0.0024,0.0283,0.7935,0.0033,0.021,5,0.3592
+neighbourhood,Roslindale,am_dryer,Dryer,181,166,15,0.0156,2.7622,0.0001,0.042,0.7333,-0.0044,0.0187,3,0.3865
+neighbourhood,Roslindale,am_elevator,Elevator,181,0,181,0.048,5.3171,0.0051,0.1176,0.8785,0.0491,0.0848,5,
+neighbourhood,Roslindale,am_ev_charger,EV charger,181,13,168,0.0272,4.0333,0.0095,0.0376,0.9286,0.0009,0.0373,5,0.5774
+neighbourhood,Roslindale,am_fireplace,Indoor fireplace,181,17,164,0.0426,7.7261,0.0145,0.0618,0.9268,0.0235,0.0425,5,-0.1113
+neighbourhood,Roslindale,am_free_parking,Free parking,181,170,11,0.0041,0.6059,0.0008,0.009,0.8182,0.0015,0.0083,5,-0.0505
+neighbourhood,Roslindale,am_game_console,Game console,181,4,177,0.0005,0.0433,-0.0011,0.0047,0.5424,-0.0001,0.0025,3,
+neighbourhood,Roslindale,am_gym,Gym,181,8,173,0.0099,1.6651,0.0017,0.0229,0.7746,0.0039,0.0213,5,1.0021
+neighbourhood,Roslindale,am_hot_tub,Hot tub,181,10,171,0.0033,0.5857,0.0002,0.0072,0.7836,0.0002,0.0043,5,0.9492
+neighbourhood,Roslindale,am_kitchen,Kitchen,181,147,34,0.0057,1.0274,-0.0024,0.01,0.7059,0.0001,0.0064,5,-0.2708
+neighbourhood,Roslindale,am_long_term,Long-term stays allowed,181,107,74,-0.008,-0.8401,-0.0168,-0.0003,0.2432,-0.0117,0.0017,3,0.4049
+neighbourhood,Roslindale,am_luggage,Luggage drop-off,181,71,110,-0.0069,-0.9649,-0.0185,0.0012,0.3,-0.0086,-0.0016,5,0.2728
+neighbourhood,Roslindale,am_paid_parking,Paid parking,181,8,173,0.0181,2.6684,0.0023,0.0376,0.7861,0.0055,0.0272,5,-0.3077
+neighbourhood,Roslindale,am_pets,Pets allowed,181,62,119,0.0075,1.1658,0.0011,0.0226,0.7647,0.0017,0.0131,5,0.1785
+neighbourhood,Roslindale,am_pool,Pool,181,0,181,0.0177,2.7966,0.0051,0.0373,0.8785,0.0083,0.0248,5,
+neighbourhood,Roslindale,am_private_entry,Private entrance,181,83,98,0.0153,1.8129,0.0078,0.0258,0.8776,0.0089,0.0228,5,0.2169
+neighbourhood,Roslindale,am_self_checkin,Self check-in,181,116,65,-0.0041,-0.475,-0.0101,0.0007,0.2923,-0.0087,0.0048,4,0.3618
+neighbourhood,Roslindale,am_sound_system,Sound system,181,4,177,0.0265,5.1293,0.0103,0.0471,0.8983,0.0111,0.036,5,
+neighbourhood,Roslindale,am_streaming,Streaming services,181,31,150,0.0022,0.3265,-0.0016,0.0075,0.6533,-0.0029,0.0065,4,0.1951
+neighbourhood,Roslindale,am_tv,TV,181,146,35,0.0317,4.0302,0.0217,0.0561,1.0,0.0232,0.0449,5,0.6053
+neighbourhood,Roslindale,am_view,View,181,3,178,0.0043,0.6054,-0.0017,0.0108,0.6573,-0.0012,0.0072,4,
+neighbourhood,Roslindale,am_washer_in_unit,In-unit washer,181,108,73,0.0017,0.2228,-0.0058,0.0082,0.589,-0.002,0.0049,4,-0.0839
+neighbourhood,Roslindale,am_workspace,Dedicated workspace,181,109,72,0.0145,1.6158,0.0059,0.0232,0.9028,0.0108,0.026,5,0.3565
+neighbourhood,Roxbury,am_any_ac,Air conditioning,490,407,83,0.0042,0.632,-0.0019,0.0117,0.6867,0.0028,0.0118,5,0.0704
+neighbourhood,Roxbury,am_backyard,Backyard,490,100,390,-0.0011,-0.1358,-0.0064,0.0056,0.4564,-0.0024,0.0045,2,-0.0983
+neighbourhood,Roxbury,am_balcony_patio,Patio or balcony,490,129,361,0.0128,1.9501,0.0057,0.0204,0.9141,0.0095,0.0176,5,0.1697
+neighbourhood,Roxbury,am_bathtub,Bathtub,490,229,261,-0.0059,-0.9439,-0.0129,0.001,0.2912,-0.011,-0.0006,5,0.0177
+neighbourhood,Roxbury,am_bbq,BBQ grill,490,48,442,0.0107,2.2928,0.0023,0.0235,0.8009,-0.0022,0.0255,4,0.579
+neighbourhood,Roxbury,am_central_ac,Central air conditioning,490,45,445,0.0109,1.7246,0.0018,0.0185,0.7933,-0.0008,0.018,4,0.1127
+neighbourhood,Roxbury,am_crib,Crib,490,89,401,0.0045,0.7739,-0.0021,0.013,0.6883,0.0044,0.011,5,0.0741
+neighbourhood,Roxbury,am_dishwasher,Dishwasher,490,272,218,0.02,2.5953,0.0076,0.0376,0.8578,0.0091,0.0326,5,0.2598
+neighbourhood,Roxbury,am_dryer,Dryer,490,433,57,0.0133,0.7952,-0.0032,0.0235,0.7368,0.011,0.045,5,0.2319
+neighbourhood,Roxbury,am_elevator,Elevator,490,18,472,0.0344,4.1388,0.0009,0.0945,0.7754,0.0249,0.0519,5,-0.0336
+neighbourhood,Roxbury,am_ev_charger,EV charger,490,3,487,0.0112,1.9036,0.0021,0.0216,0.8214,0.0,0.019,4,0.4677
+neighbourhood,Roxbury,am_fireplace,Indoor fireplace,490,46,444,0.0262,5.7147,0.0101,0.0461,0.9009,0.0213,0.0431,5,0.068
+neighbourhood,Roxbury,am_free_parking,Free parking,490,369,121,-0.0011,-0.2857,-0.007,0.003,0.3802,-0.0035,-0.0003,5,-0.0508
+neighbourhood,Roxbury,am_game_console,Game console,490,5,485,0.0,0.0012,-0.0018,0.0031,0.501,-0.0002,0.0024,2,1.3198
+neighbourhood,Roxbury,am_gym,Gym,490,16,474,0.0097,1.6197,-0.0003,0.0244,0.7405,0.0035,0.0261,5,0.4285
+neighbourhood,Roxbury,am_hot_tub,Hot tub,490,7,483,0.0027,0.5619,-0.0001,0.008,0.7371,0.0018,0.0106,5,-0.073
+neighbourhood,Roxbury,am_kitchen,Kitchen,490,426,64,0.0053,0.9813,0.0002,0.0085,0.7656,0.0033,0.0094,5,-0.0165
+neighbourhood,Roxbury,am_long_term,Long-term stays allowed,490,248,242,-0.0089,-1.4316,-0.0192,-0.0001,0.2479,-0.0169,-0.0013,5,0.0469
+neighbourhood,Roxbury,am_luggage,Luggage drop-off,490,163,327,-0.003,-0.4288,-0.0109,0.0042,0.3914,-0.0084,0.001,4,0.2686
+neighbourhood,Roxbury,am_paid_parking,Paid parking,490,60,430,0.0095,1.6257,-0.0005,0.023,0.7372,0.0028,0.0178,5,0.0757
+neighbourhood,Roxbury,am_pets,Pets allowed,490,80,410,0.0055,0.9676,-0.0016,0.0163,0.678,0.002,0.0105,5,-0.0539
+neighbourhood,Roxbury,am_pool,Pool,490,11,479,0.0192,3.7998,0.0074,0.0342,0.8956,0.0109,0.0331,5,1.2405
+neighbourhood,Roxbury,am_private_entry,Private entrance,490,140,350,0.0059,0.9258,0.0009,0.0134,0.7857,0.0046,0.011,5,0.0777
+neighbourhood,Roxbury,am_self_checkin,Self check-in,490,320,170,-0.0014,-0.1425,-0.0073,0.0048,0.4294,-0.0021,0.0023,2,0.1471
+neighbourhood,Roxbury,am_sound_system,Sound system,490,22,468,0.0296,6.0861,0.014,0.049,0.9124,0.0064,0.0453,5,0.0614
+neighbourhood,Roxbury,am_streaming,Streaming services,490,59,431,-0.0021,-0.4047,-0.0076,0.0022,0.3387,-0.0026,0.0014,4,0.1081
+neighbourhood,Roxbury,am_tv,TV,490,410,80,0.0338,2.954,0.0169,0.0567,0.9375,0.0243,0.0579,5,0.4049
+neighbourhood,Roxbury,am_view,View,490,43,447,0.0043,0.8533,-0.0013,0.0117,0.6756,-0.0031,0.0089,4,0.2439
+neighbourhood,Roxbury,am_washer_in_unit,In-unit washer,490,317,173,0.0012,0.174,-0.0032,0.0055,0.5896,0.0015,0.0068,5,-0.0283
+neighbourhood,Roxbury,am_workspace,Dedicated workspace,490,328,162,0.0151,2.6181,0.0067,0.0255,0.858,0.012,0.0304,5,0.1049
+neighbourhood,South Boston,am_any_ac,Air conditioning,281,259,22,0.0009,0.1989,-0.0025,0.0109,0.5455,0.0004,0.011,5,0.1643
+neighbourhood,South Boston,am_backyard,Backyard,281,48,233,-0.0006,-0.1854,-0.0049,0.0044,0.4721,-0.0021,0.0035,1,0.0215
+neighbourhood,South Boston,am_balcony_patio,Patio or balcony,281,106,175,0.0149,4.0034,0.0058,0.0238,0.8914,0.0048,0.0161,5,0.0269
+neighbourhood,South Boston,am_bathtub,Bathtub,281,105,176,-0.0007,-0.1659,-0.0088,0.0118,0.483,-0.0019,0.0041,2,0.1493
+neighbourhood,South Boston,am_bbq,BBQ grill,281,44,237,0.0055,1.6533,0.0009,0.0141,0.7764,-0.0026,0.0206,4,0.0051
+neighbourhood,South Boston,am_central_ac,Central air conditioning,281,61,220,0.0041,1.1193,-0.0023,0.0104,0.6682,-0.0046,0.0087,4,-0.0016
+neighbourhood,South Boston,am_crib,Crib,281,79,202,0.0114,2.929,0.0033,0.0198,0.8069,0.005,0.0131,5,0.135
+neighbourhood,South Boston,am_dishwasher,Dishwasher,281,165,116,0.0132,2.6827,0.001,0.0344,0.7586,-0.0084,0.013,3,-0.0959
+neighbourhood,South Boston,am_dryer,Dryer,281,266,15,-0.0182,-3.9482,-0.0276,-0.0032,0.1333,-0.0299,-0.0051,5,-0.0317
+neighbourhood,South Boston,am_elevator,Elevator,281,4,277,0.022,7.3054,0.0041,0.0763,0.8412,0.0147,0.0384,5,-0.4835
+neighbourhood,South Boston,am_ev_charger,EV charger,281,3,278,0.0111,3.1505,0.0032,0.0185,0.8597,0.0,0.0151,4,0.66
+neighbourhood,South Boston,am_fireplace,Indoor fireplace,281,48,233,0.0327,9.424,0.0201,0.0482,0.9442,0.024,0.0483,5,0.0703
+neighbourhood,South Boston,am_free_parking,Free parking,281,94,187,0.0023,0.6634,-0.0039,0.0078,0.6471,-0.0022,0.0038,3,-0.0231
+neighbourhood,South Boston,am_game_console,Game console,281,3,278,0.0001,0.0084,-0.0015,0.0029,0.5036,-0.001,0.002,2,-0.0619
+neighbourhood,South Boston,am_gym,Gym,281,6,275,0.0091,2.1892,-0.0002,0.0184,0.7418,0.0033,0.028,5,-0.1016
+neighbourhood,South Boston,am_hot_tub,Hot tub,281,6,275,0.0067,1.8498,0.0034,0.0098,0.9018,0.0031,0.0098,5,
+neighbourhood,South Boston,am_kitchen,Kitchen,281,243,38,0.0077,2.2559,0.0006,0.0171,0.7632,0.0019,0.0092,5,0.239
+neighbourhood,South Boston,am_long_term,Long-term stays allowed,281,115,166,-0.0031,-0.8913,-0.0125,0.0034,0.3554,-0.0108,-0.0004,5,-0.1254
+neighbourhood,South Boston,am_luggage,Luggage drop-off,281,93,188,-0.0171,-4.8557,-0.03,-0.0104,0.0585,-0.0283,-0.0137,5,-0.1245
+neighbourhood,South Boston,am_paid_parking,Paid parking,281,73,208,0.009,2.4029,-0.0041,0.0234,0.6442,-0.001,0.0088,4,-0.0738
+neighbourhood,South Boston,am_pets,Pets allowed,281,69,212,0.0043,1.0865,-0.0037,0.0141,0.6085,-0.0002,0.0076,4,-0.0432
+neighbourhood,South Boston,am_pool,Pool,281,4,277,0.014,4.5324,0.0025,0.0293,0.8051,0.0089,0.0201,5,
+neighbourhood,South Boston,am_private_entry,Private entrance,281,93,188,0.0044,1.1313,-0.0003,0.0137,0.734,0.0037,0.0115,5,-0.0133
+neighbourhood,South Boston,am_self_checkin,Self check-in,281,225,56,-0.001,-0.1129,-0.0136,0.0046,0.4821,-0.0078,0.0008,4,0.1566
+neighbourhood,South Boston,am_sound_system,Sound system,281,29,252,0.0102,2.7726,-0.001,0.0325,0.7183,-0.0005,0.0258,4,-0.1049
+neighbourhood,South Boston,am_streaming,Streaming services,281,79,202,-0.0043,-1.1074,-0.0096,0.001,0.297,-0.012,-0.0018,5,-0.0302
+neighbourhood,South Boston,am_tv,TV,281,243,38,0.0415,6.9403,0.0358,0.0508,0.9211,0.0406,0.0456,5,0.2057
+neighbourhood,South Boston,am_view,View,281,18,263,0.0019,0.5256,-0.0067,0.0111,0.5741,-0.0064,0.0081,4,0.1432
+neighbourhood,South Boston,am_washer_in_unit,In-unit washer,281,173,108,0.0031,0.6072,-0.0006,0.0089,0.7037,0.0017,0.0101,5,0.2133
+neighbourhood,South Boston,am_workspace,Dedicated workspace,281,217,64,0.0459,14.3823,0.0303,0.0609,1.0,0.0291,0.0646,5,0.283
+neighbourhood,South Boston Waterfront,am_backyard,Backyard,128,20,108,0.0023,0.6775,-0.0049,0.0087,0.6389,-0.0053,0.006,4,
+neighbourhood,South Boston Waterfront,am_balcony_patio,Patio or balcony,128,13,115,0.0076,2.3555,0.0023,0.0172,0.8261,-0.0028,0.0072,4,0.1255
+neighbourhood,South Boston Waterfront,am_bathtub,Bathtub,128,34,94,-0.0041,-1.1311,-0.011,0.0081,0.3936,-0.0096,0.0052,4,0.1448
+neighbourhood,South Boston Waterfront,am_bbq,BBQ grill,128,14,114,0.0104,2.9725,0.0029,0.0197,0.7895,-0.0035,0.0135,4,0.2169
+neighbourhood,South Boston Waterfront,am_central_ac,Central air conditioning,128,6,122,0.0114,3.3932,0.0026,0.0207,0.8279,-0.0063,0.0161,4,0.9907
+neighbourhood,South Boston Waterfront,am_crib,Crib,128,13,115,0.0052,1.6267,0.0005,0.0167,0.7826,-0.0075,0.0064,4,0.2252
+neighbourhood,South Boston Waterfront,am_dishwasher,Dishwasher,128,86,42,0.0237,9.1289,0.0132,0.0446,0.881,-0.0215,0.0257,1,0.4226
+neighbourhood,South Boston Waterfront,am_dryer,Dryer,128,123,5,-0.062,-30.73,-0.0761,-0.0171,0.2,-0.0682,-0.0171,5,
+neighbourhood,South Boston Waterfront,am_elevator,Elevator,128,90,38,0.0111,3.4418,0.0044,0.0164,0.8158,-0.0037,0.0075,3,0.2632
+neighbourhood,South Boston Waterfront,am_ev_charger,EV charger,128,20,108,0.0091,2.9875,-0.0013,0.0209,0.7222,0.0,0.0156,4,
+neighbourhood,South Boston Waterfront,am_fireplace,Indoor fireplace,128,15,113,0.0351,12.014,0.019,0.076,0.9823,0.0263,0.0491,5,-0.0501
+neighbourhood,South Boston Waterfront,am_free_parking,Free parking,128,3,125,0.0055,1.8524,-0.0001,0.0118,0.744,-0.0115,0.0068,3,0.8127
+neighbourhood,South Boston Waterfront,am_game_console,Game console,128,0,128,0.003,1.0299,0.0004,0.0066,0.7578,-0.001,0.003,4,
+neighbourhood,South Boston Waterfront,am_gym,Gym,128,97,31,0.0134,5.0165,0.0063,0.0226,0.9032,0.0041,0.0228,5,-0.0743
+neighbourhood,South Boston Waterfront,am_hot_tub,Hot tub,128,2,126,0.0086,2.7961,0.0055,0.0125,0.9444,0.0033,0.0085,5,
+neighbourhood,South Boston Waterfront,am_kitchen,Kitchen,128,96,32,0.0144,6.0232,0.0048,0.017,0.8438,-0.0306,0.0144,1,-0.5375
+neighbourhood,South Boston Waterfront,am_long_term,Long-term stays allowed,128,71,57,0.0098,2.2161,0.0017,0.0159,0.7719,0.0014,0.0146,5,0.2337
+neighbourhood,South Boston Waterfront,am_luggage,Luggage drop-off,128,9,119,-0.0314,-9.1748,-0.0432,-0.0176,0.042,-0.0392,-0.028,5,-0.2925
+neighbourhood,South Boston Waterfront,am_paid_parking,Paid parking,128,73,55,0.0283,6.5987,0.0143,0.0451,0.9091,0.0061,0.0256,5,0.0133
+neighbourhood,South Boston Waterfront,am_pets,Pets allowed,128,97,31,0.0092,2.2147,-0.0024,0.0193,0.6774,-0.0042,0.0102,4,0.298
+neighbourhood,South Boston Waterfront,am_pool,Pool,128,84,44,0.0491,8.9011,0.0084,0.0708,0.9091,0.0091,0.0496,5,0.0446
+neighbourhood,South Boston Waterfront,am_private_entry,Private entrance,128,19,109,0.0153,5.0348,0.0054,0.0206,0.9174,0.0038,0.0137,5,-0.0863
+neighbourhood,South Boston Waterfront,am_self_checkin,Self check-in,128,109,19,0.0068,2.2417,0.0002,0.0086,0.7368,-0.0051,0.0041,2,-0.4327
+neighbourhood,South Boston Waterfront,am_sound_system,Sound system,128,0,128,0.026,10.102,0.0171,0.0398,0.9453,0.015,0.0382,5,
+neighbourhood,South Boston Waterfront,am_streaming,Streaming services,128,0,128,0.0015,0.6075,-0.0042,0.0105,0.5703,-0.0103,0.0054,1,
+neighbourhood,South Boston Waterfront,am_tv,TV,128,122,6,0.0529,9.1433,0.0318,0.0764,1.0,0.0482,0.0625,5,1.162
+neighbourhood,South Boston Waterfront,am_view,View,128,5,123,0.0079,2.0574,0.0019,0.0177,0.7967,-0.0078,0.0173,4,-0.6504
+neighbourhood,South Boston Waterfront,am_washer_in_unit,In-unit washer,128,98,30,0.011,4.2343,0.0013,0.015,0.8,-0.0067,0.0121,3,0.7198
+neighbourhood,South Boston Waterfront,am_workspace,Dedicated workspace,128,109,19,0.0326,8.4257,0.0228,0.0525,1.0,0.0165,0.0569,5,0.2354
+neighbourhood,South End,am_any_ac,Air conditioning,461,288,173,0.0102,3.0175,0.0038,0.0171,0.8439,0.0032,0.0171,5,-0.1623
+neighbourhood,South End,am_backyard,Backyard,461,43,418,0.008,2.2351,0.0026,0.0146,0.8541,0.0038,0.0123,5,0.6622
+neighbourhood,South End,am_balcony_patio,Patio or balcony,461,83,378,0.0123,3.4804,0.0022,0.0213,0.8148,0.0048,0.0202,5,0.3858
+neighbourhood,South End,am_bathtub,Bathtub,461,118,343,-0.0056,-1.6715,-0.0142,0.0018,0.312,-0.0144,-0.0002,5,0.2075
+neighbourhood,South End,am_bbq,BBQ grill,461,61,400,0.008,2.4572,0.0007,0.0172,0.7775,-0.0007,0.0203,4,0.374
+neighbourhood,South End,am_central_ac,Central air conditioning,461,30,431,0.0222,6.6949,0.0139,0.0325,0.9675,0.015,0.0453,5,0.809
+neighbourhood,South End,am_crib,Crib,461,119,342,0.0064,1.7629,-0.0007,0.0151,0.7281,0.0033,0.0073,5,-0.0679
+neighbourhood,South End,am_dishwasher,Dishwasher,461,199,262,0.0559,15.4815,0.0331,0.0702,0.9427,0.0225,0.0577,5,0.3261
+neighbourhood,South End,am_dryer,Dryer,461,441,20,0.0345,8.8743,0.0105,0.0404,0.75,0.0053,0.0726,5,-0.0367
+neighbourhood,South End,am_elevator,Elevator,461,34,427,0.0092,3.1185,0.0011,0.0265,0.8056,0.0046,0.0156,5,-0.1698
+neighbourhood,South End,am_ev_charger,EV charger,461,6,455,0.0076,2.1006,0.0005,0.0154,0.7736,0.0003,0.015,5,0.5319
+neighbourhood,South End,am_fireplace,Indoor fireplace,461,37,424,0.032,9.9327,0.0176,0.0614,0.9599,0.0152,0.0673,5,0.3499
+neighbourhood,South End,am_free_parking,Free parking,461,41,420,-0.0005,-0.156,-0.0047,0.0035,0.4571,-0.0059,0.0004,4,0.5419
+neighbourhood,South End,am_game_console,Game console,461,6,455,0.002,0.5401,0.0,0.0058,0.7143,-0.0003,0.0024,2,0.0958
+neighbourhood,South End,am_gym,Gym,461,21,440,0.0218,6.8988,0.0069,0.047,0.9182,0.0038,0.0493,5,0.6829
+neighbourhood,South End,am_hot_tub,Hot tub,461,3,458,0.0066,1.8027,0.0033,0.0103,0.9083,0.0033,0.0109,5,
+neighbourhood,South End,am_kitchen,Kitchen,461,330,131,0.007,2.0478,-0.0013,0.0216,0.7328,0.0014,0.0136,5,0.0169
+neighbourhood,South End,am_long_term,Long-term stays allowed,461,293,168,0.0001,0.0205,-0.0086,0.0089,0.5,-0.0072,0.0023,2,0.1618
+neighbourhood,South End,am_luggage,Luggage drop-off,461,185,276,0.0011,0.4782,-0.0066,0.0082,0.5543,-0.0038,0.0013,2,0.079
+neighbourhood,South End,am_paid_parking,Paid parking,461,227,234,0.0465,13.0369,0.0213,0.0785,0.9274,0.0269,0.0457,5,0.1903
+neighbourhood,South End,am_pets,Pets allowed,461,184,277,0.0084,2.6357,0.0016,0.0176,0.7906,0.0019,0.007,5,0.0379
+neighbourhood,South End,am_pool,Pool,461,14,447,0.0199,5.9178,0.008,0.0343,0.9329,0.0122,0.0319,5,1.1626
+neighbourhood,South End,am_private_entry,Private entrance,461,84,377,0.0157,4.6908,0.0081,0.0253,0.9125,0.0088,0.023,5,0.196
+neighbourhood,South End,am_self_checkin,Self check-in,461,311,150,0.0066,1.816,0.0008,0.0189,0.7733,0.0016,0.0127,5,0.0791
+neighbourhood,South End,am_sound_system,Sound system,461,34,427,0.0227,6.0195,0.0125,0.0338,0.9602,0.0031,0.0268,5,0.9991
+neighbourhood,South End,am_streaming,Streaming services,461,74,387,0.0002,0.0777,-0.0047,0.0056,0.5194,-0.0036,0.0012,1,0.3862
+neighbourhood,South End,am_tv,TV,461,444,17,0.0497,11.9172,0.0358,0.0581,1.0,0.0077,0.0502,5,0.0399
+neighbourhood,South End,am_view,View,461,30,431,0.0084,2.6094,0.0024,0.0172,0.8515,0.0008,0.0117,5,0.3697
+neighbourhood,South End,am_washer_in_unit,In-unit washer,461,242,219,0.0099,3.0587,0.0026,0.0181,0.8493,0.0049,0.0127,5,0.0866
+neighbourhood,South End,am_workspace,Dedicated workspace,461,256,205,0.011,3.1279,0.004,0.0219,0.878,0.0052,0.0218,5,0.2109
+neighbourhood,West End,am_any_ac,Air conditioning,51,38,13,-0.003,-0.8238,-0.0083,0.0029,0.3846,-0.0079,0.0168,1,1.1735
+neighbourhood,West End,am_backyard,Backyard,51,9,42,-0.0015,-0.3199,-0.0049,0.0026,0.3571,-0.0051,0.0041,3,-0.2292
+neighbourhood,West End,am_balcony_patio,Patio or balcony,51,7,44,0.0057,0.8817,-0.001,0.013,0.7045,-0.0018,0.0099,4,-0.1084
+neighbourhood,West End,am_bathtub,Bathtub,51,18,33,0.0031,0.5488,-0.0046,0.0121,0.6364,-0.0031,0.0064,3,0.0105
+neighbourhood,West End,am_bbq,BBQ grill,51,10,41,0.0061,1.2254,-0.0003,0.0157,0.7073,-0.0026,0.0153,4,0.2571
+neighbourhood,West End,am_central_ac,Central air conditioning,51,8,43,0.0137,3.9198,0.0022,0.0333,0.8372,0.0064,0.0307,5,0.366
+neighbourhood,West End,am_crib,Crib,51,7,44,0.0112,1.7448,-0.0026,0.0211,0.7045,-0.0018,0.0141,4,0.1543
+neighbourhood,West End,am_dishwasher,Dishwasher,51,25,26,0.027,3.7132,0.0152,0.039,0.9231,0.0225,0.0522,5,0.1469
+neighbourhood,West End,am_dryer,Dryer,51,45,6,0.017,1.7436,0.0134,0.0267,0.8333,0.0035,0.0475,5,0.8205
+neighbourhood,West End,am_elevator,Elevator,51,20,31,0.0453,7.2164,0.0222,0.0693,0.9032,0.0301,0.0551,5,0.3361
+neighbourhood,West End,am_ev_charger,EV charger,51,1,50,0.0051,0.6668,-0.0021,0.0115,0.7,0.0,0.0133,4,
+neighbourhood,West End,am_fireplace,Indoor fireplace,51,0,51,0.003,1.1217,-0.0038,0.0233,0.6078,0.0049,0.0185,5,
+neighbourhood,West End,am_free_parking,Free parking,51,4,47,0.0009,0.1193,-0.0033,0.0061,0.5319,-0.0025,0.0015,4,
+neighbourhood,West End,am_game_console,Game console,51,0,51,0.0,0.0,-0.003,0.0032,0.4902,-0.0001,0.0019,1,
+neighbourhood,West End,am_gym,Gym,51,19,32,0.0284,3.6446,0.014,0.0479,0.9062,0.01,0.0624,5,0.3054
+neighbourhood,West End,am_hot_tub,Hot tub,51,1,50,0.0041,0.8685,0.0005,0.007,0.76,0.0017,0.0091,5,
+neighbourhood,West End,am_kitchen,Kitchen,51,49,2,-0.001,-0.8749,-0.005,0.003,0.5,-0.0853,-0.001,5,
+neighbourhood,West End,am_long_term,Long-term stays allowed,51,27,24,-0.0017,-0.246,-0.009,0.0035,0.4167,-0.0171,0.0,4,-0.1568
+neighbourhood,West End,am_luggage,Luggage drop-off,51,9,42,-0.0003,-0.0481,-0.0077,0.0106,0.4762,-0.0062,0.0054,3,0.1067
+neighbourhood,West End,am_paid_parking,Paid parking,51,31,20,0.0292,3.0822,0.0201,0.038,1.0,0.031,0.0477,5,0.2804
+neighbourhood,West End,am_pets,Pets allowed,51,19,32,0.0162,3.7866,0.0023,0.0533,0.875,0.0145,0.0461,5,0.4977
+neighbourhood,West End,am_pool,Pool,51,6,45,0.0392,10.8266,0.0266,0.0717,0.9778,0.0196,0.0569,5,
+neighbourhood,West End,am_private_entry,Private entrance,51,15,36,0.0055,1.5584,0.0002,0.0156,0.75,-0.0018,0.0232,4,-0.3605
+neighbourhood,West End,am_self_checkin,Self check-in,51,24,27,0.0021,0.3554,-0.0038,0.0086,0.7037,0.0017,0.013,5,0.3835
+neighbourhood,West End,am_sound_system,Sound system,51,0,51,0.0245,5.4272,0.008,0.045,0.9216,0.0139,0.0387,5,
+neighbourhood,West End,am_streaming,Streaming services,51,3,48,-0.0032,-0.6858,-0.0069,0.0,0.25,-0.0075,-0.0025,5,
+neighbourhood,West End,am_tv,TV,51,43,8,0.0281,2.7317,0.0156,0.0317,0.875,0.0036,0.0325,5,0.8107
+neighbourhood,West End,am_view,View,51,3,48,0.0152,2.3823,0.0017,0.0241,0.7708,-0.0061,0.019,4,
+neighbourhood,West End,am_washer_in_unit,In-unit washer,51,19,32,0.0067,0.9843,0.0011,0.0112,0.8125,0.0007,0.0174,5,0.1666
+neighbourhood,West End,am_workspace,Dedicated workspace,51,34,17,0.0022,0.9509,-0.0027,0.0108,0.5882,-0.0134,-0.0001,0,-0.482
+neighbourhood,West Roxbury,am_any_ac,Air conditioning,153,117,36,0.0072,1.983,0.0047,0.0222,0.8611,0.0057,0.0191,5,-0.175
+neighbourhood,West Roxbury,am_backyard,Backyard,153,67,86,-0.0002,-0.0285,-0.0036,0.0063,0.4767,-0.0059,0.0065,2,0.2948
+neighbourhood,West Roxbury,am_balcony_patio,Patio or balcony,153,71,82,0.0034,0.6181,-0.001,0.0089,0.7073,0.0023,0.0119,5,0.1515
+neighbourhood,West Roxbury,am_bathtub,Bathtub,153,82,71,-0.0001,-0.0337,-0.0087,0.0108,0.4789,-0.0116,0.0088,2,0.0091
+neighbourhood,West Roxbury,am_bbq,BBQ grill,153,45,108,0.0016,0.2313,-0.006,0.0083,0.5463,-0.0057,0.0142,4,0.392
+neighbourhood,West Roxbury,am_central_ac,Central air conditioning,153,9,144,-0.0017,-0.2873,-0.0099,0.0054,0.4444,-0.0094,0.0095,1,0.4821
+neighbourhood,West Roxbury,am_crib,Crib,153,32,121,0.0109,2.2298,0.0024,0.0205,0.8182,0.0022,0.0212,5,0.1708
+neighbourhood,West Roxbury,am_dishwasher,Dishwasher,153,89,64,0.0221,3.8347,0.0063,0.0339,0.8281,0.0155,0.0546,5,0.2374
+neighbourhood,West Roxbury,am_dryer,Dryer,153,140,13,-0.0228,-1.6781,-0.0335,0.0059,0.3077,-0.0253,0.0869,1,1.9912
+neighbourhood,West Roxbury,am_elevator,Elevator,153,0,153,0.0507,6.8924,0.0061,0.1104,0.8301,0.0269,0.0674,5,
+neighbourhood,West Roxbury,am_ev_charger,EV charger,153,5,148,0.0269,5.3444,0.0126,0.0372,0.8716,0.0,0.0342,4,0.4012
+neighbourhood,West Roxbury,am_fireplace,Indoor fireplace,153,37,116,0.0374,7.496,0.0148,0.0548,0.931,0.0116,0.0384,5,0.2157
+neighbourhood,West Roxbury,am_free_parking,Free parking,153,146,7,0.0008,0.1349,-0.0006,0.007,0.7143,0.0008,0.007,5,-0.1068
+neighbourhood,West Roxbury,am_game_console,Game console,153,1,152,0.0004,0.0607,-0.0018,0.0048,0.5066,-0.0009,0.0013,3,
+neighbourhood,West Roxbury,am_gym,Gym,153,4,149,0.0043,1.0937,0.0,0.0159,0.745,0.0037,0.0172,5,
+neighbourhood,West Roxbury,am_hot_tub,Hot tub,153,4,149,0.0023,0.4568,-0.0,0.0061,0.745,0.0007,0.0049,5,
+neighbourhood,West Roxbury,am_kitchen,Kitchen,153,130,23,-0.0051,-0.9515,-0.0194,0.0027,0.3478,-0.0079,0.0072,1,-0.3415
+neighbourhood,West Roxbury,am_long_term,Long-term stays allowed,153,114,39,-0.0077,-2.3477,-0.0142,0.0,0.2564,-0.0158,0.0008,4,-0.1868
+neighbourhood,West Roxbury,am_luggage,Luggage drop-off,153,85,68,-0.0037,-0.6544,-0.0099,0.0059,0.4118,-0.0119,0.0016,4,0.1688
+neighbourhood,West Roxbury,am_paid_parking,Paid parking,153,19,134,0.0183,3.1688,0.0027,0.0319,0.791,0.0024,0.0229,5,-0.3706
+neighbourhood,West Roxbury,am_pets,Pets allowed,153,70,83,0.0011,0.1837,-0.0029,0.0119,0.6024,0.0007,0.0138,5,-0.2198
+neighbourhood,West Roxbury,am_pool,Pool,153,6,147,0.0162,3.4098,0.0062,0.0261,0.9048,0.0085,0.0234,5,0.6405
+neighbourhood,West Roxbury,am_private_entry,Private entrance,153,60,93,0.0109,1.7371,0.0035,0.0163,0.8172,0.0075,0.024,5,-0.1021
+neighbourhood,West Roxbury,am_self_checkin,Self check-in,153,89,64,-0.0044,-0.7677,-0.0137,0.0023,0.2969,-0.0097,-0.0008,5,-0.3312
+neighbourhood,West Roxbury,am_sound_system,Sound system,153,7,146,0.0256,4.0553,0.0134,0.0379,0.9452,0.017,0.0321,5,0.7717
+neighbourhood,West Roxbury,am_streaming,Streaming services,153,22,131,0.0016,0.236,-0.0042,0.0064,0.6107,-0.0036,0.0074,4,0.0767
+neighbourhood,West Roxbury,am_tv,TV,153,132,21,0.0267,4.3215,0.0192,0.0292,0.9524,0.0229,0.0407,5,-0.2629
+neighbourhood,West Roxbury,am_view,View,153,12,141,0.001,0.1828,-0.0017,0.006,0.5745,-0.0003,0.0056,4,0.1195
+neighbourhood,West Roxbury,am_washer_in_unit,In-unit washer,153,95,58,0.0063,1.3399,0.0014,0.0144,0.8103,0.0003,0.0107,5,-0.1354
+neighbourhood,West Roxbury,am_workspace,Dedicated workspace,153,109,44,0.0089,1.5979,-0.0028,0.0201,0.7045,0.0048,0.026,5,0.044
+zone,Back Bay / South End,am_any_ac,Air conditioning,1510,1159,351,0.009,2.7181,0.0015,0.0167,0.8034,0.004,0.0169,5,-0.0437
+zone,Back Bay / South End,am_backyard,Backyard,1510,49,1461,0.0064,1.8057,0.0007,0.0134,0.7741,0.0032,0.0116,5,0.5522
+zone,Back Bay / South End,am_balcony_patio,Patio or balcony,1510,163,1347,0.0121,3.5769,0.004,0.0233,0.8627,0.0051,0.0228,5,0.2667
+zone,Back Bay / South End,am_bathtub,Bathtub,1510,474,1036,-0.0062,-1.7716,-0.0143,0.0018,0.2925,-0.0137,-0.0001,5,0.0418
+zone,Back Bay / South End,am_bbq,BBQ grill,1510,112,1398,0.009,2.5136,0.0017,0.018,0.8054,0.0002,0.0217,5,0.2539
+zone,Back Bay / South End,am_central_ac,Central air conditioning,1510,107,1403,0.0241,7.1349,0.0153,0.0374,0.9729,0.0158,0.0534,5,0.5415
+zone,Back Bay / South End,am_crib,Crib,1510,405,1105,0.0074,1.9591,-0.0008,0.0164,0.733,0.0044,0.0095,5,0.0721
+zone,Back Bay / South End,am_dishwasher,Dishwasher,1510,667,843,0.0498,14.202,0.0258,0.0674,0.9205,0.0259,0.0575,5,0.1704
+zone,Back Bay / South End,am_dryer,Dryer,1510,1457,53,0.0343,10.1214,0.0197,0.0407,0.8679,0.0124,0.0582,5,0.0332
+zone,Back Bay / South End,am_elevator,Elevator,1510,318,1192,0.0097,3.1127,0.0016,0.0252,0.8054,0.0036,0.0166,5,0.0289
+zone,Back Bay / South End,am_ev_charger,EV charger,1510,45,1465,0.0093,2.6267,0.0005,0.0182,0.7672,0.0003,0.016,5,0.1383
+zone,Back Bay / South End,am_fireplace,Indoor fireplace,1510,132,1378,0.0298,9.463,0.0135,0.0561,0.9311,0.0168,0.0564,5,0.0058
+zone,Back Bay / South End,am_free_parking,Free parking,1510,88,1422,-0.0013,-0.3565,-0.0057,0.0033,0.4135,-0.0052,0.001,4,0.0034
+zone,Back Bay / South End,am_game_console,Game console,1510,8,1502,0.0013,0.3432,-0.0007,0.0049,0.6185,-0.0001,0.0024,3,0.0884
+zone,Back Bay / South End,am_gym,Gym,1510,184,1326,0.018,5.0557,0.0049,0.0412,0.8665,0.005,0.0508,5,0.1444
+zone,Back Bay / South End,am_hot_tub,Hot tub,1510,10,1500,0.0052,1.5153,0.0016,0.0097,0.8533,0.0033,0.0102,5,-0.2199
+zone,Back Bay / South End,am_kitchen,Kitchen,1510,1069,441,0.0038,1.0799,-0.0018,0.0104,0.6961,0.0025,0.0111,5,0.062
+zone,Back Bay / South End,am_long_term,Long-term stays allowed,1510,991,519,-0.0005,-0.1091,-0.0087,0.0075,0.474,-0.003,0.0009,4,0.1636
+zone,Back Bay / South End,am_luggage,Luggage drop-off,1510,439,1071,-0.0006,-0.153,-0.0079,0.0062,0.4809,-0.0033,0.0004,3,0.1523
+zone,Back Bay / South End,am_paid_parking,Paid parking,1510,684,826,0.0464,12.8311,0.0256,0.0752,0.9334,0.0306,0.0544,5,0.1686
+zone,Back Bay / South End,am_pets,Pets allowed,1510,721,789,0.0055,1.5904,-0.0016,0.0153,0.7009,0.0025,0.0105,5,0.0207
+zone,Back Bay / South End,am_pool,Pool,1510,74,1436,0.021,6.4477,0.0077,0.0372,0.8935,0.0146,0.033,5,0.3237
+zone,Back Bay / South End,am_private_entry,Private entrance,1510,209,1301,0.0176,5.2415,0.0089,0.0283,0.927,0.0092,0.0253,5,0.2244
+zone,Back Bay / South End,am_self_checkin,Self check-in,1510,976,534,0.0059,1.4726,0.0001,0.0156,0.7509,0.0026,0.0119,5,0.0981
+zone,Back Bay / South End,am_sound_system,Sound system,1510,50,1460,0.0236,6.5626,0.0133,0.0368,0.9253,0.0043,0.0303,5,0.5487
+zone,Back Bay / South End,am_streaming,Streaming services,1510,196,1314,0.0003,0.0875,-0.0046,0.0059,0.5198,-0.0021,0.0016,1,0.2424
+zone,Back Bay / South End,am_tv,TV,1510,1471,39,0.0365,6.7358,0.0193,0.0498,1.0,0.0263,0.0517,5,0.3743
+zone,Back Bay / South End,am_view,View,1510,99,1411,0.0071,2.1077,0.001,0.016,0.7881,-0.0003,0.0128,4,0.3294
+zone,Back Bay / South End,am_washer_in_unit,In-unit washer,1510,765,745,0.0081,2.4206,0.002,0.0158,0.8201,0.0059,0.0117,5,-0.0097
+zone,Back Bay / South End,am_workspace,Dedicated workspace,1510,932,578,0.0046,1.296,-0.0033,0.0147,0.654,0.0034,0.0143,5,0.0467
+zone,Brighton / Allston,am_any_ac,Air conditioning,731,632,99,0.0071,1.2915,0.0021,0.0184,0.8182,0.0052,0.0133,5,0.2404
+zone,Brighton / Allston,am_backyard,Backyard,731,134,597,0.001,0.2245,-0.0044,0.0071,0.5712,-0.0048,0.0038,3,-0.1642
+zone,Brighton / Allston,am_balcony_patio,Patio or balcony,731,241,490,0.0097,1.6359,0.0021,0.0202,0.8245,0.0038,0.0171,5,0.0649
+zone,Brighton / Allston,am_bathtub,Bathtub,731,308,423,-0.0059,-1.015,-0.013,0.0032,0.3121,-0.0069,-0.002,5,-0.0311
+zone,Brighton / Allston,am_bbq,BBQ grill,731,165,566,0.0085,1.4246,-0.0006,0.0181,0.735,-0.0015,0.0202,4,0.1325
+zone,Brighton / Allston,am_central_ac,Central air conditioning,731,70,661,0.0116,2.1061,0.003,0.0207,0.8215,0.0004,0.0143,5,0.2532
+zone,Brighton / Allston,am_crib,Crib,731,144,587,0.0061,1.1443,-0.0038,0.0151,0.6559,-0.001,0.0134,4,0.3454
+zone,Brighton / Allston,am_dishwasher,Dishwasher,731,426,305,0.0105,1.5763,-0.0004,0.032,0.741,0.0095,0.0326,5,-0.0921
+zone,Brighton / Allston,am_dryer,Dryer,731,628,103,0.0289,3.9229,0.0139,0.0357,0.9029,0.019,0.03,5,0.4096
+zone,Brighton / Allston,am_elevator,Elevator,731,225,506,0.071,6.7585,0.0117,0.1316,0.8854,0.0576,0.0833,5,0.8391
+zone,Brighton / Allston,am_ev_charger,EV charger,731,82,649,0.0072,1.1019,0.0,0.0186,0.7011,0.0,0.0161,4,0.2215
+zone,Brighton / Allston,am_fireplace,Indoor fireplace,731,36,695,0.0275,6.0493,0.0109,0.0499,0.9036,0.0188,0.0334,5,0.5816
+zone,Brighton / Allston,am_free_parking,Free parking,731,469,262,-0.0018,-0.2484,-0.0084,0.0053,0.4122,-0.0027,0.0041,3,-0.0992
+zone,Brighton / Allston,am_game_console,Game console,731,4,727,0.0001,0.012,-0.0028,0.003,0.5034,-0.0012,0.002,2,-0.6113
+zone,Brighton / Allston,am_gym,Gym,731,90,641,0.0096,1.3621,0.0,0.0231,0.7441,0.0007,0.0238,5,0.4714
+zone,Brighton / Allston,am_hot_tub,Hot tub,731,12,719,0.0024,0.437,-0.0022,0.0061,0.6467,-0.0002,0.0071,4,-0.4227
+zone,Brighton / Allston,am_kitchen,Kitchen,731,560,171,-0.0026,-0.3391,-0.0285,0.0045,0.4327,-0.015,0.0014,4,-0.66
+zone,Brighton / Allston,am_long_term,Long-term stays allowed,731,467,264,-0.0079,-1.2568,-0.0171,-0.0014,0.2121,-0.0146,-0.0029,5,0.2809
+zone,Brighton / Allston,am_luggage,Luggage drop-off,731,116,615,-0.0112,-2.4464,-0.0221,-0.0035,0.1528,-0.0289,-0.006,5,0.0623
+zone,Brighton / Allston,am_paid_parking,Paid parking,731,280,451,0.029,4.6571,0.0118,0.0514,0.9024,0.0212,0.0473,5,0.8545
+zone,Brighton / Allston,am_pets,Pets allowed,731,216,515,0.0023,0.5082,-0.0061,0.014,0.5767,-0.0024,0.0072,3,-0.001
+zone,Brighton / Allston,am_pool,Pool,731,105,626,0.0122,1.9805,0.0002,0.0279,0.7572,0.0067,0.0252,5,0.2196
+zone,Brighton / Allston,am_private_entry,Private entrance,731,296,435,0.0039,0.5786,-0.0037,0.0122,0.6253,0.0017,0.0075,5,0.1847
+zone,Brighton / Allston,am_self_checkin,Self check-in,731,521,210,-0.0078,-1.4267,-0.0192,-0.0006,0.219,-0.0139,-0.0019,5,-0.4747
+zone,Brighton / Allston,am_sound_system,Sound system,731,21,710,0.0279,5.6346,0.0098,0.0435,0.9042,0.0082,0.0416,5,0.0975
+zone,Brighton / Allston,am_streaming,Streaming services,731,64,667,0.0,0.0045,-0.0056,0.0056,0.5022,-0.0023,0.0025,2,0.2011
+zone,Brighton / Allston,am_tv,TV,731,584,147,0.0416,5.8361,0.0246,0.0588,0.9524,0.0318,0.0715,5,0.7212
+zone,Brighton / Allston,am_view,View,731,50,681,0.0013,0.2022,-0.0051,0.0082,0.5595,-0.0055,0.0063,3,0.1558
+zone,Brighton / Allston,am_washer_in_unit,In-unit washer,731,401,330,0.0017,0.2793,-0.0046,0.007,0.5909,0.0003,0.0033,5,-0.1559
+zone,Brighton / Allston,am_workspace,Dedicated workspace,731,576,155,0.003,0.4288,-0.0048,0.0113,0.6,-0.0006,0.0064,4,0.0445
+zone,Dorchester / Mattapan,am_any_ac,Air conditioning,678,563,115,0.0146,1.2779,0.004,0.0294,0.8696,0.0055,0.0202,5,0.3578
+zone,Dorchester / Mattapan,am_backyard,Backyard,678,247,431,-0.0019,-0.356,-0.0087,0.0051,0.4084,-0.0057,0.001,3,-0.0329
+zone,Dorchester / Mattapan,am_balcony_patio,Patio or balcony,678,295,383,0.0057,0.7896,-0.0004,0.0147,0.7363,0.0047,0.0104,5,0.1096
+zone,Dorchester / Mattapan,am_bathtub,Bathtub,678,327,351,-0.0096,-1.3891,-0.0212,0.002,0.2792,-0.0126,-0.0013,5,0.0092
+zone,Dorchester / Mattapan,am_bbq,BBQ grill,678,87,591,0.0069,0.9125,-0.001,0.0191,0.7174,-0.0036,0.024,4,0.5708
+zone,Dorchester / Mattapan,am_central_ac,Central air conditioning,678,85,593,0.0055,0.8083,-0.0026,0.0162,0.6931,-0.0088,0.01,4,0.1004
+zone,Dorchester / Mattapan,am_crib,Crib,678,153,525,0.0122,1.6624,0.0019,0.0208,0.779,0.0045,0.0157,5,0.1716
+zone,Dorchester / Mattapan,am_dishwasher,Dishwasher,678,341,337,0.0111,1.2371,-0.0008,0.024,0.727,0.0035,0.0243,5,0.2196
+zone,Dorchester / Mattapan,am_dryer,Dryer,678,593,85,0.0046,0.9555,-0.0163,0.0162,0.6235,-0.0012,0.0115,4,0.2028
+zone,Dorchester / Mattapan,am_elevator,Elevator,678,0,678,0.0457,5.1543,0.0029,0.1086,0.7994,0.0412,0.0701,5,
+zone,Dorchester / Mattapan,am_ev_charger,EV charger,678,19,659,0.0251,3.7746,0.0086,0.0376,0.8634,0.0,0.0357,4,0.7984
+zone,Dorchester / Mattapan,am_fireplace,Indoor fireplace,678,47,631,0.0309,6.6238,0.0115,0.0592,0.8843,0.0218,0.0385,5,0.2868
+zone,Dorchester / Mattapan,am_free_parking,Free parking,678,582,96,0.0015,0.2652,-0.0053,0.0069,0.5521,0.0005,0.0083,5,0.3698
+zone,Dorchester / Mattapan,am_game_console,Game console,678,1,677,0.0004,0.0572,-0.0019,0.0039,0.5244,0.0,0.002,3,
+zone,Dorchester / Mattapan,am_gym,Gym,678,22,656,0.0079,1.7134,0.0012,0.0241,0.7805,0.0048,0.0182,5,0.2272
+zone,Dorchester / Mattapan,am_hot_tub,Hot tub,678,15,663,0.0033,0.5885,0.0,0.0072,0.7647,0.0001,0.0044,5,-0.319
+zone,Dorchester / Mattapan,am_kitchen,Kitchen,678,582,96,0.0013,0.1638,-0.006,0.0065,0.5417,-0.0013,0.0052,4,-0.1697
+zone,Dorchester / Mattapan,am_long_term,Long-term stays allowed,678,342,336,-0.0052,-1.0017,-0.0154,0.0034,0.3333,-0.0111,0.0005,4,-0.0811
+zone,Dorchester / Mattapan,am_luggage,Luggage drop-off,678,248,430,-0.0103,-1.9743,-0.0197,-0.0021,0.2023,-0.0216,-0.0064,5,0.0021
+zone,Dorchester / Mattapan,am_paid_parking,Paid parking,678,73,605,0.0091,1.3561,-0.0005,0.0217,0.7273,0.0038,0.0187,5,0.0808
+zone,Dorchester / Mattapan,am_pets,Pets allowed,678,208,470,0.0086,1.1701,-0.0014,0.0213,0.7064,0.0013,0.0184,5,0.1994
+zone,Dorchester / Mattapan,am_pool,Pool,678,37,641,0.0113,2.2918,0.0028,0.0259,0.8268,0.0061,0.0213,5,0.0308
+zone,Dorchester / Mattapan,am_private_entry,Private entrance,678,241,437,0.0059,0.7503,-0.0016,0.0154,0.7048,0.0048,0.0121,5,0.0768
+zone,Dorchester / Mattapan,am_self_checkin,Self check-in,678,474,204,-0.0011,-0.0716,-0.0068,0.0052,0.4559,-0.0064,-0.0001,5,0.425
+zone,Dorchester / Mattapan,am_sound_system,Sound system,678,16,662,0.0233,3.3508,0.0102,0.0464,0.9335,0.0119,0.0436,5,0.507
+zone,Dorchester / Mattapan,am_streaming,Streaming services,678,68,610,0.0014,0.2277,-0.0041,0.0074,0.5705,-0.0022,0.0044,3,0.0481
+zone,Dorchester / Mattapan,am_tv,TV,678,564,114,0.0184,1.2031,0.005,0.0302,0.8684,0.0055,0.0337,5,0.578
+zone,Dorchester / Mattapan,am_view,View,678,33,645,0.0028,0.5936,-0.0014,0.0107,0.6496,-0.0008,0.0069,4,-0.0975
+zone,Dorchester / Mattapan,am_washer_in_unit,In-unit washer,678,377,301,-0.0001,-0.0379,-0.007,0.0059,0.485,-0.0002,0.0031,2,0.1304
+zone,Dorchester / Mattapan,am_workspace,Dedicated workspace,678,440,238,0.0265,4.999,0.0163,0.0362,0.9244,0.0242,0.0357,5,0.1103
+zone,Dorchester / South Boston,am_any_ac,Air conditioning,776,642,134,0.0042,0.5402,-0.001,0.0116,0.7015,0.0026,0.0079,5,0.0938
+zone,Dorchester / South Boston,am_backyard,Backyard,776,212,564,-0.0001,-0.021,-0.0059,0.0061,0.4894,-0.0046,0.0033,1,0.1348
+zone,Dorchester / South Boston,am_balcony_patio,Patio or balcony,776,327,449,0.0116,1.8921,0.0029,0.0217,0.8441,0.0064,0.0172,5,0.1475
+zone,Dorchester / South Boston,am_bathtub,Bathtub,776,390,386,-0.0036,-0.4507,-0.0105,0.0058,0.3964,-0.0041,0.0022,4,0.0127
+zone,Dorchester / South Boston,am_bbq,BBQ grill,776,118,658,0.009,1.7507,0.001,0.022,0.7766,-0.0023,0.0255,4,0.2741
+zone,Dorchester / South Boston,am_central_ac,Central air conditioning,776,110,666,0.0055,0.9742,-0.0004,0.0134,0.7372,-0.0042,0.0098,4,0.1271
+zone,Dorchester / South Boston,am_crib,Crib,776,222,554,0.0075,1.2009,-0.0,0.0177,0.7491,0.0064,0.015,5,0.147
+zone,Dorchester / South Boston,am_dishwasher,Dishwasher,776,441,335,0.0164,2.5718,0.0038,0.0386,0.8209,0.005,0.0351,5,0.0479
+zone,Dorchester / South Boston,am_dryer,Dryer,776,730,46,-0.0015,-0.3695,-0.0205,0.0259,0.4783,-0.0105,0.009,2,-0.0068
+zone,Dorchester / South Boston,am_elevator,Elevator,776,5,771,0.0492,6.2315,0.0034,0.0961,0.821,0.0376,0.0567,5,-0.1466
+zone,Dorchester / South Boston,am_ev_charger,EV charger,776,14,762,0.0121,2.2139,0.0026,0.0227,0.8215,0.0,0.0206,4,0.0949
+zone,Dorchester / South Boston,am_fireplace,Indoor fireplace,776,97,679,0.028,5.5953,0.0137,0.05,0.944,0.0214,0.0381,5,0.143
+zone,Dorchester / South Boston,am_free_parking,Free parking,776,527,249,0.0001,0.0204,-0.0063,0.0062,0.502,-0.0014,0.0037,1,-0.1087
+zone,Dorchester / South Boston,am_game_console,Game console,776,5,771,0.0006,0.0589,-0.0014,0.0033,0.5409,-0.0005,0.002,2,0.3886
+zone,Dorchester / South Boston,am_gym,Gym,776,16,760,0.0095,1.4553,0.0007,0.0199,0.7684,0.0043,0.0203,5,-0.0975
+zone,Dorchester / South Boston,am_hot_tub,Hot tub,776,15,761,0.0052,1.0436,0.0012,0.0093,0.7911,0.0031,0.0098,5,0.0001
+zone,Dorchester / South Boston,am_kitchen,Kitchen,776,692,84,0.0045,0.7053,-0.0024,0.0101,0.7024,0.0028,0.0059,5,-0.1159
+zone,Dorchester / South Boston,am_long_term,Long-term stays allowed,776,431,345,-0.0049,-1.1205,-0.0155,0.0009,0.2783,-0.0123,-0.0005,5,-0.1997
+zone,Dorchester / South Boston,am_luggage,Luggage drop-off,776,326,450,-0.0119,-2.462,-0.0227,-0.0043,0.1689,-0.0223,-0.006,5,0.0327
+zone,Dorchester / South Boston,am_paid_parking,Paid parking,776,139,637,0.0103,1.895,-0.0015,0.0268,0.7253,0.0049,0.0197,5,0.2386
+zone,Dorchester / South Boston,am_pets,Pets allowed,776,228,548,0.0046,0.999,-0.0024,0.0188,0.6642,0.0019,0.0108,5,-0.1376
+zone,Dorchester / South Boston,am_pool,Pool,776,10,766,0.0179,3.3737,0.0062,0.0329,0.8773,0.0088,0.0237,5,0.2821
+zone,Dorchester / South Boston,am_private_entry,Private entrance,776,265,511,0.0036,0.5378,-0.0032,0.0106,0.638,0.0038,0.0064,5,0.1472
+zone,Dorchester / South Boston,am_self_checkin,Self check-in,776,568,208,0.0001,0.0091,-0.0063,0.0055,0.5,-0.0007,0.0023,3,0.2347
+zone,Dorchester / South Boston,am_sound_system,Sound system,776,40,736,0.0205,3.3739,0.005,0.0404,0.8424,0.007,0.0301,5,0.2506
+zone,Dorchester / South Boston,am_streaming,Streaming services,776,129,647,-0.0022,-0.4019,-0.0078,0.0028,0.357,-0.0063,0.0014,4,0.2181
+zone,Dorchester / South Boston,am_tv,TV,776,661,115,0.0224,1.8529,0.014,0.0386,0.9304,0.0159,0.0464,5,0.2472
+zone,Dorchester / South Boston,am_view,View,776,58,718,0.0036,0.6041,-0.0017,0.0114,0.6504,-0.002,0.0082,4,0.1104
+zone,Dorchester / South Boston,am_washer_in_unit,In-unit washer,776,501,275,-0.0009,-0.1202,-0.0054,0.0049,0.4655,-0.0009,0.0045,1,-0.0223
+zone,Dorchester / South Boston,am_workspace,Dedicated workspace,776,576,200,0.0257,5.6056,0.0146,0.0432,0.955,0.0189,0.0373,5,0.1457
+zone,Downtown / Beacon Hill,am_any_ac,Air conditioning,1690,1412,278,0.0028,0.7425,-0.003,0.0088,0.6331,0.0018,0.0073,5,0.4945
+zone,Downtown / Beacon Hill,am_backyard,Backyard,1690,73,1617,0.0016,0.4832,-0.0032,0.0085,0.5875,-0.0016,0.008,4,0.0037
+zone,Downtown / Beacon Hill,am_balcony_patio,Patio or balcony,1690,145,1545,0.0047,1.2353,-0.0016,0.0133,0.6874,0.0015,0.0087,5,0.1745
+zone,Downtown / Beacon Hill,am_bathtub,Bathtub,1690,479,1211,0.0025,0.5171,-0.0059,0.0116,0.5756,-0.0037,0.0028,3,0.3101
+zone,Downtown / Beacon Hill,am_bbq,BBQ grill,1690,101,1589,0.0069,1.6721,-0.0001,0.0149,0.7476,-0.0015,0.0141,4,0.5081
+zone,Downtown / Beacon Hill,am_central_ac,Central air conditioning,1690,229,1461,0.0157,4.3635,0.006,0.0267,0.8871,0.0058,0.0204,5,0.3734
+zone,Downtown / Beacon Hill,am_crib,Crib,1690,379,1311,0.0087,2.1563,0.0005,0.0181,0.7635,0.0051,0.0115,5,0.2469
+zone,Downtown / Beacon Hill,am_dishwasher,Dishwasher,1690,872,818,0.0312,8.148,0.0152,0.0523,0.9059,0.0163,0.0381,5,0.4085
+zone,Downtown / Beacon Hill,am_dryer,Dryer,1690,1639,51,0.0108,1.8978,-0.0076,0.0247,0.6471,-0.0193,0.0056,2,-0.1549
+zone,Downtown / Beacon Hill,am_elevator,Elevator,1690,543,1147,0.0226,6.9508,0.0073,0.0721,0.8675,0.0164,0.0294,5,0.4269
+zone,Downtown / Beacon Hill,am_ev_charger,EV charger,1690,37,1653,0.0097,2.6691,0.0023,0.0168,0.8221,0.0,0.0125,4,0.1593
+zone,Downtown / Beacon Hill,am_fireplace,Indoor fireplace,1690,95,1595,0.0261,8.6329,0.0099,0.0529,0.8903,0.0142,0.0411,5,0.6059
+zone,Downtown / Beacon Hill,am_free_parking,Free parking,1690,104,1586,0.0008,0.2168,-0.0022,0.0052,0.6009,-0.0046,0.0019,3,0.3334
+zone,Downtown / Beacon Hill,am_game_console,Game console,1690,13,1677,0.0008,0.2177,-0.0007,0.0043,0.573,-0.0012,0.002,2,0.6838
+zone,Downtown / Beacon Hill,am_gym,Gym,1690,325,1365,0.019,4.9732,0.0063,0.0463,0.8857,0.0074,0.051,5,0.5471
+zone,Downtown / Beacon Hill,am_hot_tub,Hot tub,1690,11,1679,0.0063,1.9371,0.0031,0.0102,0.8892,0.0026,0.0095,5,1.0974
+zone,Downtown / Beacon Hill,am_kitchen,Kitchen,1690,1406,284,-0.0028,-1.0433,-0.0164,0.0061,0.3908,-0.0232,0.0023,4,-0.6371
+zone,Downtown / Beacon Hill,am_long_term,Long-term stays allowed,1690,895,795,-0.0004,-0.0871,-0.0077,0.0067,0.483,-0.0038,-0.0006,5,0.2194
+zone,Downtown / Beacon Hill,am_luggage,Luggage drop-off,1690,329,1361,-0.0047,-1.2213,-0.0154,0.0038,0.349,-0.0106,-0.0029,5,0.4188
+zone,Downtown / Beacon Hill,am_paid_parking,Paid parking,1690,796,894,0.0305,7.826,0.012,0.0629,0.8803,0.024,0.0414,5,0.4056
+zone,Downtown / Beacon Hill,am_pets,Pets allowed,1690,657,1033,0.011,2.72,-0.0,0.0356,0.7483,0.0065,0.0161,5,0.2679
+zone,Downtown / Beacon Hill,am_pool,Pool,1690,177,1513,0.0183,5.0074,0.0049,0.0426,0.8572,0.01,0.0347,5,0.4046
+zone,Downtown / Beacon Hill,am_private_entry,Private entrance,1690,427,1263,0.0129,3.938,0.0055,0.0225,0.9129,0.0066,0.0208,5,-0.0619
+zone,Downtown / Beacon Hill,am_self_checkin,Self check-in,1690,1132,558,0.004,0.8372,-0.0012,0.0107,0.6953,0.0031,0.0085,5,0.3843
+zone,Downtown / Beacon Hill,am_sound_system,Sound system,1690,26,1664,0.0215,6.1709,0.0102,0.0367,0.8966,0.0048,0.0283,5,0.4752
+zone,Downtown / Beacon Hill,am_streaming,Streaming services,1690,211,1479,-0.0004,-0.0886,-0.0047,0.0048,0.4753,-0.0046,0.0026,4,0.2169
+zone,Downtown / Beacon Hill,am_tv,TV,1690,1564,126,0.0351,3.4029,0.0253,0.0448,0.9683,0.0093,0.038,5,2.5421
+zone,Downtown / Beacon Hill,am_view,View,1690,91,1599,0.0072,2.155,0.0,0.0188,0.7467,-0.0074,0.01,4,0.391
+zone,Downtown / Beacon Hill,am_washer_in_unit,In-unit washer,1690,766,924,0.0072,1.8788,0.0017,0.0147,0.829,0.0039,0.0103,5,0.2817
+zone,Downtown / Beacon Hill,am_workspace,Dedicated workspace,1690,1303,387,0.0149,3.8581,0.001,0.0339,0.7597,0.0073,0.0236,5,0.1346
+zone,East Boston / Charlestown,am_any_ac,Air conditioning,400,352,48,0.0053,1.048,0.0006,0.0108,0.7917,0.0007,0.0069,5,0.0849
+zone,East Boston / Charlestown,am_backyard,Backyard,400,96,304,-0.0009,-0.1289,-0.0051,0.0048,0.4539,-0.0026,0.0028,4,-0.0245
+zone,East Boston / Charlestown,am_balcony_patio,Patio or balcony,400,123,277,0.0076,1.5969,0.0003,0.0174,0.7581,0.0016,0.0165,5,0.1794
+zone,East Boston / Charlestown,am_bathtub,Bathtub,400,143,257,-0.0052,-0.9556,-0.0143,0.0005,0.2685,-0.0131,-0.0022,5,-0.0595
+zone,East Boston / Charlestown,am_bbq,BBQ grill,400,45,355,0.0071,1.621,-0.0006,0.018,0.7127,-0.0025,0.0172,4,0.1616
+zone,East Boston / Charlestown,am_central_ac,Central air conditioning,400,66,334,0.0066,1.4162,-0.0022,0.0151,0.6886,-0.0065,0.0095,4,0.1109
+zone,East Boston / Charlestown,am_crib,Crib,400,90,310,0.0112,2.2171,0.0015,0.0197,0.7774,0.0039,0.0198,5,0.1683
+zone,East Boston / Charlestown,am_dishwasher,Dishwasher,400,247,153,0.0264,4.7433,0.0114,0.0431,0.8824,0.013,0.0441,5,0.2148
+zone,East Boston / Charlestown,am_dryer,Dryer,400,373,27,0.0011,0.1593,-0.0244,0.01,0.5185,-0.0249,0.006,2,0.1829
+zone,East Boston / Charlestown,am_elevator,Elevator,400,35,365,0.0267,6.5363,0.002,0.0999,0.811,0.0128,0.0344,5,0.1235
+zone,East Boston / Charlestown,am_ev_charger,EV charger,400,3,397,0.0103,2.2721,0.0024,0.0202,0.8035,0.0,0.0166,4,
+zone,East Boston / Charlestown,am_fireplace,Indoor fireplace,400,33,367,0.0303,7.3012,0.0158,0.0481,0.9319,0.0244,0.0371,5,0.1778
+zone,East Boston / Charlestown,am_free_parking,Free parking,400,197,203,0.0003,0.0601,-0.0034,0.0052,0.5222,-0.0018,0.0031,3,-0.0361
+zone,East Boston / Charlestown,am_game_console,Game console,400,4,396,0.001,0.1832,-0.0013,0.0048,0.5732,0.0,0.002,4,0.2424
+zone,East Boston / Charlestown,am_gym,Gym,400,20,380,0.0089,1.9831,0.0007,0.026,0.7579,0.0013,0.0184,5,0.3118
+zone,East Boston / Charlestown,am_hot_tub,Hot tub,400,6,394,0.0058,1.4849,0.0023,0.0095,0.8401,0.0031,0.0105,5,
+zone,East Boston / Charlestown,am_kitchen,Kitchen,400,359,41,-0.0002,-0.0437,-0.0033,0.0025,0.4634,-0.0002,0.0045,1,0.1502
+zone,East Boston / Charlestown,am_long_term,Long-term stays allowed,400,163,237,-0.0048,-0.9042,-0.0117,0.0005,0.2743,-0.0093,-0.0008,5,0.21
+zone,East Boston / Charlestown,am_luggage,Luggage drop-off,400,98,302,-0.0101,-2.4467,-0.0203,-0.0023,0.1788,-0.0155,-0.0039,5,0.0869
+zone,East Boston / Charlestown,am_paid_parking,Paid parking,400,77,323,0.0142,3.114,0.0006,0.0397,0.7616,0.0077,0.0287,5,0.2816
+zone,East Boston / Charlestown,am_pets,Pets allowed,400,110,290,0.0043,0.8022,-0.0023,0.0117,0.6483,0.0014,0.0076,5,0.0082
+zone,East Boston / Charlestown,am_pool,Pool,400,20,380,0.0099,2.6691,0.0015,0.0258,0.8079,0.0052,0.0222,5,0.2694
+zone,East Boston / Charlestown,am_private_entry,Private entrance,400,128,272,0.0053,1.0893,-0.0019,0.0141,0.6801,0.0026,0.0095,5,0.0194
+zone,East Boston / Charlestown,am_self_checkin,Self check-in,400,321,79,0.0032,1.0984,-0.0024,0.0085,0.6962,-0.0005,0.0049,4,0.0687
+zone,East Boston / Charlestown,am_sound_system,Sound system,400,28,372,0.0165,3.1447,0.005,0.0304,0.8683,0.0084,0.0229,5,0.1784
+zone,East Boston / Charlestown,am_streaming,Streaming services,400,41,359,-0.0001,-0.0236,-0.0048,0.0059,0.4986,-0.0033,0.0044,3,0.1216
+zone,East Boston / Charlestown,am_tv,TV,400,358,42,0.0235,3.3218,0.0165,0.0385,0.9524,0.0084,0.0326,5,0.124
+zone,East Boston / Charlestown,am_view,View,400,46,354,0.0057,1.251,0.0009,0.0133,0.7712,-0.0001,0.0084,4,0.5112
+zone,East Boston / Charlestown,am_washer_in_unit,In-unit washer,400,229,171,0.0062,1.2668,0.0012,0.0103,0.8304,0.0023,0.0094,5,0.1736
+zone,East Boston / Charlestown,am_workspace,Dedicated workspace,400,241,159,0.0243,5.9914,0.0154,0.0368,0.9811,0.0178,0.0348,5,0.0767
+zone,Roslindale / West Roxbury,am_any_ac,Air conditioning,490,378,112,0.0119,2.0428,0.0052,0.0229,0.9018,0.0107,0.0204,5,0.1578
+zone,Roslindale / West Roxbury,am_backyard,Backyard,490,228,262,-0.0008,-0.113,-0.0072,0.0048,0.4542,-0.0059,0.0031,3,0.1261
+zone,Roslindale / West Roxbury,am_balcony_patio,Patio or balcony,490,205,285,0.0055,0.8107,-0.0004,0.0142,0.7333,0.0008,0.0115,5,0.1386
+zone,Roslindale / West Roxbury,am_bathtub,Bathtub,490,240,250,-0.001,-0.102,-0.0098,0.0072,0.468,-0.011,0.0043,3,0.2686
+zone,Roslindale / West Roxbury,am_bbq,BBQ grill,490,117,373,0.0048,0.6886,-0.0025,0.0119,0.6542,-0.0045,0.0154,4,0.1954
+zone,Roslindale / West Roxbury,am_central_ac,Central air conditioning,490,59,431,0.0041,0.5288,-0.0034,0.0139,0.6334,-0.0087,0.0119,4,0.1559
+zone,Roslindale / West Roxbury,am_crib,Crib,490,95,395,0.0088,1.6579,0.001,0.0214,0.7797,0.0032,0.0184,5,0.1449
+zone,Roslindale / West Roxbury,am_dishwasher,Dishwasher,490,267,223,0.0148,1.9287,0.0022,0.0287,0.7803,0.0078,0.0281,5,-0.0051
+zone,Roslindale / West Roxbury,am_dryer,Dryer,490,441,49,0.0106,2.6705,-0.0151,0.0301,0.6531,-0.0144,0.017,4,0.0047
+zone,Roslindale / West Roxbury,am_elevator,Elevator,490,0,490,0.0403,5.4439,0.0034,0.113,0.8224,0.0311,0.0589,5,
+zone,Roslindale / West Roxbury,am_ev_charger,EV charger,490,25,465,0.023,3.8503,0.0085,0.0344,0.8925,0.0,0.0358,4,0.3712
+zone,Roslindale / West Roxbury,am_fireplace,Indoor fireplace,490,84,406,0.037,6.4174,0.0103,0.0571,0.8966,0.0182,0.0392,5,0.0908
+zone,Roslindale / West Roxbury,am_free_parking,Free parking,490,461,29,0.0029,0.6059,0.0001,0.0109,0.7586,0.0011,0.007,5,-0.1343
+zone,Roslindale / West Roxbury,am_game_console,Game console,490,12,478,0.0,0.0,-0.0018,0.0044,0.4895,-0.0004,0.001,1,-0.269
+zone,Roslindale / West Roxbury,am_gym,Gym,490,14,476,0.0074,1.512,0.0003,0.0206,0.7668,0.004,0.0204,5,0.7369
+zone,Roslindale / West Roxbury,am_hot_tub,Hot tub,490,14,476,0.0031,0.6007,0.0002,0.0069,0.7689,0.0007,0.0049,5,0.645
+zone,Roslindale / West Roxbury,am_kitchen,Kitchen,490,422,68,0.0028,0.5484,-0.0071,0.0069,0.5882,-0.0044,0.0061,4,-0.2581
+zone,Roslindale / West Roxbury,am_long_term,Long-term stays allowed,490,282,208,-0.0095,-1.4961,-0.0174,-0.0009,0.2212,-0.0119,0.0006,4,0.1118
+zone,Roslindale / West Roxbury,am_luggage,Luggage drop-off,490,186,304,-0.0048,-0.8071,-0.0131,0.0033,0.352,-0.0075,-0.0012,5,0.3221
+zone,Roslindale / West Roxbury,am_paid_parking,Paid parking,490,40,450,0.017,2.7296,0.0014,0.0338,0.7689,0.0036,0.0253,5,-0.1817
+zone,Roslindale / West Roxbury,am_pets,Pets allowed,490,161,329,0.0048,0.8794,-0.0011,0.0163,0.6991,0.0009,0.0104,5,-0.0972
+zone,Roslindale / West Roxbury,am_pool,Pool,490,6,484,0.0161,2.9866,0.0056,0.0292,0.8946,0.0081,0.0237,5,-0.0336
+zone,Roslindale / West Roxbury,am_private_entry,Private entrance,490,220,270,0.012,1.7703,0.0055,0.0219,0.8593,0.0062,0.0212,5,0.1401
+zone,Roslindale / West Roxbury,am_self_checkin,Self check-in,490,293,197,-0.0035,-0.4629,-0.0106,0.0037,0.3553,-0.0105,0.0011,4,0.0488
+zone,Roslindale / West Roxbury,am_sound_system,Sound system,490,25,465,0.027,4.8628,0.0112,0.0427,0.914,0.013,0.0354,5,0.2901
+zone,Roslindale / West Roxbury,am_streaming,Streaming services,490,76,414,0.0026,0.3995,-0.0016,0.0077,0.6643,-0.0021,0.0069,4,0.0976
+zone,Roslindale / West Roxbury,am_tv,TV,490,427,63,0.0279,4.1313,0.0199,0.0404,0.9841,0.0272,0.0442,5,0.2122
+zone,Roslindale / West Roxbury,am_view,View,490,15,475,0.002,0.3198,-0.0021,0.0086,0.6021,-0.0001,0.0054,4,0.0827
+zone,Roslindale / West Roxbury,am_washer_in_unit,In-unit washer,490,305,185,0.0037,0.527,-0.0019,0.0101,0.6649,-0.001,0.0056,4,-0.1914
+zone,Roslindale / West Roxbury,am_workspace,Dedicated workspace,490,315,175,0.0115,1.4744,0.0022,0.023,0.8057,0.007,0.0212,5,0.1956
+zone,Roxbury / Jamaica Plain,am_any_ac,Air conditioning,764,575,189,0.004,0.7078,-0.0019,0.0121,0.6825,0.0022,0.0095,5,-0.0569
+zone,Roxbury / Jamaica Plain,am_backyard,Backyard,764,203,561,0.0004,0.0868,-0.0054,0.006,0.5276,-0.0028,0.0041,3,0.1547
+zone,Roxbury / Jamaica Plain,am_balcony_patio,Patio or balcony,764,233,531,0.0096,1.635,0.0033,0.0165,0.8531,0.0079,0.0172,5,0.2111
+zone,Roxbury / Jamaica Plain,am_bathtub,Bathtub,764,358,406,-0.0061,-1.0557,-0.0126,0.0006,0.2709,-0.0106,-0.0029,5,-0.0211
+zone,Roxbury / Jamaica Plain,am_bbq,BBQ grill,764,82,682,0.0078,1.4146,0.0001,0.0207,0.7551,-0.0021,0.0204,4,0.2122
+zone,Roxbury / Jamaica Plain,am_central_ac,Central air conditioning,764,67,697,0.0098,1.6015,0.0026,0.0176,0.8092,-0.001,0.0177,4,0.0281
+zone,Roxbury / Jamaica Plain,am_crib,Crib,764,137,627,0.0051,0.8555,-0.0022,0.014,0.6683,0.0019,0.0116,5,0.0709
+zone,Roxbury / Jamaica Plain,am_dishwasher,Dishwasher,764,357,407,0.0304,5.7257,0.0146,0.0475,0.8993,0.0134,0.0435,5,0.1743
+zone,Roxbury / Jamaica Plain,am_dryer,Dryer,764,680,84,0.0161,2.3336,0.0039,0.0276,0.7976,0.0151,0.0315,5,0.3234
+zone,Roxbury / Jamaica Plain,am_elevator,Elevator,764,14,750,0.0334,4.9378,0.0041,0.0837,0.8373,0.0091,0.0432,5,0.2233
+zone,Roxbury / Jamaica Plain,am_ev_charger,EV charger,764,6,758,0.0136,2.5793,0.0044,0.0232,0.8681,0.0,0.0208,5,0.3892
+zone,Roxbury / Jamaica Plain,am_fireplace,Indoor fireplace,764,83,681,0.0298,6.9227,0.0117,0.054,0.906,0.0233,0.0471,5,0.4471
+zone,Roxbury / Jamaica Plain,am_free_parking,Free parking,764,530,234,-0.0012,-0.2943,-0.0068,0.0027,0.3889,-0.0025,-0.0005,5,0.2056
+zone,Roxbury / Jamaica Plain,am_game_console,Game console,764,11,753,0.0004,0.0464,-0.0013,0.0033,0.5392,-0.0009,0.0024,2,-0.1568
+zone,Roxbury / Jamaica Plain,am_gym,Gym,764,51,713,0.0083,1.4395,-0.0002,0.0239,0.7377,0.0012,0.0252,5,0.2405
+zone,Roxbury / Jamaica Plain,am_hot_tub,Hot tub,764,9,755,0.0029,0.5276,-0.0002,0.0076,0.7152,0.0013,0.0092,5,-0.2693
+zone,Roxbury / Jamaica Plain,am_kitchen,Kitchen,764,633,131,0.0059,1.2467,-0.0001,0.0146,0.7481,0.0021,0.0066,5,-0.0589
+zone,Roxbury / Jamaica Plain,am_long_term,Long-term stays allowed,764,379,385,-0.0051,-0.9424,-0.0147,0.0029,0.3195,-0.0134,0.0014,4,-0.0324
+zone,Roxbury / Jamaica Plain,am_luggage,Luggage drop-off,764,289,475,-0.0034,-0.4639,-0.0115,0.004,0.3663,-0.0085,-0.0001,5,0.2574
+zone,Roxbury / Jamaica Plain,am_paid_parking,Paid parking,764,119,645,0.013,2.2336,0.0013,0.0321,0.769,0.0035,0.0236,5,-0.0667
+zone,Roxbury / Jamaica Plain,am_pets,Pets allowed,764,117,647,0.0057,1.208,-0.0015,0.019,0.6986,0.0024,0.0111,5,0.1108
+zone,Roxbury / Jamaica Plain,am_pool,Pool,764,15,749,0.0198,3.5486,0.0077,0.0362,0.8905,0.0107,0.031,5,0.9547
+zone,Roxbury / Jamaica Plain,am_private_entry,Private entrance,764,231,533,0.0052,0.7872,-0.0007,0.0136,0.7223,0.004,0.0105,5,0.1116
+zone,Roxbury / Jamaica Plain,am_self_checkin,Self check-in,764,543,221,-0.0015,-0.1833,-0.0078,0.0042,0.4253,-0.0033,0.0009,3,0.1484
+zone,Roxbury / Jamaica Plain,am_sound_system,Sound system,764,34,730,0.0266,4.868,0.0121,0.0482,0.9,0.0061,0.0446,5,0.2342
+zone,Roxbury / Jamaica Plain,am_streaming,Streaming services,764,114,650,-0.0008,-0.1273,-0.0056,0.0043,0.4462,-0.0016,0.0016,3,0.1703
+zone,Roxbury / Jamaica Plain,am_tv,TV,764,602,162,0.0366,3.7801,0.0189,0.0601,0.9568,0.0258,0.0617,5,0.5405
+zone,Roxbury / Jamaica Plain,am_view,View,764,50,714,0.0035,0.6381,-0.0023,0.0106,0.6625,-0.004,0.0077,4,0.0677
+zone,Roxbury / Jamaica Plain,am_washer_in_unit,In-unit washer,764,447,317,0.0025,0.5341,-0.0011,0.0088,0.6688,0.0013,0.0093,5,0.0311
+zone,Roxbury / Jamaica Plain,am_workspace,Dedicated workspace,764,534,230,0.0136,2.3048,0.0029,0.0257,0.8261,0.0076,0.0229,5,0.0543
