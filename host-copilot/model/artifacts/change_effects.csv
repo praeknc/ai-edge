@@ -1,4 +1,4 @@
-level,area,amenity,label,n_area,n_with,n_without,lift_pct,lift_usd,lift_pct_q25,lift_pct_q75,share_positive,fold_min_pct,fold_max_pct,sign_agree,raw_gap_pct
+level,area,change,label,n_area,n_with,n_without,lift_pct,lift_usd,lift_pct_q25,lift_pct_q75,share_positive,fold_min_pct,fold_max_pct,sign_agree,raw_gap_pct
 boston,Boston,am_any_ac,Air conditioning,7039,5713,1326,0.0064,1.2402,0.0002,0.0157,0.7549,0.0037,0.0095,5,0.1305
 boston,Boston,am_backyard,Backyard,7039,1242,5797,0.0019,0.4206,-0.0037,0.009,0.5912,-0.0013,0.0063,4,-0.0819
 boston,Boston,am_balcony_patio,Patio or balcony,7039,1732,5307,0.0082,1.7786,0.001,0.0177,0.7841,0.0043,0.0132,5,0.0404
@@ -29,6 +29,14 @@ boston,Boston,am_tv,TV,7039,6231,808,0.0303,3.5503,0.0176,0.0478,0.9455,0.0183,0
 boston,Boston,am_view,View,7039,442,6597,0.0045,1.0487,-0.0009,0.0136,0.698,-0.0027,0.0083,4,0.2692
 boston,Boston,am_washer_in_unit,In-unit washer,7039,3791,3248,0.0046,0.9767,-0.0007,0.0117,0.7152,0.004,0.0055,5,0.0004
 boston,Boston,am_workspace,Dedicated workspace,7039,4917,2122,0.0132,2.6224,0.0018,0.0282,0.7837,0.0094,0.0206,5,0.1298
+boston,Boston,lv_licensed,Registered (licence number),7039,4619,2420,0.059,9.8974,0.0291,0.0955,0.9207,0.0462,0.0669,5,0.4656
+boston,Boston,lv_min_nights_1,Minimum stay 1 night,7039,3589,1166,0.0462,16.1672,0.0258,0.0784,0.9434,0.0429,0.0575,5,0.573
+boston,Boston,lv_min_nights_2,Minimum stay 2 nights,7039,753,413,0.0226,8.4377,0.0068,0.2277,0.8741,0.0165,0.0384,5,0.1162
+boston,Boston,lv_min_nights_5,Minimum stay 5 nights,7039,158,4342,-0.1623,-50.7678,-0.2299,-0.1097,0.0106,-0.1821,-0.1227,5,0.101
+boston,Boston,lv_monthly,Monthly stays only (30 nights),7039,2284,4755,-0.4328,-133.8474,-0.4918,-0.3592,0.0004,-0.4415,-0.4166,5,-0.5015
+boston,Boston,lv_nightly,Switch to nightly stays (2 nights),7039,4755,2284,0.8827,128.7565,0.6714,1.1235,0.9991,0.8418,0.9379,5,1.006
+boston,Boston,lv_superhost,Superhost status,7039,3009,4030,0.0227,5.3283,0.0096,0.0403,0.895,0.0166,0.0278,5,0.2446
+boston,Boston,lv_verified,Verified identity,7039,6848,191,-0.0029,-0.5066,-0.0048,-0.0004,0.0105,-0.0109,-0.001,5,-0.0769
 neighbourhood,Allston,am_any_ac,Air conditioning,271,230,41,0.0064,1.0585,0.003,0.0119,0.8537,0.0037,0.0124,5,0.2904
 neighbourhood,Allston,am_backyard,Backyard,271,52,219,0.0011,0.2732,-0.0029,0.0061,0.6027,-0.003,0.005,3,-0.3574
 neighbourhood,Allston,am_balcony_patio,Patio or balcony,271,66,205,0.0092,1.7946,0.0027,0.02,0.8439,0.004,0.0179,5,0.2461
@@ -59,6 +67,14 @@ neighbourhood,Allston,am_tv,TV,271,210,61,0.0338,4.5848,0.0213,0.047,0.9672,0.00
 neighbourhood,Allston,am_view,View,271,18,253,0.0003,0.072,-0.0063,0.0085,0.5217,-0.0068,0.0064,4,0.3309
 neighbourhood,Allston,am_washer_in_unit,In-unit washer,271,161,110,0.0013,0.156,-0.0046,0.0065,0.5545,-0.0009,0.0051,3,-0.4647
 neighbourhood,Allston,am_workspace,Dedicated workspace,271,212,59,-0.0011,-0.2096,-0.0084,0.0059,0.4576,-0.0027,0.0014,3,-0.3542
+neighbourhood,Allston,lv_licensed,Registered (licence number),271,176,95,0.054,5.1849,-0.0129,0.0884,0.6316,0.0314,0.0616,5,0.1433
+neighbourhood,Allston,lv_min_nights_1,Minimum stay 1 night,271,152,15,0.0271,10.9844,0.01,0.0437,0.8667,0.008,0.0341,5,1.2204
+neighbourhood,Allston,lv_min_nights_2,Minimum stay 2 nights,271,12,3,0.0106,3.3669,0.01,0.016,1.0,-0.0062,0.0208,4,0.3813
+neighbourhood,Allston,lv_min_nights_5,Minimum stay 5 nights,271,1,164,-0.1301,-40.2669,-0.2332,-0.0702,0.0061,-0.1678,-0.0887,5,
+neighbourhood,Allston,lv_monthly,Monthly stays only (30 nights),271,104,167,-0.378,-118.8384,-0.4517,-0.3135,0.0,-0.4005,-0.3725,5,-0.6136
+neighbourhood,Allston,lv_nightly,Switch to nightly stays (2 nights),271,167,104,0.8097,95.6629,0.6316,1.0241,1.0,0.7212,0.8485,5,1.5877
+neighbourhood,Allston,lv_superhost,Superhost status,271,134,137,0.0115,2.1121,0.0025,0.0268,0.8029,0.0069,0.0184,5,0.5106
+neighbourhood,Allston,lv_verified,Verified identity,271,265,6,-0.001,-0.2198,-0.001,-0.001,0.0,-0.0161,-0.0008,5,
 neighbourhood,Back Bay,am_any_ac,Air conditioning,545,443,102,0.0075,2.4598,0.001,0.016,0.8333,0.0042,0.0208,5,-0.0048
 neighbourhood,Back Bay,am_backyard,Backyard,545,4,541,0.0062,1.8376,-0.0,0.0134,0.7486,0.0015,0.0115,5,
 neighbourhood,Back Bay,am_balcony_patio,Patio or balcony,545,49,496,0.0142,4.0394,0.0045,0.026,0.8468,0.0047,0.0246,5,0.3427
@@ -89,6 +105,14 @@ neighbourhood,Back Bay,am_tv,TV,545,534,11,0.0178,4.3789,0.011,0.0288,1.0,0.0186
 neighbourhood,Back Bay,am_view,View,545,20,525,0.0075,2.4017,0.0003,0.0176,0.7657,0.0006,0.0168,5,-0.0318
 neighbourhood,Back Bay,am_washer_in_unit,In-unit washer,545,175,370,0.0097,2.5988,0.0027,0.0171,0.827,0.0071,0.0139,5,0.1637
 neighbourhood,Back Bay,am_workspace,Dedicated workspace,545,325,220,0.0029,0.8019,-0.0037,0.0108,0.6091,0.002,0.0094,5,0.0112
+neighbourhood,Back Bay,lv_licensed,Registered (licence number),545,248,297,0.0381,9.254,0.0173,0.0619,0.9057,0.0184,0.0495,5,0.3418
+neighbourhood,Back Bay,lv_min_nights_1,Minimum stay 1 night,545,381,28,0.0199,8.3101,-0.0016,0.0403,0.7143,-0.0001,0.019,4,0.4082
+neighbourhood,Back Bay,lv_min_nights_2,Minimum stay 2 nights,545,11,17,0.007,5.4748,0.0025,0.0124,0.8824,-0.0049,0.0101,3,0.4075
+neighbourhood,Back Bay,lv_min_nights_5,Minimum stay 5 nights,545,5,392,-0.1564,-54.6262,-0.1947,-0.1235,0.0,-0.1848,-0.1175,5,1.4519
+neighbourhood,Back Bay,lv_monthly,Monthly stays only (30 nights),545,136,409,-0.4478,-157.009,-0.5156,-0.3858,0.0,-0.4707,-0.3976,5,-0.3845
+neighbourhood,Back Bay,lv_nightly,Switch to nightly stays (2 nights),545,409,136,0.896,167.4307,0.6789,1.1105,1.0,0.7317,1.0028,5,0.6247
+neighbourhood,Back Bay,lv_superhost,Superhost status,545,176,369,0.0356,9.8512,0.0226,0.0549,0.9892,0.0223,0.0601,5,0.4907
+neighbourhood,Back Bay,lv_verified,Verified identity,545,524,21,-0.0049,-1.135,-0.0067,-0.0049,0.0,-0.0052,-0.0005,5,0.0955
 neighbourhood,Bay Village,am_any_ac,Air conditioning,175,167,8,0.0064,1.8065,0.0041,0.0353,1.0,-0.0014,0.0128,4,-0.1856
 neighbourhood,Bay Village,am_backyard,Backyard,175,5,170,0.0042,1.4582,-0.0002,0.0125,0.7353,-0.0004,0.0155,4,0.2956
 neighbourhood,Bay Village,am_balcony_patio,Patio or balcony,175,12,163,0.0046,1.5002,0.0003,0.0098,0.7546,0.0006,0.0204,5,0.7568
@@ -119,6 +143,14 @@ neighbourhood,Bay Village,am_tv,TV,175,173,2,0.0212,7.1145,0.0192,0.0232,1.0,-0.
 neighbourhood,Bay Village,am_view,View,175,8,167,0.0024,0.7239,-0.001,0.0074,0.6587,-0.0053,0.0119,4,0.4187
 neighbourhood,Bay Village,am_washer_in_unit,In-unit washer,175,101,74,0.0048,2.9741,0.0014,0.0128,0.8243,0.0029,0.0088,5,-0.2364
 neighbourhood,Bay Village,am_workspace,Dedicated workspace,175,162,13,0.0226,6.3956,0.0099,0.0357,0.9231,-0.0058,0.0221,4,-0.1325
+neighbourhood,Bay Village,lv_licensed,Registered (licence number),175,107,68,0.0196,9.7728,0.0038,0.0344,0.7941,-0.0149,0.0196,3,0.4134
+neighbourhood,Bay Village,lv_min_nights_1,Minimum stay 1 night,175,150,14,0.0201,8.9246,0.0037,0.0395,0.8571,0.0017,0.042,5,-0.0414
+neighbourhood,Bay Village,lv_min_nights_2,Minimum stay 2 nights,175,10,4,0.0756,70.6145,-0.006,0.1572,0.5,-0.0073,0.0769,3,-0.4218
+neighbourhood,Bay Village,lv_min_nights_5,Minimum stay 5 nights,175,0,160,-0.1106,-39.5535,-0.2606,-0.0354,0.0562,-0.1836,-0.0589,5,
+neighbourhood,Bay Village,lv_monthly,Monthly stays only (30 nights),175,11,164,-0.4296,-129.8815,-0.4804,-0.3641,0.0,-0.4791,-0.4047,5,-0.2843
+neighbourhood,Bay Village,lv_nightly,Switch to nightly stays (2 nights),175,164,11,0.7557,385.8661,0.5552,1.7251,1.0,0.7289,0.7805,5,0.3973
+neighbourhood,Bay Village,lv_superhost,Superhost status,175,22,153,0.0405,11.5107,0.031,0.0556,1.0,0.0281,0.058,5,1.2939
+neighbourhood,Bay Village,lv_verified,Verified identity,175,158,17,-0.0131,-2.6546,-0.0142,-0.0105,0.0,-0.0132,-0.001,5,0.1345
 neighbourhood,Beacon Hill,am_any_ac,Air conditioning,386,275,111,-0.0011,-0.1468,-0.0084,0.0054,0.4595,-0.0024,0.0054,2,0.0888
 neighbourhood,Beacon Hill,am_backyard,Backyard,386,13,373,0.0016,0.3521,-0.0025,0.0071,0.5791,-0.0011,0.0076,4,0.2733
 neighbourhood,Beacon Hill,am_balcony_patio,Patio or balcony,386,46,340,0.006,0.8138,-0.0007,0.0133,0.7265,-0.0002,0.0094,4,1.5227
@@ -149,6 +181,13 @@ neighbourhood,Beacon Hill,am_tv,TV,386,315,71,0.0325,2.9167,0.0269,0.0409,0.9718
 neighbourhood,Beacon Hill,am_view,View,386,17,369,0.0141,2.4716,0.003,0.0249,0.813,-0.0068,0.0183,4,2.4844
 neighbourhood,Beacon Hill,am_washer_in_unit,In-unit washer,386,132,254,0.0109,2.0766,0.0039,0.0187,0.9094,0.0028,0.0213,5,0.9571
 neighbourhood,Beacon Hill,am_workspace,Dedicated workspace,386,282,104,0.0016,0.1862,-0.0055,0.0103,0.5577,-0.0008,0.007,3,-0.2485
+neighbourhood,Beacon Hill,lv_licensed,Registered (licence number),386,100,286,0.0769,11.6505,0.0545,0.0906,0.965,0.0752,0.1266,5,1.7968
+neighbourhood,Beacon Hill,lv_min_nights_1,Minimum stay 1 night,386,126,15,0.0256,14.8785,0.0136,0.0557,0.8667,0.0261,0.0482,5,2.2715
+neighbourhood,Beacon Hill,lv_min_nights_2,Minimum stay 2 nights,386,9,6,0.0042,1.9346,0.0003,0.0083,0.8333,-0.0002,0.0168,4,0.8207
+neighbourhood,Beacon Hill,lv_min_nights_5,Minimum stay 5 nights,386,2,135,-0.1773,-66.1751,-0.2092,-0.1387,0.0,-0.2325,-0.1269,5,
+neighbourhood,Beacon Hill,lv_monthly,Monthly stays only (30 nights),386,245,141,-0.5058,-186.502,-0.5385,-0.4707,0.0,-0.5332,-0.4969,5,-0.7073
+neighbourhood,Beacon Hill,lv_nightly,Switch to nightly stays (2 nights),386,141,245,1.0404,160.1291,0.8541,1.2504,1.0,1.0346,1.2338,5,2.416
+neighbourhood,Beacon Hill,lv_superhost,Superhost status,386,111,275,0.0416,6.3141,0.023,0.0616,0.9636,0.0272,0.0654,5,1.2353
 neighbourhood,Brighton,am_any_ac,Air conditioning,460,402,58,0.0103,1.6022,0.001,0.0242,0.7931,0.0062,0.0158,5,0.185
 neighbourhood,Brighton,am_backyard,Backyard,460,82,378,0.0009,0.2057,-0.0053,0.0078,0.5529,-0.0064,0.0033,2,-0.0431
 neighbourhood,Brighton,am_balcony_patio,Patio or balcony,460,175,285,0.0104,1.6118,0.0017,0.0207,0.8105,0.0037,0.0176,5,0.1239
@@ -179,6 +218,14 @@ neighbourhood,Brighton,am_tv,TV,460,374,86,0.0499,6.2107,0.0302,0.0707,0.9419,0.
 neighbourhood,Brighton,am_view,View,460,32,428,0.0017,0.3316,-0.0041,0.0081,0.5818,-0.0049,0.0061,3,0.1137
 neighbourhood,Brighton,am_washer_in_unit,In-unit washer,460,240,220,0.0021,0.3025,-0.0045,0.0076,0.6091,-0.0012,0.0032,4,-0.053
 neighbourhood,Brighton,am_workspace,Dedicated workspace,460,364,96,0.0046,0.644,-0.002,0.0135,0.6875,-0.0004,0.0089,4,0.0437
+neighbourhood,Brighton,lv_licensed,Registered (licence number),460,310,150,0.063,11.2461,0.0316,0.1109,0.9067,0.0317,0.0659,5,-0.2465
+neighbourhood,Brighton,lv_min_nights_1,Minimum stay 1 night,460,258,58,0.044,11.9302,0.0262,0.0591,0.931,0.0315,0.062,5,0.7747
+neighbourhood,Brighton,lv_min_nights_2,Minimum stay 2 nights,460,47,11,0.0077,3.2784,0.0005,0.2227,0.7273,-0.0012,0.0297,4,0.1092
+neighbourhood,Brighton,lv_min_nights_5,Minimum stay 5 nights,460,3,305,-0.1986,-40.7461,-0.3197,-0.0734,0.0557,-0.1937,-0.1249,5,
+neighbourhood,Brighton,lv_monthly,Monthly stays only (30 nights),460,144,316,-0.4161,-99.8396,-0.5024,-0.3116,0.0,-0.4185,-0.4087,5,-0.4878
+neighbourhood,Brighton,lv_nightly,Switch to nightly stays (2 nights),460,316,144,0.8974,95.6104,0.7321,1.1244,1.0,0.7681,0.9373,5,0.9525
+neighbourhood,Brighton,lv_superhost,Superhost status,460,220,240,0.0097,1.2323,-0.0007,0.0228,0.7417,0.0021,0.016,5,0.2267
+neighbourhood,Brighton,lv_verified,Verified identity,460,458,2,-0.0045,-0.263,-0.0045,-0.0045,0.0,-0.0096,-0.001,5,
 neighbourhood,Charlestown,am_any_ac,Air conditioning,124,103,21,0.0077,1.8111,0.0028,0.0178,0.9048,0.0017,0.0105,5,0.296
 neighbourhood,Charlestown,am_backyard,Backyard,124,22,102,-0.0005,-0.1864,-0.006,0.0024,0.3627,-0.0035,0.0022,3,-0.4195
 neighbourhood,Charlestown,am_balcony_patio,Patio or balcony,124,40,84,0.0062,1.3747,-0.0015,0.0145,0.7024,0.004,0.0149,5,0.1346
@@ -209,6 +256,13 @@ neighbourhood,Charlestown,am_tv,TV,124,114,10,0.0237,3.1525,0.0159,0.0601,1.0,0.
 neighbourhood,Charlestown,am_view,View,124,40,84,0.0065,1.7013,0.0,0.0156,0.7381,-0.0032,0.0091,4,0.8573
 neighbourhood,Charlestown,am_washer_in_unit,In-unit washer,124,74,50,0.0022,0.5825,-0.0038,0.0058,0.62,0.0012,0.0057,5,-0.3917
 neighbourhood,Charlestown,am_workspace,Dedicated workspace,124,74,50,0.0089,2.5576,-0.0018,0.021,0.64,0.0051,0.0279,5,-0.4833
+neighbourhood,Charlestown,lv_licensed,Registered (licence number),124,103,21,0.0863,10.8717,0.073,0.128,1.0,0.0709,0.1108,5,1.4238
+neighbourhood,Charlestown,lv_min_nights_1,Minimum stay 1 night,124,63,29,0.0456,21.6688,0.0343,0.0661,1.0,0.0341,0.0511,5,0.7659
+neighbourhood,Charlestown,lv_min_nights_2,Minimum stay 2 nights,124,16,13,0.0088,3.1826,0.0019,0.0607,0.7692,0.0035,0.0361,5,0.1626
+neighbourhood,Charlestown,lv_min_nights_5,Minimum stay 5 nights,124,5,79,-0.2196,-84.9114,-0.2503,-0.1743,0.0,-0.2584,-0.1742,5,-0.4612
+neighbourhood,Charlestown,lv_monthly,Monthly stays only (30 nights),124,32,92,-0.5204,-207.9092,-0.5605,-0.4692,0.0,-0.5612,-0.5236,5,-0.718
+neighbourhood,Charlestown,lv_nightly,Switch to nightly stays (2 nights),124,92,32,1.0838,123.7272,0.9881,1.2803,1.0,1.1253,1.4646,5,2.5462
+neighbourhood,Charlestown,lv_superhost,Superhost status,124,91,33,0.0197,7.1393,0.0054,0.0333,0.8182,0.0054,0.0234,5,0.4016
 neighbourhood,Chinatown,am_backyard,Backyard,69,0,69,0.0147,4.5097,0.0074,0.025,0.8261,0.0063,0.0237,5,
 neighbourhood,Chinatown,am_balcony_patio,Patio or balcony,69,4,65,0.008,2.2134,0.0032,0.0201,0.8462,0.0082,0.0227,5,
 neighbourhood,Chinatown,am_bathtub,Bathtub,69,18,51,0.0052,1.3564,0.0006,0.0153,0.8039,0.0064,0.0224,5,-0.0253
@@ -236,6 +290,14 @@ neighbourhood,Chinatown,am_streaming,Streaming services,69,4,65,-0.0011,-0.3679,
 neighbourhood,Chinatown,am_view,View,69,5,64,0.0159,3.9992,0.0068,0.0245,0.8594,-0.0024,0.0239,4,
 neighbourhood,Chinatown,am_washer_in_unit,In-unit washer,69,62,7,0.0025,0.4815,-0.0003,0.0084,0.7143,0.0025,0.0131,5,0.1995
 neighbourhood,Chinatown,am_workspace,Dedicated workspace,69,57,12,0.0166,3.7567,0.0117,0.0206,1.0,0.0125,0.0459,5,0.1978
+neighbourhood,Chinatown,lv_licensed,Registered (licence number),69,16,53,0.0129,3.5788,-0.0113,0.0289,0.6038,-0.0071,0.0172,4,0.0998
+neighbourhood,Chinatown,lv_min_nights_1,Minimum stay 1 night,69,2,6,0.0171,6.0656,0.0097,0.0285,0.8333,0.0201,0.0507,5,
+neighbourhood,Chinatown,lv_min_nights_2,Minimum stay 2 nights,69,2,4,0.0029,1.0323,0.0017,0.0039,1.0,0.0029,0.0244,5,
+neighbourhood,Chinatown,lv_min_nights_5,Minimum stay 5 nights,69,0,4,-0.0415,-28.9322,-0.1006,0.0198,0.5,-0.104,-0.0147,5,
+neighbourhood,Chinatown,lv_monthly,Monthly stays only (30 nights),69,61,8,-0.3225,-144.1606,-0.3353,-0.2525,0.0,-0.3704,-0.3225,5,-0.3612
+neighbourhood,Chinatown,lv_nightly,Switch to nightly stays (2 nights),69,8,61,0.4072,122.6063,0.2601,0.6848,1.0,0.3107,0.4049,5,0.5656
+neighbourhood,Chinatown,lv_superhost,Superhost status,69,17,52,0.0298,6.9962,0.0138,0.0426,0.9231,0.011,0.0418,5,0.1756
+neighbourhood,Chinatown,lv_verified,Verified identity,69,63,6,-0.0021,-0.3905,-0.0029,-0.0019,0.0,-0.0118,0.0,4,0.0252
 neighbourhood,Dorchester,am_any_ac,Air conditioning,993,803,190,0.0078,0.8707,0.0011,0.0201,0.7895,0.0032,0.013,5,0.1798
 neighbourhood,Dorchester,am_backyard,Backyard,993,336,657,-0.0003,-0.0407,-0.0072,0.0066,0.4795,-0.0051,0.0026,2,0.0927
 neighbourhood,Dorchester,am_balcony_patio,Patio or balcony,993,425,568,0.0066,0.8956,0.0003,0.0155,0.7641,0.0046,0.0122,5,0.1777
@@ -266,6 +328,14 @@ neighbourhood,Dorchester,am_tv,TV,993,802,191,0.0198,1.3006,0.0073,0.0283,0.8953
 neighbourhood,Dorchester,am_view,View,993,55,938,0.0036,0.5709,-0.0012,0.0115,0.6588,-0.0009,0.0078,4,0.1061
 neighbourhood,Dorchester,am_washer_in_unit,In-unit washer,993,612,381,-0.0006,-0.0699,-0.0059,0.0045,0.4646,-0.0014,0.0029,1,0.0954
 neighbourhood,Dorchester,am_workspace,Dedicated workspace,993,706,287,0.0262,4.8125,0.0165,0.0365,0.9408,0.021,0.0359,5,0.1382
+neighbourhood,Dorchester,lv_licensed,Registered (licence number),993,702,291,0.1157,9.9308,0.0785,0.1421,0.9828,0.0912,0.1151,5,0.7863
+neighbourhood,Dorchester,lv_min_nights_1,Minimum stay 1 night,993,397,205,0.0462,17.0601,0.03,0.068,0.9561,0.0441,0.057,5,0.488
+neighbourhood,Dorchester,lv_min_nights_2,Minimum stay 2 nights,993,155,50,0.0435,17.297,0.0201,0.4891,0.96,0.0301,0.1248,5,0.4139
+neighbourhood,Dorchester,lv_min_nights_5,Minimum stay 5 nights,993,28,552,-0.1843,-48.9918,-0.2517,-0.1302,0.0054,-0.2008,-0.128,5,-0.2505
+neighbourhood,Dorchester,lv_monthly,Monthly stays only (30 nights),993,391,602,-0.4092,-102.8944,-0.4669,-0.3273,0.0017,-0.4135,-0.3801,5,-0.4753
+neighbourhood,Dorchester,lv_nightly,Switch to nightly stays (2 nights),993,602,391,0.8606,80.5026,0.6994,1.0573,1.0,0.7265,0.9705,5,0.9058
+neighbourhood,Dorchester,lv_superhost,Superhost status,993,426,567,0.0171,2.3381,0.0064,0.03,0.866,0.0117,0.0219,5,0.2823
+neighbourhood,Dorchester,lv_verified,Verified identity,993,990,3,-0.0038,-2.5263,-0.0102,-0.0024,0.0,-0.0166,0.0,4,
 neighbourhood,Downtown,am_any_ac,Air conditioning,575,509,66,0.0035,1.1152,0.0,0.0067,0.7424,0.0015,0.0092,5,0.0878
 neighbourhood,Downtown,am_backyard,Backyard,575,0,575,0.0016,0.5065,-0.004,0.0083,0.5861,-0.0021,0.0087,4,
 neighbourhood,Downtown,am_balcony_patio,Patio or balcony,575,8,567,0.0019,0.8018,-0.003,0.0101,0.6067,-0.0018,0.0081,4,-0.1667
@@ -296,6 +366,14 @@ neighbourhood,Downtown,am_tv,TV,575,573,2,0.0061,1.3407,-0.0011,0.0134,0.5,0.006
 neighbourhood,Downtown,am_view,View,575,25,550,0.0062,2.2146,0.0002,0.0155,0.7564,-0.0092,0.0087,4,0.1857
 neighbourhood,Downtown,am_washer_in_unit,In-unit washer,575,264,311,0.0078,2.3567,0.0023,0.014,0.8392,0.0037,0.0094,5,0.2115
 neighbourhood,Downtown,am_workspace,Dedicated workspace,575,465,110,0.0301,8.7431,0.0106,0.0422,0.9182,0.007,0.0357,5,0.146
+neighbourhood,Downtown,lv_licensed,Registered (licence number),575,411,164,0.0334,9.6598,0.0219,0.0514,0.8841,0.0281,0.0389,5,0.0369
+neighbourhood,Downtown,lv_min_nights_1,Minimum stay 1 night,575,387,56,0.0115,7.8919,0.0005,0.0262,0.75,-0.0043,0.0164,3,-0.0899
+neighbourhood,Downtown,lv_min_nights_2,Minimum stay 2 nights,575,38,18,-0.003,-2.3702,-0.0065,-0.0005,0.1667,-0.0077,-0.0014,5,0.7353
+neighbourhood,Downtown,lv_min_nights_5,Minimum stay 5 nights,575,7,425,-0.1404,-49.9321,-0.1938,-0.0885,0.0141,-0.148,-0.0983,5,1.3734
+neighbourhood,Downtown,lv_monthly,Monthly stays only (30 nights),575,132,443,-0.3996,-160.66,-0.4583,-0.3261,0.0,-0.4016,-0.3537,5,-0.1775
+neighbourhood,Downtown,lv_nightly,Switch to nightly stays (2 nights),575,443,132,0.7905,210.4766,0.6078,0.9468,1.0,0.6604,0.8125,5,0.2158
+neighbourhood,Downtown,lv_superhost,Superhost status,575,165,410,0.0295,9.6645,0.0167,0.0485,0.961,0.0232,0.0513,5,0.0582
+neighbourhood,Downtown,lv_verified,Verified identity,575,536,39,-0.0011,-0.3565,-0.0043,-0.001,0.0,-0.0145,-0.001,5,-0.1422
 neighbourhood,East Boston,am_any_ac,Air conditioning,385,337,48,0.0053,1.048,0.0006,0.0108,0.7917,0.0007,0.0069,5,0.065
 neighbourhood,East Boston,am_backyard,Backyard,385,96,289,-0.001,-0.1187,-0.0053,0.0053,0.4567,-0.0028,0.0029,4,-0.0111
 neighbourhood,East Boston,am_balcony_patio,Patio or balcony,385,109,276,0.0076,1.5665,0.0003,0.0175,0.7572,0.0016,0.0163,5,0.0399
@@ -326,6 +404,14 @@ neighbourhood,East Boston,am_tv,TV,385,343,42,0.0235,3.3218,0.0165,0.0385,0.9524
 neighbourhood,East Boston,am_view,View,385,32,353,0.0058,1.2545,0.0008,0.0134,0.7705,-0.0001,0.0083,4,0.2871
 neighbourhood,East Boston,am_washer_in_unit,In-unit washer,385,221,164,0.0063,1.2523,0.0011,0.0103,0.8293,0.0019,0.0093,5,0.1776
 neighbourhood,East Boston,am_workspace,Dedicated workspace,385,237,148,0.0241,5.7648,0.0154,0.0369,0.9797,0.018,0.0345,5,0.092
+neighbourhood,East Boston,lv_licensed,Registered (licence number),385,316,69,0.1079,11.9335,0.0563,0.1352,1.0,0.0812,0.128,5,0.9917
+neighbourhood,East Boston,lv_min_nights_1,Minimum stay 1 night,385,234,63,0.0413,15.5142,0.0321,0.0565,0.9683,0.0337,0.07,5,0.3594
+neighbourhood,East Boston,lv_min_nights_2,Minimum stay 2 nights,385,54,9,0.2244,41.2896,0.0017,0.2853,1.0,0.0156,0.2244,5,0.1196
+neighbourhood,East Boston,lv_min_nights_5,Minimum stay 5 nights,385,5,288,-0.1986,-54.0427,-0.2786,-0.1351,0.0069,-0.2171,-0.1579,5,0.0391
+neighbourhood,East Boston,lv_monthly,Monthly stays only (30 nights),385,88,297,-0.4498,-121.5086,-0.5046,-0.3839,0.0,-0.467,-0.4325,5,-0.5164
+neighbourhood,East Boston,lv_nightly,Switch to nightly stays (2 nights),385,297,88,0.9618,119.7721,0.5575,1.2925,1.0,0.8924,1.1074,5,1.0678
+neighbourhood,East Boston,lv_superhost,Superhost status,385,216,169,0.0234,6.2457,0.0133,0.0367,0.9112,0.0176,0.0341,5,0.2672
+neighbourhood,East Boston,lv_verified,Verified identity,385,378,7,0.0,0.0,0.0,0.0,0.0,-0.0117,0.0,1,0.1569
 neighbourhood,Fenway,am_any_ac,Air conditioning,389,321,68,0.0049,1.4968,-0.0024,0.0136,0.6324,-0.0006,0.0124,4,0.1423
 neighbourhood,Fenway,am_backyard,Backyard,389,2,387,0.004,1.2251,-0.0005,0.0107,0.7054,0.0011,0.0091,5,
 neighbourhood,Fenway,am_balcony_patio,Patio or balcony,389,20,369,0.0103,3.2254,0.0039,0.0189,0.8835,0.0046,0.0207,5,0.5554
@@ -356,6 +442,14 @@ neighbourhood,Fenway,am_tv,TV,389,385,4,0.0274,3.8354,0.0147,0.0391,1.0,0.0294,0
 neighbourhood,Fenway,am_view,View,389,41,348,0.0055,1.8093,-0.0001,0.0134,0.7414,-0.0016,0.0116,4,0.2007
 neighbourhood,Fenway,am_washer_in_unit,In-unit washer,389,235,154,0.0049,1.5526,-0.0001,0.0097,0.7468,0.0053,0.007,5,0.0553
 neighbourhood,Fenway,am_workspace,Dedicated workspace,389,243,146,-0.0032,-0.8826,-0.0106,0.0052,0.3973,-0.0062,0.0149,1,0.0483
+neighbourhood,Fenway,lv_licensed,Registered (licence number),389,233,156,0.0297,6.6783,0.0141,0.0541,0.891,0.0218,0.0465,5,0.1457
+neighbourhood,Fenway,lv_min_nights_1,Minimum stay 1 night,389,259,20,0.0194,8.4698,0.0095,0.0458,0.95,0.0104,0.0239,5,0.1344
+neighbourhood,Fenway,lv_min_nights_2,Minimum stay 2 nights,389,14,6,0.0615,28.8821,0.02,0.125,0.8333,-0.0057,0.0786,4,0.2689
+neighbourhood,Fenway,lv_min_nights_5,Minimum stay 5 nights,389,4,273,-0.1206,-44.2396,-0.1603,-0.092,0.0037,-0.1495,-0.1067,5,0.9574
+neighbourhood,Fenway,lv_monthly,Monthly stays only (30 nights),389,110,279,-0.404,-140.9092,-0.4548,-0.3493,0.0,-0.3953,-0.3658,5,-0.1986
+neighbourhood,Fenway,lv_nightly,Switch to nightly stays (2 nights),389,279,110,0.6691,155.9258,0.4828,0.9421,1.0,0.5555,0.688,5,0.2477
+neighbourhood,Fenway,lv_superhost,Superhost status,389,152,237,0.024,8.0207,0.0133,0.0377,0.962,0.0151,0.0395,5,0.1308
+neighbourhood,Fenway,lv_verified,Verified identity,389,363,26,-0.0031,-0.8185,-0.0049,-0.0011,0.0,-0.01,-0.001,5,0.1109
 neighbourhood,Hyde Park,am_any_ac,Air conditioning,132,120,12,0.0122,2.6298,0.008,0.0156,1.0,0.0124,0.0424,5,0.4472
 neighbourhood,Hyde Park,am_backyard,Backyard,132,46,86,0.0001,0.0061,-0.0079,0.0077,0.5,-0.0031,0.0056,2,-0.1045
 neighbourhood,Hyde Park,am_balcony_patio,Patio or balcony,132,47,85,0.0044,0.8545,-0.0037,0.0154,0.6824,-0.0065,0.0105,4,0.0794
@@ -386,6 +480,14 @@ neighbourhood,Hyde Park,am_tv,TV,132,129,3,0.0278,7.8856,0.0227,0.0417,1.0,0.005
 neighbourhood,Hyde Park,am_view,View,132,0,132,0.0014,0.1596,-0.0032,0.0068,0.5758,-0.0001,0.0048,4,
 neighbourhood,Hyde Park,am_washer_in_unit,In-unit washer,132,83,49,0.0011,0.182,-0.0031,0.0081,0.5714,-0.0004,0.0061,4,-0.4059
 neighbourhood,Hyde Park,am_workspace,Dedicated workspace,132,82,50,0.0078,0.8871,-0.0015,0.0156,0.72,-0.0029,0.0155,4,0.0395
+neighbourhood,Hyde Park,lv_licensed,Registered (licence number),132,96,36,0.0744,9.4421,0.0464,0.1335,1.0,0.0721,0.1301,5,1.4323
+neighbourhood,Hyde Park,lv_min_nights_1,Minimum stay 1 night,132,37,27,0.0528,15.1168,0.0402,0.0671,1.0,0.0483,0.0908,5,1.089
+neighbourhood,Hyde Park,lv_min_nights_2,Minimum stay 2 nights,132,23,4,0.2359,34.8716,0.2067,0.2502,1.0,0.2227,0.4275,5,0.7505
+neighbourhood,Hyde Park,lv_min_nights_5,Minimum stay 5 nights,132,3,60,-0.2055,-57.7093,-0.2427,-0.1722,0.0,-0.233,-0.1538,5,0.1139
+neighbourhood,Hyde Park,lv_monthly,Monthly stays only (30 nights),132,68,64,-0.4562,-132.1072,-0.4885,-0.4107,0.0,-0.4758,-0.4484,5,-0.5273
+neighbourhood,Hyde Park,lv_nightly,Switch to nightly stays (2 nights),132,64,68,0.9247,120.79,0.7347,1.1278,1.0,0.8766,0.9487,5,1.1157
+neighbourhood,Hyde Park,lv_superhost,Superhost status,132,58,74,-0.0009,-0.1739,-0.013,0.0132,0.4595,-0.0161,0.0075,4,0.6314
+neighbourhood,Hyde Park,lv_verified,Verified identity,132,130,2,0.0,0.0,0.0,0.0,0.0,-0.0111,0.0,1,
 neighbourhood,Jamaica Plain,am_any_ac,Air conditioning,281,206,75,0.0068,1.1036,0.0009,0.0153,0.76,0.0022,0.0115,5,0.1948
 neighbourhood,Jamaica Plain,am_backyard,Backyard,281,115,166,-0.001,-0.1518,-0.0063,0.005,0.4699,-0.0049,0.0017,4,0.1482
 neighbourhood,Jamaica Plain,am_balcony_patio,Patio or balcony,281,145,136,0.0091,1.6124,0.0018,0.0176,0.7794,0.0044,0.0132,5,0.1063
@@ -416,6 +518,13 @@ neighbourhood,Jamaica Plain,am_tv,TV,281,228,53,0.0364,4.1099,0.0206,0.0545,0.96
 neighbourhood,Jamaica Plain,am_view,View,281,18,263,0.003,0.6148,-0.0003,0.0089,0.6958,-0.0023,0.0061,4,-0.2194
 neighbourhood,Jamaica Plain,am_washer_in_unit,In-unit washer,281,164,117,0.005,0.8716,0.0005,0.0108,0.7521,0.0011,0.0099,5,0.0586
 neighbourhood,Jamaica Plain,am_workspace,Dedicated workspace,281,196,85,0.0147,2.6528,0.0062,0.0272,0.8471,0.0071,0.0207,5,0.1063
+neighbourhood,Jamaica Plain,lv_licensed,Registered (licence number),281,242,39,0.1078,12.5039,0.0998,0.1475,1.0,0.1012,0.1644,5,0.875
+neighbourhood,Jamaica Plain,lv_min_nights_1,Minimum stay 1 night,281,69,133,0.0537,18.8099,0.0376,0.0946,0.9925,0.052,0.064,5,0.2649
+neighbourhood,Jamaica Plain,lv_min_nights_2,Minimum stay 2 nights,281,76,57,0.0309,9.4261,0.0138,0.2056,0.9123,0.0173,0.0464,5,-0.0011
+neighbourhood,Jamaica Plain,lv_min_nights_5,Minimum stay 5 nights,281,23,145,-0.1772,-47.4923,-0.2173,-0.1248,0.0,-0.1952,-0.1402,5,0.2859
+neighbourhood,Jamaica Plain,lv_monthly,Monthly stays only (30 nights),281,79,202,-0.4459,-124.458,-0.4806,-0.3893,0.0,-0.4529,-0.4242,5,-0.4331
+neighbourhood,Jamaica Plain,lv_nightly,Switch to nightly stays (2 nights),281,202,79,0.8806,93.3779,0.6472,1.1715,0.9747,0.8121,0.9222,5,0.7641
+neighbourhood,Jamaica Plain,lv_superhost,Superhost status,281,172,109,0.0114,1.8438,0.0042,0.019,0.8073,0.0047,0.0186,5,0.1846
 neighbourhood,Longwood Medical Area,am_any_ac,Air conditioning,43,37,6,0.0019,0.5259,-0.003,0.0027,0.6667,-0.0371,0.0019,1,-0.2821
 neighbourhood,Longwood Medical Area,am_backyard,Backyard,43,0,43,0.0032,1.5266,0.0023,0.0059,0.9302,-0.0022,0.0058,3,
 neighbourhood,Longwood Medical Area,am_balcony_patio,Patio or balcony,43,0,43,0.0099,2.9562,0.0079,0.0127,0.9535,0.0063,0.0343,5,
@@ -446,6 +555,14 @@ neighbourhood,Longwood Medical Area,am_tv,TV,43,39,4,0.0721,18.0783,0.0606,0.082
 neighbourhood,Longwood Medical Area,am_view,View,43,0,43,-0.0008,-0.3405,-0.0067,0.0039,0.4651,-0.0071,0.0078,2,
 neighbourhood,Longwood Medical Area,am_washer_in_unit,In-unit washer,43,34,9,0.0043,1.6783,-0.0007,0.0115,0.6667,-0.0024,0.0022,2,-0.2821
 neighbourhood,Longwood Medical Area,am_workspace,Dedicated workspace,43,33,10,0.0086,2.6835,-0.0062,0.0457,0.6,-0.0182,0.0086,2,-0.0985
+neighbourhood,Longwood Medical Area,lv_licensed,Registered (licence number),43,8,35,0.01,3.5084,-0.0033,0.0303,0.6571,-0.0379,0.0104,2,
+neighbourhood,Longwood Medical Area,lv_min_nights_1,Minimum stay 1 night,43,37,4,0.0111,4.885,-0.0113,0.0318,0.5,-0.0193,0.0111,2,
+neighbourhood,Longwood Medical Area,lv_min_nights_2,Minimum stay 2 nights,43,0,4,0.0003,0.1027,-0.0056,0.0063,0.5,-0.0144,0.0003,1,
+neighbourhood,Longwood Medical Area,lv_min_nights_5,Minimum stay 5 nights,43,3,37,-0.0801,-26.0004,-0.102,-0.064,0.0541,-0.1526,-0.0801,5,0.4472
+neighbourhood,Longwood Medical Area,lv_monthly,Monthly stays only (30 nights),43,2,41,-0.2988,-97.1515,-0.3888,-0.2606,0.0,-0.423,-0.2988,5,
+neighbourhood,Longwood Medical Area,lv_nightly,Switch to nightly stays (2 nights),43,41,2,0.5634,176.3466,0.5057,0.6212,1.0,0.4578,0.661,5,
+neighbourhood,Longwood Medical Area,lv_superhost,Superhost status,43,3,40,0.0398,12.964,0.0259,0.0476,0.975,0.0248,0.0496,5,
+neighbourhood,Longwood Medical Area,lv_verified,Verified identity,43,42,1,0.0,0.0,0.0,0.0,0.0,-0.0138,0.0013,2,
 neighbourhood,Mattapan,am_any_ac,Air conditioning,128,101,27,0.0187,6.3931,0.0098,0.0538,0.9259,0.0146,0.021,5,-0.0804
 neighbourhood,Mattapan,am_backyard,Backyard,128,61,67,-0.0036,-0.7781,-0.0133,0.0027,0.3284,-0.0093,0.0026,4,0.0215
 neighbourhood,Mattapan,am_balcony_patio,Patio or balcony,128,52,76,0.0083,1.608,0.0014,0.0198,0.75,0.0059,0.0126,5,0.244
@@ -476,6 +593,13 @@ neighbourhood,Mattapan,am_tv,TV,128,118,10,0.0543,8.6104,0.0142,0.1048,1.0,0.009
 neighbourhood,Mattapan,am_view,View,128,6,122,0.0009,0.1745,-0.0034,0.0067,0.5492,-0.0008,0.0046,4,
 neighbourhood,Mattapan,am_washer_in_unit,In-unit washer,128,50,78,-0.0005,-0.0653,-0.0088,0.0075,0.4872,-0.0002,0.0029,1,-0.051
 neighbourhood,Mattapan,am_workspace,Dedicated workspace,128,75,53,0.0251,6.6022,0.0115,0.0408,0.9057,0.0095,0.033,5,0.0215
+neighbourhood,Mattapan,lv_licensed,Registered (licence number),128,114,14,0.1381,16.2765,0.0825,0.1897,1.0,0.1051,0.1963,5,1.1793
+neighbourhood,Mattapan,lv_min_nights_1,Minimum stay 1 night,128,51,37,0.0662,16.2175,0.0477,0.0805,1.0,0.0329,0.0699,5,0.2698
+neighbourhood,Mattapan,lv_min_nights_2,Minimum stay 2 nights,128,28,9,0.0256,12.036,0.0189,0.0411,1.0,0.0182,0.0256,5,0.5729
+neighbourhood,Mattapan,lv_min_nights_5,Minimum stay 5 nights,128,3,79,-0.2865,-65.2029,-0.3488,-0.1909,0.0,-0.3056,-0.1956,5,
+neighbourhood,Mattapan,lv_monthly,Monthly stays only (30 nights),128,40,88,-0.4808,-112.8812,-0.5433,-0.4322,0.0,-0.5033,-0.4685,5,-0.5203
+neighbourhood,Mattapan,lv_nightly,Switch to nightly stays (2 nights),128,88,40,0.8443,121.4465,0.6578,1.1256,1.0,0.841,0.9858,5,1.0845
+neighbourhood,Mattapan,lv_superhost,Superhost status,128,61,67,0.0009,0.2801,-0.0091,0.0054,0.5373,-0.0065,0.0143,2,0.0483
 neighbourhood,Mission Hill,am_any_ac,Air conditioning,143,94,49,0.0012,0.2844,-0.0027,0.0079,0.6122,0.0004,0.0108,5,-0.0691
 neighbourhood,Mission Hill,am_backyard,Backyard,143,17,126,0.0037,0.754,-0.0016,0.01,0.6667,-0.0007,0.0112,4,0.0519
 neighbourhood,Mission Hill,am_balcony_patio,Patio or balcony,143,23,120,0.0073,1.3074,0.0016,0.0147,0.8167,0.0069,0.0192,5,0.271
@@ -506,6 +630,13 @@ neighbourhood,Mission Hill,am_tv,TV,143,96,47,0.0465,5.3547,0.0263,0.0615,1.0,0.
 neighbourhood,Mission Hill,am_view,View,143,7,136,0.0054,1.0621,-0.004,0.0189,0.6691,-0.0064,0.0095,4,-0.1354
 neighbourhood,Mission Hill,am_washer_in_unit,In-unit washer,143,53,90,0.0012,0.2665,-0.0016,0.006,0.5889,0.0003,0.0072,5,-0.0477
 neighbourhood,Mission Hill,am_workspace,Dedicated workspace,143,103,40,0.0107,2.6409,0.0021,0.0218,0.85,0.0055,0.0136,5,-0.1106
+neighbourhood,Mission Hill,lv_licensed,Registered (licence number),143,122,21,0.0888,9.0593,0.0492,0.1342,0.9524,0.0664,0.1034,5,0.6263
+neighbourhood,Mission Hill,lv_min_nights_1,Minimum stay 1 night,143,73,26,0.0639,17.6659,0.029,0.128,1.0,0.0363,0.0638,5,0.4846
+neighbourhood,Mission Hill,lv_min_nights_2,Minimum stay 2 nights,143,15,11,0.294,32.2373,0.026,0.3961,1.0,0.294,0.6311,5,0.0674
+neighbourhood,Mission Hill,lv_min_nights_5,Minimum stay 5 nights,143,6,88,-0.1934,-52.1498,-0.2219,-0.1534,0.0,-0.2041,-0.1267,5,-0.0379
+neighbourhood,Mission Hill,lv_monthly,Monthly stays only (30 nights),143,44,99,-0.4217,-107.2294,-0.4557,-0.3753,0.0,-0.4179,-0.3709,5,-0.4545
+neighbourhood,Mission Hill,lv_nightly,Switch to nightly stays (2 nights),143,99,44,0.6312,62.261,0.4976,0.803,1.0,0.6253,0.8931,5,0.8331
+neighbourhood,Mission Hill,lv_superhost,Superhost status,143,69,74,0.0119,2.5828,0.005,0.03,0.973,0.0099,0.0297,5,0.0549
 neighbourhood,North End,am_any_ac,Air conditioning,195,138,57,0.0078,3.1128,0.0005,0.0321,0.7544,0.0027,0.0168,5,0.2437
 neighbourhood,North End,am_backyard,Backyard,195,0,195,0.0034,1.0169,-0.0031,0.0116,0.6256,-0.0027,0.0092,3,
 neighbourhood,North End,am_balcony_patio,Patio or balcony,195,26,169,0.008,2.4244,-0.0012,0.0165,0.7101,0.0011,0.0103,5,0.4158
@@ -536,6 +667,14 @@ neighbourhood,North End,am_tv,TV,195,189,6,0.0492,20.0846,0.0464,0.0517,1.0,0.01
 neighbourhood,North End,am_view,View,195,4,191,0.005,1.8394,0.0,0.0182,0.7382,-0.0049,0.0128,4,0.4381
 neighbourhood,North End,am_washer_in_unit,In-unit washer,195,78,117,0.0055,1.7584,0.0001,0.0125,0.7521,0.0029,0.0071,5,-0.2589
 neighbourhood,North End,am_workspace,Dedicated workspace,195,139,56,0.0183,6.31,0.0071,0.0345,0.7857,0.0151,0.0462,5,0.0299
+neighbourhood,North End,lv_licensed,Registered (licence number),195,144,51,0.0452,9.5197,0.0131,0.112,0.9216,0.0453,0.0934,5,1.2339
+neighbourhood,North End,lv_min_nights_1,Minimum stay 1 night,195,106,40,0.0605,28.9395,0.0427,0.3846,0.975,0.0349,0.0653,5,0.5085
+neighbourhood,North End,lv_min_nights_2,Minimum stay 2 nights,195,13,27,0.013,5.0505,0.0026,0.6096,0.8148,0.0128,0.085,5,0.2553
+neighbourhood,North End,lv_min_nights_5,Minimum stay 5 nights,195,5,119,-0.1476,-68.9888,-0.2122,-0.0967,0.0168,-0.209,-0.1227,5,-0.1636
+neighbourhood,North End,lv_monthly,Monthly stays only (30 nights),195,49,146,-0.4913,-219.2716,-0.5492,-0.3927,0.0,-0.5265,-0.477,5,-0.5756
+neighbourhood,North End,lv_nightly,Switch to nightly stays (2 nights),195,146,49,0.9533,194.1431,0.8245,1.4133,1.0,0.9518,1.0798,5,1.3565
+neighbourhood,North End,lv_superhost,Superhost status,195,116,79,0.0693,20.8942,0.0437,0.113,1.0,0.0441,0.1077,5,0.6398
+neighbourhood,North End,lv_verified,Verified identity,195,186,9,0.0,0.0,-0.001,0.0,0.2222,-0.0057,0.0,1,
 neighbourhood,Roslindale,am_any_ac,Air conditioning,181,121,60,0.0129,1.9706,0.0057,0.0246,0.9167,0.0077,0.0265,5,0.2556
 neighbourhood,Roslindale,am_backyard,Backyard,181,104,77,-0.0025,-0.2819,-0.0112,0.0026,0.3896,-0.0091,0.0005,3,0.1363
 neighbourhood,Roslindale,am_balcony_patio,Patio or balcony,181,76,105,0.0071,0.7861,0.0005,0.0167,0.781,0.0045,0.0116,5,0.3546
@@ -566,6 +705,14 @@ neighbourhood,Roslindale,am_tv,TV,181,146,35,0.0317,4.0302,0.0217,0.0561,1.0,0.0
 neighbourhood,Roslindale,am_view,View,181,3,178,0.0043,0.6054,-0.0017,0.0108,0.6573,-0.0012,0.0072,4,
 neighbourhood,Roslindale,am_washer_in_unit,In-unit washer,181,108,73,0.0017,0.2228,-0.0058,0.0082,0.589,-0.002,0.0049,4,-0.0839
 neighbourhood,Roslindale,am_workspace,Dedicated workspace,181,109,72,0.0145,1.6158,0.0059,0.0232,0.9028,0.0108,0.026,5,0.3565
+neighbourhood,Roslindale,lv_licensed,Registered (licence number),181,146,35,0.1304,7.5262,0.0809,0.1446,1.0,0.1233,0.1863,5,1.1806
+neighbourhood,Roslindale,lv_min_nights_1,Minimum stay 1 night,181,43,76,0.0984,27.7682,0.0741,0.14,1.0,0.0729,0.1201,5,0.6112
+neighbourhood,Roslindale,lv_min_nights_2,Minimum stay 2 nights,181,41,35,0.0342,8.9732,0.018,0.2346,1.0,0.0253,0.0587,5,0.1803
+neighbourhood,Roslindale,lv_min_nights_5,Minimum stay 5 nights,181,9,84,-0.2277,-55.6811,-0.3174,-0.1802,0.0,-0.2499,-0.1807,5,-0.0023
+neighbourhood,Roslindale,lv_monthly,Monthly stays only (30 nights),181,62,119,-0.4764,-106.8799,-0.5239,-0.4409,0.0084,-0.4768,-0.46,5,-0.5344
+neighbourhood,Roslindale,lv_nightly,Switch to nightly stays (2 nights),181,119,62,1.0005,92.3395,0.7282,1.1387,1.0,0.8966,1.097,5,1.1479
+neighbourhood,Roslindale,lv_superhost,Superhost status,181,105,76,0.0118,2.5996,0.0035,0.0212,0.8816,0.0054,0.0168,5,-0.0153
+neighbourhood,Roslindale,lv_verified,Verified identity,181,174,7,0.0,0.0,0.0,0.0,0.0,-0.0125,0.0,1,0.5541
 neighbourhood,Roxbury,am_any_ac,Air conditioning,490,407,83,0.0042,0.632,-0.0019,0.0117,0.6867,0.0028,0.0118,5,0.0704
 neighbourhood,Roxbury,am_backyard,Backyard,490,100,390,-0.0011,-0.1358,-0.0064,0.0056,0.4564,-0.0024,0.0045,2,-0.0983
 neighbourhood,Roxbury,am_balcony_patio,Patio or balcony,490,129,361,0.0128,1.9501,0.0057,0.0204,0.9141,0.0095,0.0176,5,0.1697
@@ -596,6 +743,14 @@ neighbourhood,Roxbury,am_tv,TV,490,410,80,0.0338,2.954,0.0169,0.0567,0.9375,0.02
 neighbourhood,Roxbury,am_view,View,490,43,447,0.0043,0.8533,-0.0013,0.0117,0.6756,-0.0031,0.0089,4,0.2439
 neighbourhood,Roxbury,am_washer_in_unit,In-unit washer,490,317,173,0.0012,0.174,-0.0032,0.0055,0.5896,0.0015,0.0068,5,-0.0283
 neighbourhood,Roxbury,am_workspace,Dedicated workspace,490,328,162,0.0151,2.6181,0.0067,0.0255,0.858,0.012,0.0304,5,0.1049
+neighbourhood,Roxbury,lv_licensed,Registered (licence number),490,357,133,0.089,9.5187,0.0726,0.1102,0.985,0.0882,0.1287,5,0.7537
+neighbourhood,Roxbury,lv_min_nights_1,Minimum stay 1 night,490,193,115,0.0428,10.825,0.028,0.0642,0.9826,0.0423,0.0581,5,0.5926
+neighbourhood,Roxbury,lv_min_nights_2,Minimum stay 2 nights,490,90,25,0.0222,5.0793,0.0115,0.2277,0.96,0.014,0.0466,5,0.062
+neighbourhood,Roxbury,lv_min_nights_5,Minimum stay 5 nights,490,7,283,-0.1562,-45.9614,-0.2219,-0.1269,0.0,-0.1864,-0.1283,5,-0.2843
+neighbourhood,Roxbury,lv_monthly,Monthly stays only (30 nights),490,182,308,-0.4208,-112.3292,-0.4683,-0.3498,0.0,-0.4203,-0.4103,5,-0.5127
+neighbourhood,Roxbury,lv_nightly,Switch to nightly stays (2 nights),490,308,182,1.0004,93.6999,0.8274,1.2913,1.0,0.9296,1.075,5,1.052
+neighbourhood,Roxbury,lv_superhost,Superhost status,490,206,284,0.0105,1.9134,0.0032,0.0204,0.8592,0.0054,0.0152,5,0.214
+neighbourhood,Roxbury,lv_verified,Verified identity,490,487,3,-0.0045,-3.6481,-0.0057,-0.0045,0.0,-0.0094,-0.001,5,-0.0322
 neighbourhood,South Boston,am_any_ac,Air conditioning,281,259,22,0.0009,0.1989,-0.0025,0.0109,0.5455,0.0004,0.011,5,0.1643
 neighbourhood,South Boston,am_backyard,Backyard,281,48,233,-0.0006,-0.1854,-0.0049,0.0044,0.4721,-0.0021,0.0035,1,0.0215
 neighbourhood,South Boston,am_balcony_patio,Patio or balcony,281,106,175,0.0149,4.0034,0.0058,0.0238,0.8914,0.0048,0.0161,5,0.0269
@@ -626,6 +781,14 @@ neighbourhood,South Boston,am_tv,TV,281,243,38,0.0415,6.9403,0.0358,0.0508,0.921
 neighbourhood,South Boston,am_view,View,281,18,263,0.0019,0.5256,-0.0067,0.0111,0.5741,-0.0064,0.0081,4,0.1432
 neighbourhood,South Boston,am_washer_in_unit,In-unit washer,281,173,108,0.0031,0.6072,-0.0006,0.0089,0.7037,0.0017,0.0101,5,0.2133
 neighbourhood,South Boston,am_workspace,Dedicated workspace,281,217,64,0.0459,14.3823,0.0303,0.0609,1.0,0.0291,0.0646,5,0.283
+neighbourhood,South Boston,lv_licensed,Registered (licence number),281,205,76,0.0608,11.9072,0.0304,0.0954,0.9474,0.0034,0.0654,5,0.6592
+neighbourhood,South Boston,lv_min_nights_1,Minimum stay 1 night,281,149,69,0.0393,19.5357,0.0248,0.0609,0.9565,0.028,0.0513,5,0.1211
+neighbourhood,South Boston,lv_min_nights_2,Minimum stay 2 nights,281,39,30,0.0162,7.4256,0.0013,0.2806,0.8667,0.0039,0.0286,5,0.2672
+neighbourhood,South Boston,lv_min_nights_5,Minimum stay 5 nights,281,12,188,-0.1732,-69.8591,-0.3037,-0.1232,0.0,-0.1921,-0.1418,5,-0.2405
+neighbourhood,South Boston,lv_monthly,Monthly stays only (30 nights),281,63,218,-0.4464,-147.7374,-0.5132,-0.3701,0.0,-0.4596,-0.4371,5,-0.3597
+neighbourhood,South Boston,lv_nightly,Switch to nightly stays (2 nights),281,218,63,0.8319,206.04,0.6016,0.9944,1.0,0.7867,0.8783,5,0.5618
+neighbourhood,South Boston,lv_superhost,Superhost status,281,136,145,0.028,5.7907,0.0117,0.042,0.9034,0.0157,0.0389,5,0.13
+neighbourhood,South Boston,lv_verified,Verified identity,281,280,1,0.0,0.0,0.0,0.0,0.0,-0.0046,0.0003,1,
 neighbourhood,South Boston Waterfront,am_backyard,Backyard,128,20,108,0.0023,0.6775,-0.0049,0.0087,0.6389,-0.0053,0.006,4,
 neighbourhood,South Boston Waterfront,am_balcony_patio,Patio or balcony,128,13,115,0.0076,2.3555,0.0023,0.0172,0.8261,-0.0028,0.0072,4,0.1255
 neighbourhood,South Boston Waterfront,am_bathtub,Bathtub,128,34,94,-0.0041,-1.1311,-0.011,0.0081,0.3936,-0.0096,0.0052,4,0.1448
@@ -655,6 +818,14 @@ neighbourhood,South Boston Waterfront,am_tv,TV,128,122,6,0.0529,9.1433,0.0318,0.
 neighbourhood,South Boston Waterfront,am_view,View,128,5,123,0.0079,2.0574,0.0019,0.0177,0.7967,-0.0078,0.0173,4,-0.6504
 neighbourhood,South Boston Waterfront,am_washer_in_unit,In-unit washer,128,98,30,0.011,4.2343,0.0013,0.015,0.8,-0.0067,0.0121,3,0.7198
 neighbourhood,South Boston Waterfront,am_workspace,Dedicated workspace,128,109,19,0.0326,8.4257,0.0228,0.0525,1.0,0.0165,0.0569,5,0.2354
+neighbourhood,South Boston Waterfront,lv_licensed,Registered (licence number),128,21,107,0.0388,11.7755,0.0268,0.051,0.972,0.0202,0.0396,5,0.3857
+neighbourhood,South Boston Waterfront,lv_min_nights_1,Minimum stay 1 night,128,42,10,0.0908,57.8855,0.0789,0.1612,0.9,0.0337,0.1398,5,0.3311
+neighbourhood,South Boston Waterfront,lv_min_nights_2,Minimum stay 2 nights,128,3,7,0.0759,34.196,0.0514,0.195,1.0,0.0484,0.2275,5,
+neighbourhood,South Boston Waterfront,lv_min_nights_5,Minimum stay 5 nights,128,3,45,-0.1426,-59.9737,-0.2287,-0.0852,0.0222,-0.2245,-0.117,5,0.9907
+neighbourhood,South Boston Waterfront,lv_monthly,Monthly stays only (30 nights),128,76,52,-0.3692,-143.0225,-0.4766,-0.3024,0.0,-0.5133,-0.3919,5,-0.4066
+neighbourhood,South Boston Waterfront,lv_nightly,Switch to nightly stays (2 nights),128,52,76,0.5985,202.283,0.2451,1.048,1.0,0.2892,0.6927,5,0.6853
+neighbourhood,South Boston Waterfront,lv_superhost,Superhost status,128,51,77,0.0327,8.9525,0.0201,0.046,0.9481,0.0197,0.042,5,0.116
+neighbourhood,South Boston Waterfront,lv_verified,Verified identity,128,106,22,-0.0046,-0.9622,-0.0046,-0.0042,0.0,-0.0115,0.0,4,0.108
 neighbourhood,South End,am_any_ac,Air conditioning,461,288,173,0.0102,3.0175,0.0038,0.0171,0.8439,0.0032,0.0171,5,-0.1623
 neighbourhood,South End,am_backyard,Backyard,461,43,418,0.008,2.2351,0.0026,0.0146,0.8541,0.0038,0.0123,5,0.6622
 neighbourhood,South End,am_balcony_patio,Patio or balcony,461,83,378,0.0123,3.4804,0.0022,0.0213,0.8148,0.0048,0.0202,5,0.3858
@@ -685,6 +856,14 @@ neighbourhood,South End,am_tv,TV,461,444,17,0.0497,11.9172,0.0358,0.0581,1.0,0.0
 neighbourhood,South End,am_view,View,461,30,431,0.0084,2.6094,0.0024,0.0172,0.8515,0.0008,0.0117,5,0.3697
 neighbourhood,South End,am_washer_in_unit,In-unit washer,461,242,219,0.0099,3.0587,0.0026,0.0181,0.8493,0.0049,0.0127,5,0.0866
 neighbourhood,South End,am_workspace,Dedicated workspace,461,256,205,0.011,3.1279,0.004,0.0219,0.878,0.0052,0.0218,5,0.2109
+neighbourhood,South End,lv_licensed,Registered (licence number),461,307,154,0.044,11.8078,0.0292,0.0673,0.987,0.0225,0.0482,5,0.3147
+neighbourhood,South End,lv_min_nights_1,Minimum stay 1 night,461,305,66,0.0177,8.6691,0.0101,0.0468,0.8485,0.0079,0.0344,5,0.0873
+neighbourhood,South End,lv_min_nights_2,Minimum stay 2 nights,461,37,29,0.0087,4.2108,0.0032,0.1339,0.8276,0.0008,0.0076,5,0.4481
+neighbourhood,South End,lv_min_nights_5,Minimum stay 5 nights,461,9,342,-0.1375,-43.9167,-0.1767,-0.0951,0.0,-0.1654,-0.0913,5,0.7517
+neighbourhood,South End,lv_monthly,Monthly stays only (30 nights),461,90,371,-0.425,-130.8514,-0.4799,-0.3681,0.0,-0.4459,-0.3916,5,-0.4879
+neighbourhood,South End,lv_nightly,Switch to nightly stays (2 nights),461,371,90,0.8443,162.7655,0.6764,1.0561,1.0,0.7739,0.8706,5,0.9526
+neighbourhood,South End,lv_superhost,Superhost status,461,192,269,0.028,8.122,0.0193,0.0403,0.9851,0.0187,0.0453,5,0.4164
+neighbourhood,South End,lv_verified,Verified identity,461,455,6,-0.001,-0.3344,-0.0048,-0.001,0.0,-0.017,-0.001,5,0.3764
 neighbourhood,West End,am_any_ac,Air conditioning,51,38,13,-0.003,-0.8238,-0.0083,0.0029,0.3846,-0.0079,0.0168,1,1.1735
 neighbourhood,West End,am_backyard,Backyard,51,9,42,-0.0015,-0.3199,-0.0049,0.0026,0.3571,-0.0051,0.0041,3,-0.2292
 neighbourhood,West End,am_balcony_patio,Patio or balcony,51,7,44,0.0057,0.8817,-0.001,0.013,0.7045,-0.0018,0.0099,4,-0.1084
@@ -715,6 +894,13 @@ neighbourhood,West End,am_tv,TV,51,43,8,0.0281,2.7317,0.0156,0.0317,0.875,0.0036
 neighbourhood,West End,am_view,View,51,3,48,0.0152,2.3823,0.0017,0.0241,0.7708,-0.0061,0.019,4,
 neighbourhood,West End,am_washer_in_unit,In-unit washer,51,19,32,0.0067,0.9843,0.0011,0.0112,0.8125,0.0007,0.0174,5,0.1666
 neighbourhood,West End,am_workspace,Dedicated workspace,51,34,17,0.0022,0.9509,-0.0027,0.0108,0.5882,-0.0134,-0.0001,0,-0.482
+neighbourhood,West End,lv_licensed,Registered (licence number),51,23,28,0.0833,13.3047,0.0498,0.0879,0.9643,0.0715,0.1135,5,0.8521
+neighbourhood,West End,lv_min_nights_1,Minimum stay 1 night,51,7,8,0.3972,140.5247,0.176,0.6242,1.0,0.3891,0.5515,5,0.4309
+neighbourhood,West End,lv_min_nights_2,Minimum stay 2 nights,51,1,7,0.41,187.7273,0.2841,0.5606,1.0,0.3888,0.5635,5,
+neighbourhood,West End,lv_min_nights_5,Minimum stay 5 nights,51,2,8,-0.2073,-78.3534,-0.2791,-0.1776,0.0,-0.2479,-0.1161,5,
+neighbourhood,West End,lv_monthly,Monthly stays only (30 nights),51,36,15,-0.4314,-160.6108,-0.4836,-0.3455,0.0,-0.4649,-0.4291,5,-0.5446
+neighbourhood,West End,lv_nightly,Switch to nightly stays (2 nights),51,15,36,0.9262,182.8273,0.8133,1.0835,1.0,0.947,1.1683,5,1.196
+neighbourhood,West End,lv_superhost,Superhost status,51,13,38,0.047,9.6878,0.0366,0.0672,1.0,0.0344,0.0742,5,0.0752
 neighbourhood,West Roxbury,am_any_ac,Air conditioning,153,117,36,0.0072,1.983,0.0047,0.0222,0.8611,0.0057,0.0191,5,-0.175
 neighbourhood,West Roxbury,am_backyard,Backyard,153,67,86,-0.0002,-0.0285,-0.0036,0.0063,0.4767,-0.0059,0.0065,2,0.2948
 neighbourhood,West Roxbury,am_balcony_patio,Patio or balcony,153,71,82,0.0034,0.6181,-0.001,0.0089,0.7073,0.0023,0.0119,5,0.1515
@@ -745,6 +931,14 @@ neighbourhood,West Roxbury,am_tv,TV,153,132,21,0.0267,4.3215,0.0192,0.0292,0.952
 neighbourhood,West Roxbury,am_view,View,153,12,141,0.001,0.1828,-0.0017,0.006,0.5745,-0.0003,0.0056,4,0.1195
 neighbourhood,West Roxbury,am_washer_in_unit,In-unit washer,153,95,58,0.0063,1.3399,0.0014,0.0144,0.8103,0.0003,0.0107,5,-0.1354
 neighbourhood,West Roxbury,am_workspace,Dedicated workspace,153,109,44,0.0089,1.5979,-0.0028,0.0201,0.7045,0.0048,0.026,5,0.044
+neighbourhood,West Roxbury,lv_licensed,Registered (licence number),153,112,41,0.1218,13.6906,0.0622,0.1612,1.0,0.0655,0.1482,5,0.9669
+neighbourhood,West Roxbury,lv_min_nights_1,Minimum stay 1 night,153,68,46,0.0804,27.1008,0.0645,0.1597,0.9783,0.0772,0.1085,5,0.6243
+neighbourhood,West Roxbury,lv_min_nights_2,Minimum stay 2 nights,153,19,27,0.0606,15.515,0.0165,0.1838,0.963,0.03,0.1388,5,0.0818
+neighbourhood,West Roxbury,lv_min_nights_5,Minimum stay 5 nights,153,13,87,-0.2236,-51.5206,-0.2641,-0.1693,0.0,-0.3259,-0.21,5,0.3393
+neighbourhood,West Roxbury,lv_monthly,Monthly stays only (30 nights),153,39,114,-0.4477,-99.3663,-0.5016,-0.3851,0.0,-0.5139,-0.4262,5,-0.5352
+neighbourhood,West Roxbury,lv_nightly,Switch to nightly stays (2 nights),153,114,39,1.1484,139.3438,0.9923,1.7149,1.0,0.9114,1.1856,5,1.1514
+neighbourhood,West Roxbury,lv_superhost,Superhost status,153,97,56,0.0012,0.2442,-0.0116,0.0149,0.5,-0.0075,0.0147,2,0.4644
+neighbourhood,West Roxbury,lv_verified,Verified identity,153,140,13,0.0,0.0,0.0,0.0,0.0,-0.0139,0.0,1,-0.4827
 zone,Back Bay / South End,am_any_ac,Air conditioning,1510,1159,351,0.009,2.7181,0.0015,0.0167,0.8034,0.004,0.0169,5,-0.0437
 zone,Back Bay / South End,am_backyard,Backyard,1510,49,1461,0.0064,1.8057,0.0007,0.0134,0.7741,0.0032,0.0116,5,0.5522
 zone,Back Bay / South End,am_balcony_patio,Patio or balcony,1510,163,1347,0.0121,3.5769,0.004,0.0233,0.8627,0.0051,0.0228,5,0.2667
@@ -775,6 +969,14 @@ zone,Back Bay / South End,am_tv,TV,1510,1471,39,0.0365,6.7358,0.0193,0.0498,1.0,
 zone,Back Bay / South End,am_view,View,1510,99,1411,0.0071,2.1077,0.001,0.016,0.7881,-0.0003,0.0128,4,0.3294
 zone,Back Bay / South End,am_washer_in_unit,In-unit washer,1510,765,745,0.0081,2.4206,0.002,0.0158,0.8201,0.0059,0.0117,5,-0.0097
 zone,Back Bay / South End,am_workspace,Dedicated workspace,1510,932,578,0.0046,1.296,-0.0033,0.0147,0.654,0.0034,0.0143,5,0.0467
+zone,Back Bay / South End,lv_licensed,Registered (licence number),1510,891,619,0.0402,9.5813,0.022,0.0643,0.9289,0.0233,0.0491,5,0.1882
+zone,Back Bay / South End,lv_min_nights_1,Minimum stay 1 night,1510,1029,120,0.0192,8.4244,0.0054,0.0407,0.8333,0.0075,0.0276,5,0.214
+zone,Back Bay / South End,lv_min_nights_2,Minimum stay 2 nights,1510,64,56,0.0078,4.4058,0.0024,0.125,0.8214,-0.0025,0.0092,4,0.2459
+zone,Back Bay / South End,lv_min_nights_5,Minimum stay 5 nights,1510,21,1093,-0.1424,-47.5645,-0.1823,-0.1031,0.0009,-0.1639,-0.1062,5,0.8945
+zone,Back Bay / South End,lv_monthly,Monthly stays only (30 nights),1510,361,1149,-0.4252,-137.0303,-0.4811,-0.3669,0.0,-0.438,-0.3871,5,-0.3458
+zone,Back Bay / South End,lv_nightly,Switch to nightly stays (2 nights),1510,1149,361,0.8264,165.4811,0.6274,1.0635,1.0,0.7022,0.868,5,0.5286
+zone,Back Bay / South End,lv_superhost,Superhost status,1510,529,981,0.0296,8.2053,0.0185,0.0438,0.9796,0.0195,0.0468,5,0.2565
+zone,Back Bay / South End,lv_verified,Verified identity,1510,1442,68,-0.0049,-1.0994,-0.0067,-0.0026,0.0,-0.0083,-0.001,5,0.0941
 zone,Brighton / Allston,am_any_ac,Air conditioning,731,632,99,0.0071,1.2915,0.0021,0.0184,0.8182,0.0052,0.0133,5,0.2404
 zone,Brighton / Allston,am_backyard,Backyard,731,134,597,0.001,0.2245,-0.0044,0.0071,0.5712,-0.0048,0.0038,3,-0.1642
 zone,Brighton / Allston,am_balcony_patio,Patio or balcony,731,241,490,0.0097,1.6359,0.0021,0.0202,0.8245,0.0038,0.0171,5,0.0649
@@ -805,6 +1007,14 @@ zone,Brighton / Allston,am_tv,TV,731,584,147,0.0416,5.8361,0.0246,0.0588,0.9524,
 zone,Brighton / Allston,am_view,View,731,50,681,0.0013,0.2022,-0.0051,0.0082,0.5595,-0.0055,0.0063,3,0.1558
 zone,Brighton / Allston,am_washer_in_unit,In-unit washer,731,401,330,0.0017,0.2793,-0.0046,0.007,0.5909,0.0003,0.0033,5,-0.1559
 zone,Brighton / Allston,am_workspace,Dedicated workspace,731,576,155,0.003,0.4288,-0.0048,0.0113,0.6,-0.0006,0.0064,4,0.0445
+zone,Brighton / Allston,lv_licensed,Registered (licence number),731,486,245,0.06,7.5258,0.0101,0.0964,0.8,0.0351,0.0659,5,-0.3255
+zone,Brighton / Allston,lv_min_nights_1,Minimum stay 1 night,731,410,73,0.0412,11.4915,0.0203,0.0564,0.9178,0.0283,0.0527,5,0.9535
+zone,Brighton / Allston,lv_min_nights_2,Minimum stay 2 nights,731,59,14,0.01,3.3226,0.0031,0.2104,0.7857,0.0029,0.0251,5,0.1424
+zone,Brighton / Allston,lv_min_nights_5,Minimum stay 5 nights,731,4,469,-0.1623,-40.5605,-0.2843,-0.0702,0.0384,-0.1851,-0.1114,5,
+zone,Brighton / Allston,lv_monthly,Monthly stays only (30 nights),731,248,483,-0.4024,-104.1877,-0.4959,-0.312,0.0,-0.4087,-0.3962,5,-0.5525
+zone,Brighton / Allston,lv_nightly,Switch to nightly stays (2 nights),731,483,248,0.8711,95.6104,0.6829,1.0888,1.0,0.739,0.9206,5,1.2345
+zone,Brighton / Allston,lv_superhost,Superhost status,731,354,377,0.0106,1.6252,0.0006,0.0237,0.7639,0.0056,0.0169,5,0.2722
+zone,Brighton / Allston,lv_verified,Verified identity,731,723,8,-0.001,-0.2384,-0.0045,-0.001,0.0,-0.0142,-0.0008,5,
 zone,Dorchester / Mattapan,am_any_ac,Air conditioning,678,563,115,0.0146,1.2779,0.004,0.0294,0.8696,0.0055,0.0202,5,0.3578
 zone,Dorchester / Mattapan,am_backyard,Backyard,678,247,431,-0.0019,-0.356,-0.0087,0.0051,0.4084,-0.0057,0.001,3,-0.0329
 zone,Dorchester / Mattapan,am_balcony_patio,Patio or balcony,678,295,383,0.0057,0.7896,-0.0004,0.0147,0.7363,0.0047,0.0104,5,0.1096
@@ -835,6 +1045,14 @@ zone,Dorchester / Mattapan,am_tv,TV,678,564,114,0.0184,1.2031,0.005,0.0302,0.868
 zone,Dorchester / Mattapan,am_view,View,678,33,645,0.0028,0.5936,-0.0014,0.0107,0.6496,-0.0008,0.0069,4,-0.0975
 zone,Dorchester / Mattapan,am_washer_in_unit,In-unit washer,678,377,301,-0.0001,-0.0379,-0.007,0.0059,0.485,-0.0002,0.0031,2,0.1304
 zone,Dorchester / Mattapan,am_workspace,Dedicated workspace,678,440,238,0.0265,4.999,0.0163,0.0362,0.9244,0.0242,0.0357,5,0.1103
+zone,Dorchester / Mattapan,lv_licensed,Registered (licence number),678,514,164,0.1148,8.553,0.0788,0.1384,0.9695,0.0939,0.1434,5,1.3381
+zone,Dorchester / Mattapan,lv_min_nights_1,Minimum stay 1 night,678,300,136,0.0556,19.1517,0.038,0.0735,0.9853,0.0438,0.0627,5,0.4495
+zone,Dorchester / Mattapan,lv_min_nights_2,Minimum stay 2 nights,678,102,34,0.0303,12.1066,0.0221,0.1727,1.0,0.0216,0.0513,5,0.4992
+zone,Dorchester / Mattapan,lv_min_nights_5,Minimum stay 5 nights,678,16,402,-0.2072,-57.6378,-0.293,-0.1453,0.0,-0.2254,-0.1411,5,-0.2573
+zone,Dorchester / Mattapan,lv_monthly,Monthly stays only (30 nights),678,242,436,-0.4384,-117.1332,-0.4856,-0.3571,0.0,-0.4424,-0.4032,5,-0.5354
+zone,Dorchester / Mattapan,lv_nightly,Switch to nightly stays (2 nights),678,436,242,0.9545,82.3768,0.744,1.1619,1.0,0.8267,1.0369,5,1.1524
+zone,Dorchester / Mattapan,lv_superhost,Superhost status,678,314,364,0.0075,1.0903,-0.0003,0.0199,0.7418,0.0046,0.0204,5,0.139
+zone,Dorchester / Mattapan,lv_verified,Verified identity,678,677,1,-0.0166,-8.4657,-0.0166,-0.0166,0.0,-0.0197,0.0,4,
 zone,Dorchester / South Boston,am_any_ac,Air conditioning,776,642,134,0.0042,0.5402,-0.001,0.0116,0.7015,0.0026,0.0079,5,0.0938
 zone,Dorchester / South Boston,am_backyard,Backyard,776,212,564,-0.0001,-0.021,-0.0059,0.0061,0.4894,-0.0046,0.0033,1,0.1348
 zone,Dorchester / South Boston,am_balcony_patio,Patio or balcony,776,327,449,0.0116,1.8921,0.0029,0.0217,0.8441,0.0064,0.0172,5,0.1475
@@ -865,6 +1083,14 @@ zone,Dorchester / South Boston,am_tv,TV,776,661,115,0.0224,1.8529,0.014,0.0386,0
 zone,Dorchester / South Boston,am_view,View,776,58,718,0.0036,0.6041,-0.0017,0.0114,0.6504,-0.002,0.0082,4,0.1104
 zone,Dorchester / South Boston,am_washer_in_unit,In-unit washer,776,501,275,-0.0009,-0.1202,-0.0054,0.0049,0.4655,-0.0009,0.0045,1,-0.0223
 zone,Dorchester / South Boston,am_workspace,Dedicated workspace,776,576,200,0.0257,5.6056,0.0146,0.0432,0.955,0.0189,0.0373,5,0.1457
+zone,Dorchester / South Boston,lv_licensed,Registered (licence number),776,576,200,0.1111,11.5983,0.0749,0.1437,0.995,0.0727,0.0946,5,0.6033
+zone,Dorchester / South Boston,lv_min_nights_1,Minimum stay 1 night,776,302,202,0.0428,15.3782,0.0278,0.0628,0.9455,0.0377,0.0527,5,0.5548
+zone,Dorchester / South Boston,lv_min_nights_2,Minimum stay 2 nights,776,143,59,0.0418,17.9621,0.0054,0.4854,0.8983,0.0232,0.0703,5,0.0946
+zone,Dorchester / South Boston,lv_min_nights_5,Minimum stay 5 nights,776,29,445,-0.1663,-48.7918,-0.231,-0.1217,0.0067,-0.1837,-0.1302,5,-0.1224
+zone,Dorchester / South Boston,lv_monthly,Monthly stays only (30 nights),776,272,504,-0.4105,-120.3734,-0.468,-0.3306,0.002,-0.426,-0.4051,5,-0.4543
+zone,Dorchester / South Boston,lv_nightly,Switch to nightly stays (2 nights),776,504,272,0.8075,91.3118,0.6476,0.9924,1.0,0.7043,0.8883,5,0.8325
+zone,Dorchester / South Boston,lv_superhost,Superhost status,776,339,437,0.0211,3.2133,0.0103,0.0338,0.9222,0.017,0.0262,5,0.4931
+zone,Dorchester / South Boston,lv_verified,Verified identity,776,774,2,-0.0024,-1.3835,-0.0031,-0.0017,0.0,-0.015,-0.0005,5,
 zone,Downtown / Beacon Hill,am_any_ac,Air conditioning,1690,1412,278,0.0028,0.7425,-0.003,0.0088,0.6331,0.0018,0.0073,5,0.4945
 zone,Downtown / Beacon Hill,am_backyard,Backyard,1690,73,1617,0.0016,0.4832,-0.0032,0.0085,0.5875,-0.0016,0.008,4,0.0037
 zone,Downtown / Beacon Hill,am_balcony_patio,Patio or balcony,1690,145,1545,0.0047,1.2353,-0.0016,0.0133,0.6874,0.0015,0.0087,5,0.1745
@@ -895,6 +1121,14 @@ zone,Downtown / Beacon Hill,am_tv,TV,1690,1564,126,0.0351,3.4029,0.0253,0.0448,0
 zone,Downtown / Beacon Hill,am_view,View,1690,91,1599,0.0072,2.155,0.0,0.0188,0.7467,-0.0074,0.01,4,0.391
 zone,Downtown / Beacon Hill,am_washer_in_unit,In-unit washer,1690,766,924,0.0072,1.8788,0.0017,0.0147,0.829,0.0039,0.0103,5,0.2817
 zone,Downtown / Beacon Hill,am_workspace,Dedicated workspace,1690,1303,387,0.0149,3.8581,0.001,0.0339,0.7597,0.0073,0.0236,5,0.1346
+zone,Downtown / Beacon Hill,lv_licensed,Registered (licence number),1690,855,835,0.0475,10.3213,0.0262,0.08,0.9042,0.0344,0.0545,5,0.6617
+zone,Downtown / Beacon Hill,lv_min_nights_1,Minimum stay 1 night,1690,856,181,0.033,16.4999,0.0115,0.0661,0.8785,0.0217,0.0399,5,0.6103
+zone,Downtown / Beacon Hill,lv_min_nights_2,Minimum stay 2 nights,1690,93,88,0.0076,3.2703,-0.0008,0.1674,0.7045,0.0029,0.0216,5,0.6098
+zone,Downtown / Beacon Hill,lv_min_nights_5,Minimum stay 5 nights,1690,24,949,-0.1522,-58.76,-0.2148,-0.0885,0.0211,-0.1817,-0.113,5,0.8702
+zone,Downtown / Beacon Hill,lv_monthly,Monthly stays only (30 nights),1690,653,1037,-0.4391,-182.1214,-0.5143,-0.3605,0.0,-0.4716,-0.4377,5,-0.5609
+zone,Downtown / Beacon Hill,lv_nightly,Switch to nightly stays (2 nights),1690,1037,653,0.8952,179.0132,0.6676,1.1411,1.0,0.8856,0.9935,5,1.2775
+zone,Downtown / Beacon Hill,lv_superhost,Superhost status,1690,592,1098,0.0383,9.8799,0.0208,0.0577,0.9627,0.0284,0.0567,5,0.4735
+zone,Downtown / Beacon Hill,lv_verified,Verified identity,1690,1611,79,-0.0019,-0.4405,-0.0043,-0.001,0.0253,-0.0119,0.0,4,-0.1191
 zone,East Boston / Charlestown,am_any_ac,Air conditioning,400,352,48,0.0053,1.048,0.0006,0.0108,0.7917,0.0007,0.0069,5,0.0849
 zone,East Boston / Charlestown,am_backyard,Backyard,400,96,304,-0.0009,-0.1289,-0.0051,0.0048,0.4539,-0.0026,0.0028,4,-0.0245
 zone,East Boston / Charlestown,am_balcony_patio,Patio or balcony,400,123,277,0.0076,1.5969,0.0003,0.0174,0.7581,0.0016,0.0165,5,0.1794
@@ -925,6 +1159,14 @@ zone,East Boston / Charlestown,am_tv,TV,400,358,42,0.0235,3.3218,0.0165,0.0385,0
 zone,East Boston / Charlestown,am_view,View,400,46,354,0.0057,1.251,0.0009,0.0133,0.7712,-0.0001,0.0084,4,0.5112
 zone,East Boston / Charlestown,am_washer_in_unit,In-unit washer,400,229,171,0.0062,1.2668,0.0012,0.0103,0.8304,0.0023,0.0094,5,0.1736
 zone,East Boston / Charlestown,am_workspace,Dedicated workspace,400,241,159,0.0243,5.9914,0.0154,0.0368,0.9811,0.0178,0.0348,5,0.0767
+zone,East Boston / Charlestown,lv_licensed,Registered (licence number),400,331,69,0.1079,11.9335,0.0563,0.1352,1.0,0.0812,0.128,5,1.0478
+zone,East Boston / Charlestown,lv_min_nights_1,Minimum stay 1 night,400,248,64,0.041,15.4554,0.0316,0.0563,0.9688,0.0342,0.0709,5,0.3889
+zone,East Boston / Charlestown,lv_min_nights_2,Minimum stay 2 nights,400,55,9,0.2244,41.2896,0.0017,0.2853,1.0,0.0156,0.2244,5,0.0886
+zone,East Boston / Charlestown,lv_min_nights_5,Minimum stay 5 nights,400,5,303,-0.2035,-54.5507,-0.2721,-0.1385,0.0066,-0.2243,-0.1611,5,-0.0164
+zone,East Boston / Charlestown,lv_monthly,Monthly stays only (30 nights),400,88,312,-0.4549,-128.4389,-0.5058,-0.3871,0.0,-0.47,-0.4411,5,-0.5309
+zone,East Boston / Charlestown,lv_nightly,Switch to nightly stays (2 nights),400,312,88,0.9618,119.7721,0.5575,1.2925,1.0,0.8924,1.1074,5,1.1318
+zone,East Boston / Charlestown,lv_superhost,Superhost status,400,230,170,0.0237,6.3581,0.0134,0.0368,0.9118,0.0182,0.0341,5,0.32
+zone,East Boston / Charlestown,lv_verified,Verified identity,400,393,7,0.0,0.0,0.0,0.0,0.0,-0.0117,0.0,1,0.1944
 zone,Roslindale / West Roxbury,am_any_ac,Air conditioning,490,378,112,0.0119,2.0428,0.0052,0.0229,0.9018,0.0107,0.0204,5,0.1578
 zone,Roslindale / West Roxbury,am_backyard,Backyard,490,228,262,-0.0008,-0.113,-0.0072,0.0048,0.4542,-0.0059,0.0031,3,0.1261
 zone,Roslindale / West Roxbury,am_balcony_patio,Patio or balcony,490,205,285,0.0055,0.8107,-0.0004,0.0142,0.7333,0.0008,0.0115,5,0.1386
@@ -955,6 +1197,14 @@ zone,Roslindale / West Roxbury,am_tv,TV,490,427,63,0.0279,4.1313,0.0199,0.0404,0
 zone,Roslindale / West Roxbury,am_view,View,490,15,475,0.002,0.3198,-0.0021,0.0086,0.6021,-0.0001,0.0054,4,0.0827
 zone,Roslindale / West Roxbury,am_washer_in_unit,In-unit washer,490,305,185,0.0037,0.527,-0.0019,0.0101,0.6649,-0.001,0.0056,4,-0.1914
 zone,Roslindale / West Roxbury,am_workspace,Dedicated workspace,490,315,175,0.0115,1.4744,0.0022,0.023,0.8057,0.007,0.0212,5,0.1956
+zone,Roslindale / West Roxbury,lv_licensed,Registered (licence number),490,373,117,0.0988,11.1206,0.0622,0.1484,1.0,0.0774,0.1392,5,1.1268
+zone,Roslindale / West Roxbury,lv_min_nights_1,Minimum stay 1 night,490,157,156,0.0806,25.3222,0.0574,0.1365,0.9936,0.0696,0.1059,5,0.5423
+zone,Roslindale / West Roxbury,lv_min_nights_2,Minimum stay 2 nights,490,88,68,0.0443,10.2755,0.0179,0.2278,0.9853,0.0314,0.09,5,0.2985
+zone,Roslindale / West Roxbury,lv_min_nights_5,Minimum stay 5 nights,490,25,245,-0.2193,-56.6299,-0.2675,-0.1738,0.0,-0.2646,-0.1808,5,0.0305
+zone,Roslindale / West Roxbury,lv_monthly,Monthly stays only (30 nights),490,177,313,-0.463,-114.3453,-0.5029,-0.4107,0.0032,-0.4841,-0.4416,5,-0.5137
+zone,Roslindale / West Roxbury,lv_nightly,Switch to nightly stays (2 nights),490,313,177,0.9923,117.3113,0.7834,1.1781,1.0,0.8949,1.0549,5,1.0565
+zone,Roslindale / West Roxbury,lv_superhost,Superhost status,490,274,216,0.0055,0.8996,-0.0081,0.0168,0.6157,-0.0022,0.0131,3,0.3667
+zone,Roslindale / West Roxbury,lv_verified,Verified identity,490,468,22,0.0,0.0,0.0,0.0,0.0,-0.0139,0.0,1,-0.3322
 zone,Roxbury / Jamaica Plain,am_any_ac,Air conditioning,764,575,189,0.004,0.7078,-0.0019,0.0121,0.6825,0.0022,0.0095,5,-0.0569
 zone,Roxbury / Jamaica Plain,am_backyard,Backyard,764,203,561,0.0004,0.0868,-0.0054,0.006,0.5276,-0.0028,0.0041,3,0.1547
 zone,Roxbury / Jamaica Plain,am_balcony_patio,Patio or balcony,764,233,531,0.0096,1.635,0.0033,0.0165,0.8531,0.0079,0.0172,5,0.2111
@@ -985,3 +1235,11 @@ zone,Roxbury / Jamaica Plain,am_tv,TV,764,602,162,0.0366,3.7801,0.0189,0.0601,0.
 zone,Roxbury / Jamaica Plain,am_view,View,764,50,714,0.0035,0.6381,-0.0023,0.0106,0.6625,-0.004,0.0077,4,0.0677
 zone,Roxbury / Jamaica Plain,am_washer_in_unit,In-unit washer,764,447,317,0.0025,0.5341,-0.0011,0.0088,0.6688,0.0013,0.0093,5,0.0311
 zone,Roxbury / Jamaica Plain,am_workspace,Dedicated workspace,764,534,230,0.0136,2.3048,0.0029,0.0257,0.8261,0.0076,0.0229,5,0.0543
+zone,Roxbury / Jamaica Plain,lv_licensed,Registered (licence number),764,593,171,0.089,7.2076,0.0424,0.1109,0.924,0.0754,0.1291,5,1.086
+zone,Roxbury / Jamaica Plain,lv_min_nights_1,Minimum stay 1 night,764,287,234,0.0521,14.4462,0.0312,0.0892,0.9915,0.0492,0.0582,5,0.404
+zone,Roxbury / Jamaica Plain,lv_min_nights_2,Minimum stay 2 nights,764,149,85,0.0287,8.9383,0.0143,0.2277,0.9294,0.0189,0.0464,5,0.1342
+zone,Roxbury / Jamaica Plain,lv_min_nights_5,Minimum stay 5 nights,764,34,436,-0.1696,-46.0613,-0.2218,-0.1192,0.0046,-0.1921,-0.1278,5,0.1534
+zone,Roxbury / Jamaica Plain,lv_monthly,Monthly stays only (30 nights),764,243,521,-0.4288,-108.9587,-0.4707,-0.3686,0.0,-0.4324,-0.4089,5,-0.5402
+zone,Roxbury / Jamaica Plain,lv_nightly,Switch to nightly stays (2 nights),764,521,243,0.8904,80.0306,0.6703,1.2109,0.9918,0.8528,0.9788,5,1.1749
+zone,Roxbury / Jamaica Plain,lv_superhost,Superhost status,764,377,387,0.0131,2.2344,0.0044,0.0239,0.8786,0.0069,0.0187,5,0.2322
+zone,Roxbury / Jamaica Plain,lv_verified,Verified identity,764,760,4,-0.0045,-2.5293,-0.0051,-0.0034,0.0,-0.0096,-0.0005,5,0.0644

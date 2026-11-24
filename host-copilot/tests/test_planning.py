@@ -12,18 +12,20 @@ sys.path.insert(0, str(ROOT))
 from model import effects, vocab                                   # noqa: E402
 from model.loader import get_model                                 # noqa: E402
 from app.tools import get_amenity_cost, goal_seek, roi_rank        # noqa: E402
-from app.tools.pricing import apply_changes                        # noqa: E402
+from app.tools.pricing import apply_keys                           # noqa: E402
+from app.tools import what_if                                      # noqa: E402
 
 SAMPLE = json.loads((ROOT / "data" / "sample_listing.json").read_text())
 DOWNTOWN = {"neighbourhood": "Downtown", "room_type": "Entire home/apt", "bedrooms": 1, "accommodates": 2,
-            "amenities": ["kitchen", "tv", "self check-in"]}
+            "amenities": ["kitchen", "tv", "self check-in"], "minimum_nights": 3, "license": "none"}
+MONTHLY = {"neighbourhood": "Roxbury", "room_type": "Private room", "minimum_nights": 30, "license": "none"}
 
 
 def rescore(listing, option):
     """Price a goal_seek option again, independently of the tool."""
     model = get_model()
     L, _ = model.complete_listing(listing)
-    return round(model.price([apply_changes(L, [a["key"] for a in option["amenities"]], [])])[0]["price"])
+    return round(model.price([apply_keys(L, [a["key"] for a in option["amenities"]])])[0]["price"])
 
 
 class EffectRule(unittest.TestCase):
@@ -93,6 +95,44 @@ class RoiRank(unittest.TestCase):
             self.assertAlmostEqual(i["payback_months"], round(i["cost"] / monthly, 1), places=1)
 
 
+class Levers(unittest.TestCase):
+    def test_lever_mapping(self):
+        self.assertEqual(vocab.lever_for("minimum_nights", 3, 1), "lv_min_nights_1")
+        self.assertEqual(vocab.lever_for("minimum_nights", 30, 2), "lv_nightly")
+        self.assertEqual(vocab.lever_for("minimum_nights", 2, 30), "lv_monthly")
+        self.assertEqual(vocab.lever_for("license", "none", "licensed"), "lv_licensed")
+
+    def test_plans_never_use_market_switch_or_earned_status(self):
+        for listing in (DOWNTOWN, MONTHLY):
+            d = goal_seek(listing, target_price=10000, budget=100000)["data"]
+            for o in d["options"]:
+                keys = [a["key"] for a in o["amenities"]]
+                self.assertFalse({"lv_monthly", "lv_nightly", "lv_superhost"} & set(keys))
+                self.assertLessEqual(sum(k.startswith("lv_min_nights") for k in keys), 1)
+
+    def test_licence_is_planned_with_regulatory_note(self):
+        d = roi_rank(DOWNTOWN)["data"]
+        self.assertIn("lv_licensed", [i["key"] for i in d["items"]])
+        self.assertTrue(any("legal or regulatory advice" in n for n in d["notes"]))
+
+    def test_market_switch_is_flagged_in_what_if(self):
+        d = what_if(MONTHLY, settings={"minimum_nights": 2})["data"]
+        self.assertTrue(any(c["market_switch"] for c in d["contributions"] + (d["no_reliable_effect"] or {"items": []})["items"]))
+        self.assertTrue(any("changes the market" in n for n in d["notes"]))
+        self.assertEqual(d["levers_after"]["minimum_nights"], 2)
+
+    def test_lever_and_amenity_contributions_add_up(self):
+        d = what_if(DOWNTOWN, add=["dishwasher"], settings={"minimum_nights": 1, "license": "licensed"})["data"]
+        parts = [c["contribution"] for c in d["contributions"]]
+        if d["no_reliable_effect"]:
+            parts.append(d["no_reliable_effect"]["contribution"])
+        self.assertLessEqual(abs(sum(parts) - d["delta"]), 3)
+
+    def test_unknown_setting_is_rejected(self):
+        with self.assertRaises(ValueError):
+            what_if(DOWNTOWN, settings={"bedrooms": 3})
+
+
 class Costs(unittest.TestCase):
     def test_known_and_out_of_vocabulary(self):
         hot = get_amenity_cost("Jacuzzi")["data"]
@@ -104,7 +144,8 @@ class Costs(unittest.TestCase):
 
     def test_every_addable_amenity_has_a_cost(self):
         from app.tools.costs import cost_of
-        missing = [k for k in vocab.AMENITIES if vocab.kind(k) != "building" and cost_of(k) is None]
+        missing = [k for k in list(vocab.AMENITIES) + list(vocab.LEVERS)
+                   if vocab.kind(k) not in ("building", "earned") and k not in ("lv_monthly", "lv_nightly") and cost_of(k) is None]
         self.assertEqual(missing, [])
 
 

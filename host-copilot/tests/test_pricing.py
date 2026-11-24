@@ -100,8 +100,8 @@ class WhatIf(unittest.TestCase):
 
     def test_only_substantial_changes_are_listed(self):
         d = what_if(SAMPLE, add=["hot tub", "dishwasher"])["data"]
-        self.assertEqual([c["amenity"] for c in d["contributions"]], ["am_dishwasher"])   # substantial in South End
-        self.assertEqual([m["amenity"] for m in d["no_reliable_effect"]["items"]], ["am_hot_tub"])
+        self.assertEqual([c["key"] for c in d["contributions"]], ["am_dishwasher"])   # substantial in South End
+        self.assertEqual([m["key"] for m in d["no_reliable_effect"]["items"]], ["am_hot_tub"])
 
     def test_already_present_amenity_changes_nothing(self):
         d = what_if(SAMPLE, add=["tv"])["data"]

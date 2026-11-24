@@ -19,3 +19,8 @@ BBQ grill,am_bbq,200,800,0,PLACEHOLDER ASSUMPTION. Needs outdoor space
 Pets allowed,am_pets,0,0,25,PLACEHOLDER ASSUMPTION. Policy change; monthly = extra cleaning
 Long-term stays allowed,am_long_term,0,0,0,PLACEHOLDER ASSUMPTION. Policy change
 Luggage drop-off,am_luggage,0,0,0,PLACEHOLDER ASSUMPTION. Policy change
+Minimum stay 1 night,lv_min_nights_1,0,0,0,PLACEHOLDER ASSUMPTION. Policy change; more turnovers mean more cleaning (not modelled)
+Minimum stay 2 nights,lv_min_nights_2,0,0,0,PLACEHOLDER ASSUMPTION. Policy change; more turnovers mean more cleaning (not modelled)
+Minimum stay 5 nights,lv_min_nights_5,0,0,0,PLACEHOLDER ASSUMPTION. Policy change
+Registered (licence number),lv_licensed,0,500,0,PLACEHOLDER ASSUMPTION. Fees and eligibility are set by the city; check current rules
+Verified identity,lv_verified,0,0,0,PLACEHOLDER ASSUMPTION. Free in the Airbnb app

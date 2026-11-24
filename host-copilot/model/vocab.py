@@ -58,8 +58,8 @@ for _key, (_label, _words) in AMENITIES.items():
 
 
 def label(key):
-    """Display label for an amenity key, e.g. 'am_hot_tub' -> 'Hot tub'."""
-    return AMENITIES[key][0]
+    """Display label for an amenity or lever key, e.g. 'am_hot_tub' -> 'Hot tub'."""
+    return AMENITIES[key][0] if key in AMENITIES else LEVERS[key][0]
 
 
 def resolve(name):
@@ -111,5 +111,42 @@ KIND = {
 
 
 def kind(key):
-    """'purchase', 'policy' (free rule change) or 'building' (not realistically added by a host)."""
+    """'purchase', 'policy' (free rule change), 'registration', 'earned' (superhost: not a direct choice)
+    or 'building' (not realistically added by a host)."""
     return KIND[key]
+
+
+# Non-amenity levers a host controls. Each is one fixed move, so its effect can be checked the same
+# way as an amenity (analysis/change_effects.py). Minimum-nights moves start from a band:
+#   to 1 night (from 2-27), to 2 nights (from 3-27), to 5 nights (from 1-2),
+#   monthly = 30 nights (from 1-27), nightly = 2 nights (from 28+).
+LEVERS = {
+    "lv_min_nights_1": ("Minimum stay 1 night", "policy", {"minimum_nights": 1}),
+    "lv_min_nights_2": ("Minimum stay 2 nights", "policy", {"minimum_nights": 2}),
+    "lv_min_nights_5": ("Minimum stay 5 nights", "policy", {"minimum_nights": 5}),
+    "lv_monthly": ("Monthly stays only (30 nights)", "policy", {"minimum_nights": 30}),
+    "lv_nightly": ("Switch to nightly stays (2 nights)", "policy", {"minimum_nights": 2}),
+    "lv_superhost": ("Superhost status", "earned", {"superhost": True}),
+    "lv_licensed": ("Registered (licence number)", "registration", {"license": "licensed"}),
+    "lv_verified": ("Verified identity", "policy", {"identity_verified": True}),
+}
+KIND.update({k: v[1] for k, v in LEVERS.items()})
+
+
+def lever_for(field, current, target):
+    """The lever key that matches changing one listing field, or None.
+    Minimum nights: the move is chosen from the current and target values (see LEVERS)."""
+    if field == "minimum_nights":
+        if current >= 28 and target <= 27:
+            return "lv_nightly"
+        if current <= 27 and target >= 28:
+            return "lv_monthly"
+        if current <= 27 and target < current:
+            return "lv_min_nights_1" if target == 1 else "lv_min_nights_2"
+        if current <= 27 and target > current:
+            return "lv_min_nights_5"
+        return None
+    for key, (_, _, setting) in LEVERS.items():
+        if field in setting and setting[field] == target:
+            return key
+    return None
