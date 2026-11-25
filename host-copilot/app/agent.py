@@ -104,8 +104,12 @@ def make_client():
 
 
 def _request(client, messages):
-    """One Messages API call. Effort `low` suits short chat answers; refusals in some categories are
-    retried server-side on a fallback model (fallbacks="default")."""
+    """One Messages API call. Effort `low` suits short chat answers. With CLAUDE_SERVER_FALLBACK=1 (default),
+    refusals in some categories are retried server-side on a fallback model; set it to 0 when the API is
+    reached through a proxy (ANTHROPIC_BASE_URL) that does not accept that beta."""
+    extra = {}
+    if os.environ.get("CLAUDE_SERVER_FALLBACK", "1") == "1":
+        extra = {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
     return client.beta.messages.create(
         model=model_name(),
         max_tokens=16000,
@@ -113,13 +117,8 @@ def _request(client, messages):
         tools=prompts.TOOLS,
         messages=messages,
         output_config={"effort": os.environ.get("CLAUDE_EFFORT", "low")},
-        betas=["server-side-fallback-2026-07-01"],
-        fallbacks="default",
+        **extra,
     )
-
-
-class Refused(Exception):
-    """The model declined the request (stop_reason "refusal")."""
 
 
 def run_claude_turn(client, history, question, listing, goals):

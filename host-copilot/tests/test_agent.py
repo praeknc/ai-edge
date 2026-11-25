@@ -110,6 +110,14 @@ class Loop(unittest.TestCase):
         self.assertEqual(c.requests[0]["model"], "claude-opus-5-5")
         os.environ.pop("CLAUDE_MODEL")
 
+    def test_server_fallback_can_be_switched_off(self):
+        os.environ["CLAUDE_SERVER_FALLBACK"] = "0"
+        c = FakeClient([reply(text("ok"))])
+        agent.respond("hi", SAMPLE, GOALS, history=[], client=c)
+        self.assertNotIn("fallbacks", c.requests[0])
+        self.assertNotIn("betas", c.requests[0])
+        os.environ.pop("CLAUDE_SERVER_FALLBACK")
+
     def test_mock_mode_without_key(self):
         os.environ.pop("ANTHROPIC_API_KEY", None)
         os.environ["MOCK_LLM"] = "0"

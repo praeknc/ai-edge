@@ -5,6 +5,7 @@ Free-text chat goes to the agent (Claude, or the offline mock router). Capabilit
 sliders, toggles and buttons inside the answers call the Python tools directly and never go through the LLM.
 """
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -13,6 +14,24 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import streamlit as st  # noqa: E402
+
+SECRET_KEYS = ["ANTHROPIC_API_KEY", "ANTHROPIC_BASE_URL", "MOCK_LLM", "CLAUDE_MODEL", "CLAUDE_EFFORT",
+               "CLAUDE_SERVER_FALLBACK"]
+
+
+def load_secrets():
+    """Copy settings from Streamlit secrets (.streamlit/secrets.toml, or the Secrets box on Streamlit Cloud)
+    into environment variables, where the Anthropic SDK and the agent read them. Values already set in the
+    environment win."""
+    try:
+        for key in SECRET_KEYS:
+            if key in st.secrets and not os.environ.get(key):
+                os.environ[key] = str(st.secrets[key])
+    except Exception:                     # no secrets file: run with the environment as it is
+        pass
+
+
+load_secrets()
 
 from app import agent  # noqa: E402
 from app.suggestions import CAPABILITIES, capability_actions, follow_ups  # noqa: E402
