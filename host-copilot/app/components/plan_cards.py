@@ -6,9 +6,8 @@ from app.components.common import add_block, add_message, blocks, footnote, inte
 from app.tools import goal_seek
 from model import vocab
 
-STATUS = {"reachable": ("success", "Reachable within budget"),
-          "unreachable": ("warning", "Not reachable with the changes that work in your area"),
-          "already_met": ("info", "Your current estimate already meets the target")}
+VERDICT_STYLE = {"already_met": "info", "reachable": "success", "possible": "info", "stretch": "warning",
+                 "unlikely": "warning", "very_unlikely": "error", "out_of_range": "error"}
 
 
 def recompute(bid):
@@ -62,13 +61,18 @@ def render(bid, block):
         c2.slider("Budget", 0, max(20000, int(d["budget"])), key=f"{bid}-budget", step=100, on_change=recompute,
                   args=(bid,))
         d = blocks()[bid]["data"]
-        kind, text = STATUS[d["status"]]
-        msg = f"{text}. Today: {usd(base['price'])} ({interval_text(base)}); target {usd(d['target_price'])}."
-        if d["status"] == "unreachable":
-            msg += f" Best possible: {usd(d['best_possible'])}."
-        getattr(st, kind)(msg)
-        if d["target_above_range"]:
-            st.caption("The target is above the 90% range for listings like yours.")
+        f = d["feasibility"]
+        kind = VERDICT_STYLE[f["verdict"]]
+        detail = f["text"].split(": ", 1)[-1]
+        getattr(st, kind)(f"**{f['label']}.** " + detail[:1].upper() + detail[1:])
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Chance similar listings charge it", f"{f['chance_pct']:g}%",
+                  help="From the model's errors on hosts it never saw")
+        p = f["peers"]
+        c2.metric("Comparable listings at or above", f"{p['n_at_or_above']} of {p['n']}", help=p["description"])
+        c3.metric("Best plan within budget", usd(d["best_possible"]), signed_usd(d["best_possible"] - base["price"]))
+        st.caption(f"Today: {usd(base['price'])} ({interval_text(base)}). Comparable listings ({p['description']}): "
+                   f"median {usd(p['median'])}, top 10% from {usd(p['p90'])}, highest {usd(p['max'])}.")
         if d["options"]:
             cols = st.columns(3)
             for i, (col, o) in enumerate(zip(cols, d["options"])):

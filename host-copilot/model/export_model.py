@@ -140,6 +140,7 @@ def main():
 
     meta = {"features": list(X.columns), "lgb_params": LGB_PARAMS, "seed": SEED, "n_rows": int(len(y)),
             "n_hosts": int(len(set(groups))), "oof_mae": mae, "interval": {"90": i90, "80": i80},
+            "residual_quantiles": [float(v) for v in np.quantile(res, np.linspace(0, 1, 201))],
             "interval_method": "Empirical quantiles of out-of-fold log-price residuals (5-fold CV, hosts held out). "
                                "Same multiplier for every listing.",
             "snapshot_dates": SNAPDATE, "zones_km": zones, "zone_names": bundle["quarterly"]["zones"]["names"], "notebook_gap_log": gap}

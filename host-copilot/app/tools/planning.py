@@ -14,6 +14,7 @@ from itertools import combinations
 
 from model import effects, vocab
 from app.tools.costs import cost_of, payback_months
+from app.tools.feasibility import assess_target
 from app.tools.pricing import (CAVEAT, MARKET_SWITCH, NIGHTS_PER_YEAR, REGULATORY_NOTE, apply_keys, interval_note,
                                lever_applies, listing_context, money, priced, summary)
 
@@ -112,6 +113,8 @@ def goal_seek(listing, target_price, budget, nights_per_year=NIGHTS_PER_YEAR):
         "other_levers": OTHER_LEVERS, "interval": interval_note(model), "listing": summary(L, zone),
         "filled_fields": filled, "rule": effects.RULE_TEXT, "costs_are_assumptions": True, "caveat": CAVEAT,
     }
+    data["feasibility"] = assess_target(model, L, base["price"], target_price, data["best_possible"],
+                                        plan_reaches=status == "reachable")
     return {"component": "plan_cards", "data": data}
 
 

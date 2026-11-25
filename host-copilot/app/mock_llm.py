@@ -142,18 +142,13 @@ def narrate(tool, result):
             s += f" None of them has a reliable effect in {d['listing']['neighbourhood']}."
         return " ".join(x for x in [s, extra] if x)
     if tool == "goal_seek":
-        if d["status"] == "already_met":
-            return f"Your estimate of {usd(d['base']['price'])} already meets {usd(d['target_price'])}."
+        f = d["feasibility"]
         if d["status"] == "reachable":
             o = d["options"][0]
             names = ", ".join(a["label"] for a in o["amenities"])
-            return (f"The cheapest plan to reach {usd(d['target_price'])} is {names} for about {usd(o['cost'])} "
-                    f"(estimate {usd(o['price']['price'])}).")
-        s = (f"No plan within {usd(d['budget'])} reaches {usd(d['target_price'])}; the best reaches "
-             f"{usd(d['best_possible'])} from {usd(d['base']['price'])} today.")
-        if d["target_above_range"]:
-            s += f" The target is above the 90% range for listings like yours ({_range(d['base'])})."
-        return s
+            return (f"Reachable: the cheapest plan to reach {usd(d['target_price'])} is {names} for about {usd(o['cost'])} "
+                    f"(estimate {usd(o['price']['price'])}, range {_range(o['price'])}).")
+        return f["text"]
     if tool == "roi_rank":
         if not d["items"]:
             return f"No change you can make has a reliable price effect in {d['listing']['neighbourhood']}."

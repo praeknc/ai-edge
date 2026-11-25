@@ -95,6 +95,40 @@ class RoiRank(unittest.TestCase):
             self.assertAlmostEqual(i["payback_months"], round(i["cost"] / monthly, 1), places=1)
 
 
+class Feasibility(unittest.TestCase):
+    """Verdicts for a target price: data-backed, ordered, and 'out of range' beyond the data."""
+
+    def verdict(self, listing, target, budget=2000):
+        return goal_seek(listing, target_price=target, budget=budget)["data"]["feasibility"]
+
+    def test_verdicts_get_worse_as_target_rises(self):
+        order = ["already_met", "reachable", "possible", "stretch", "unlikely", "very_unlikely", "out_of_range"]
+        seen = [order.index(self.verdict(SAMPLE, t)["verdict"]) for t in (500, 600, 700, 900, 1500, 2500)]
+        self.assertEqual(seen, sorted(seen))
+        chances = [self.verdict(SAMPLE, t)["chance_pct"] for t in (600, 700, 900)]
+        self.assertEqual(chances, sorted(chances, reverse=True))
+
+    def test_out_of_range_above_data_and_cap(self):
+        f = self.verdict(SAMPLE, 2500)
+        self.assertEqual(f["verdict"], "out_of_range")
+        self.assertIn("$2,000 cap", f["text"])
+        f = self.verdict(SAMPLE, 1500)
+        self.assertEqual(f["verdict"], "out_of_range")
+        self.assertLess(f["peers"]["max"], 1500)
+
+    def test_peer_counts_are_real(self):
+        from app.tools.feasibility import reference
+        f = self.verdict(SAMPLE, 700)
+        ref = reference()
+        peers = ref[(ref.neighbourhood == "South End") & (ref.room_type == "Entire home/apt") & (ref.bedrooms == 2)]
+        self.assertEqual(f["peers"]["n"], len(peers))
+        self.assertEqual(f["peers"]["n_at_or_above"], int((peers.price >= 700).sum()))
+
+    def test_reachable_target(self):
+        base = goal_seek(DOWNTOWN, target_price=1, budget=0)["data"]["base"]["price"]
+        self.assertEqual(self.verdict(DOWNTOWN, base + 5, 5000)["verdict"], "reachable")
+
+
 class Levers(unittest.TestCase):
     def test_lever_mapping(self):
         self.assertEqual(vocab.lever_for("minimum_nights", 3, 1), "lv_min_nights_1")
