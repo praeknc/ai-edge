@@ -3,6 +3,8 @@ numpy>=1.26
 pandas>=2.1
 scikit-learn>=1.4
 lightgbm>=4.3        # the pricing model; its pred_contrib gives exact TreeSHAP, so the shap package is not needed
+                     # macOS: also run `brew install libomp` (LightGBM needs OpenMP)
+matplotlib>=3.8      # used by the project's data pre-check (neighbourhood polygon test)
 streamlit>=1.38
 plotly>=5.20
 anthropic>=0.40
