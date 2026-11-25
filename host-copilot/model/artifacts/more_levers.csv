@@ -1,0 +1,14 @@
+lever,label,group,n,lift_pct,lift_usd,q25_pct,q75_pct,same_direction_share,sign_agree,zones_substantial
+title_luxury,"Title words like 'modern', 'renovated', 'luxury'",Listing text,5925,0.0154,3.2325,0.0038,0.0301,0.8365,5,0
+title_view,Title mentions a view or rooftop,Listing text,6656,0.0499,11.9698,0.0328,0.071,0.9872,5,8
+title_parking,Title mentions parking,Listing text,6497,0.0,0.0,-0.0015,0.0013,0.3923,2,0
+title_amenities,Title mentions gym / pool / amenities,Listing text,6828,0.0242,5.8126,0.0114,0.0459,0.9525,5,0
+desc_full,Full description (about 500 characters),Listing text,1563,0.0198,3.6359,-0.0081,0.0523,0.6942,5,1
+guests_plus2,"Sleep 2 more guests (sofa bed: +2 guests, +1 bed)",Capacity,6258,0.1704,34.7805,0.0958,0.2403,0.9784,5,8
+beds_plus1,"One more bed, same guests",Capacity,6607,0.0125,3.0774,0.0007,0.0292,0.764,5,0
+private_bath,Private instead of shared bathroom,Capacity,1340,0.206,21.6116,0.1454,0.2717,0.9858,5,8
+rating_up,"Ratings 0.1 higher (all 7 scores, max 5)",Guest experience,3215,0.0275,5.9898,0.0003,0.0673,0.7524,5,1
+open_90_more,Calendar open 90 more days a year,Calendar,3920,0.0103,2.414,-0.0063,0.0351,0.6704,5,0
+night_saturday,Saturday night instead of a weekday (Mon-Thu),Pricing by night,3622,0.0361,10.4902,0.0052,0.0786,0.791,5,2
+night_friday,Friday night instead of a weekday (Mon-Thu),Pricing by night,3622,0.0669,19.1355,0.0167,0.1545,0.8484,5,6
+summer,Summer (June) instead of fall (September),Season,3477,0.0704,15.6241,0.032,0.1248,0.8824,5,8
