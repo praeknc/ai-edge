@@ -150,7 +150,8 @@ def respond(question, listing, goals, history=None, client=None):
     """Answer one free-text question. `history` (Claude mode) is the session's message list."""
     if mock_mode() and client is None:
         out = respond_mock(question, listing, goals)
-        out["unverified"] = unverified_figures(out["text"], [b["data"] for b in out["blocks"]])
+        # Only narration built from tool results is checked; the fixed help text has no tool behind it.
+        out["unverified"] = unverified_figures(out["text"], [b["data"] for b in out["blocks"]]) if out["blocks"] else []
         _log("mock", question, listing, goals, out["blocks"], out["text"], {"unverified": out["unverified"]})
         return out
     import anthropic

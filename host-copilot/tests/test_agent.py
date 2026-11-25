@@ -119,5 +119,20 @@ class Loop(unittest.TestCase):
         self.assertEqual(json.loads(agent.LOG_PATH.read_text().splitlines()[-1])["mode"], "mock")
 
 
+class MockRouting(unittest.TestCase):
+    def test_goal_questions_in_plain_words(self):
+        from app import mock_llm
+        for q in ["if i want $700 per night is it possible and what should i improve", "Can I make $650 a night?",
+                  "How do I get to $450 with a $2,000 budget?"]:
+            self.assertEqual(mock_llm.route(q, GOALS)[0], "goal_seek", q)
+        self.assertEqual(mock_llm.route("what should I improve?", GOALS)[0], "roi_rank")
+
+    def test_help_text_is_not_flagged(self):
+        os.environ["MOCK_LLM"] = "1"
+        out = agent.respond("what can i ask", SAMPLE, GOALS)
+        self.assertEqual(out["blocks"], [])
+        self.assertEqual(out["unverified"], [])
+
+
 if __name__ == "__main__":
     unittest.main()

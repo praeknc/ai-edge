@@ -75,10 +75,13 @@ def route(question, goals):
 
     if re.search(r"\bcost\b|how much (does|would|is|are)", q, re.I) and amen and not re.search(r"payback|roi", q, re.I):
         return "get_amenity_cost", {"name": amen[0][1]}
-    if re.search(r"\b(reach|get to|target|hit|goal|raise .* to)\b", q, re.I) and (targets or goals.get("target_price")):
+    goal_words = r"\b(reach|get to|target|hit|goal|raise .* to|want|charge|make|earn|possible|achieve|get)\b"
+    if (targets and re.search(goal_words, q, re.I)) or \
+            (re.search(r"\b(reach|target|goal)\b", q, re.I) and goals.get("target_price")):
         return "goal_seek", {"target_price": targets[0] if targets else goals["target_price"],
                              "budget": budget if budget is not None else goals.get("budget", 2000)}
-    if re.search(r"\broi\b|best value|pay ?back|worth (it|investing)|invest|upgrade|which amenit", q, re.I):
+    if re.search(r"\broi\b|best value|pay ?back|worth (it|investing)|invest|upgrade|which amenit|improve|increase|"
+                 r"raise my|boost|what should i (change|add|do)", q, re.I):
         return "roi_rank", {"budget": budget if budget is not None else goals.get("budget")}
     settings = parse_settings(q)
     if re.search(r"what if|\badd\b|install|\bget a\b|remove|without|minimum|licen|regist|superhost|monthly", q, re.I) \
