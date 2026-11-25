@@ -14,7 +14,7 @@ import os
 import time
 from pathlib import Path
 
-from app import mock_llm, prompts
+from app import mock_llm, prompts, suggestions
 from app.faithfulness import unverified_figures
 from app.tools import get_amenity_cost, goal_seek, predict_price, roi_rank, what_if
 
@@ -77,10 +77,24 @@ def _log(mode, question, listing, goals, blocks, text, extra=None):
 
 # ---------------------------------------------------------------- mock mode
 def respond_mock(question, listing, goals):
+    """Mock mode: keyword scoring picks a tool; unclear questions get clickable options instead of a guess."""
     tool, args = mock_llm.route(question, goals)
-    blocks = [] if tool is None else [call_tool(tool, args, listing, goals)]
-    text = args if tool is None else mock_llm.narrate(tool, blocks[0])
-    return {"text": text, "blocks": blocks}
+    if tool == "clarify":
+        by_tool = {a["tool"]: a for a in suggestions.capability_actions(goals)}
+        options = [by_tool[t] for t in args if t in by_tool] or suggestions.capability_actions(goals)[:3]
+        return {"text": mock_llm.CLARIFY_TEXT, "blocks": [], "suggestions": options}
+    if tool is None:
+        return {"text": args, "blocks": [], "suggestions": suggestions.capability_actions(goals)}
+    block = call_tool(tool, args, listing, goals)
+    return {"text": mock_llm.narrate(tool, block), "blocks": [block]}
+
+
+def run_action(act, listing, goals):
+    """A clicked suggestion or capability card: call its tool directly (no language model) and narrate."""
+    block = call_tool(act["tool"], act["args"], listing, goals)
+    text = mock_llm.narrate(act["tool"], block)
+    _log("action", act["label"], listing, goals, [block], text)
+    return {"text": text, "blocks": [block], "unverified": []}
 
 
 # ---------------------------------------------------------------- Claude mode

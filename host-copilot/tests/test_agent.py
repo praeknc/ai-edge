@@ -126,12 +126,25 @@ class MockRouting(unittest.TestCase):
                   "How do I get to $450 with a $2,000 budget?"]:
             self.assertEqual(mock_llm.route(q, GOALS)[0], "goal_seek", q)
         self.assertEqual(mock_llm.route("what should I improve?", GOALS)[0], "roi_rank")
+        for q, tool in [("how much is a hot tub", "get_amenity_cost"), ("would a jacuzzi help", "what_if"),
+                        ("is a dishwasher worth it", "what_if"), ("can you help me price my place", "predict_price"),
+                        ("what about going monthly", "what_if"), ("tell me about boston", "clarify")]:
+            self.assertEqual(mock_llm.route(q, GOALS)[0], tool, q)
 
-    def test_help_text_is_not_flagged(self):
+    def test_help_text_is_not_flagged_and_offers_actions(self):
         os.environ["MOCK_LLM"] = "1"
         out = agent.respond("what can i ask", SAMPLE, GOALS)
         self.assertEqual(out["blocks"], [])
         self.assertEqual(out["unverified"], [])
+        self.assertEqual(len(out["suggestions"]), 5)
+
+    def test_every_capability_action_runs(self):
+        from app.suggestions import capability_actions, follow_ups
+        for act in capability_actions(GOALS):
+            out = agent.run_action(act, SAMPLE, GOALS)
+            self.assertNotEqual(out["blocks"][0]["component"], "error", act["label"])
+            for nxt in follow_ups(out["blocks"][0], GOALS):
+                self.assertNotEqual(agent.run_action(nxt, SAMPLE, GOALS)["blocks"][0]["component"], "error", nxt["label"])
 
 
 if __name__ == "__main__":

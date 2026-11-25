@@ -59,44 +59,86 @@ def parse_settings(text):
     return s
 
 
+HELP = re.compile(r"what can (you|i)|^\s*help\s*\??$|how does (this|it) work|what do you do|^\s*(options|menu)\b", re.I)
+INTENT_WORDS = {
+    "predict_price": [(r"what should i charge|how much should i (charge|ask)|my price|nightly (price|rate)", 3),
+                      (r"\bprice\b|\bcharge\b|\brate\b|worth|estimate|value|pricing", 1)],
+    "what_if": [(r"what if|what happens if|should i add|if i (add|remove|install|drop|get|switch|set|go)", 3),
+                (r"\badd\b|install|\bput in\b|\bbuy\b|\bget a\b|remove|without|drop|switch|change my|set a", 1)],
+    "goal_seek": [(r"\breach\b|\btarget\b|\bgoal\b|get to|hit|achieve|is it possible|can i (get|make|charge|earn)", 3),
+                  (r"\bwant\b|make|earn|charge", 1)],
+    "roi_rank": [(r"\broi\b|pay ?back|best value|fastest|which (upgrade|amenit|change)|what should i (add|change|do|improve)", 3),
+                 (r"upgrade|invest|improve|increase|boost|raise|worth (it|investing)|best", 1)],
+    "get_amenity_cost": [(r"how much (does|do|would|is|are) (a|an|the)? ?\w+( \w+)? cost|\bcost of\b|price of|"
+                          r"how much (is|are|for) (a|an|the)? ?\w+", 3),
+                         (r"\bcost\b|\bcosts\b|expensive|cheap", 1)],
+}
+CLARIFY_TEXT = "I'm not sure which of these you mean. Pick one below, or rephrase with a little more detail."
+
+
+def score_intents(q, amen, settings, targets):
+    """Score each tool for a question: keyword weights plus what the question mentions."""
+    sc = {t: sum(w for pat, w in pats if re.search(pat, q, re.I)) for t, pats in INTENT_WORDS.items()}
+    if amen:
+        sc["what_if"] += 2
+        if re.search(r"worth|help|pay off|good idea|should i (add|get|buy|install)", q, re.I):
+            sc["what_if"] += 2              # judging one amenity: the what-if panel shows its effect, cost and payback
+        sc["get_amenity_cost"] += 1 if sc["get_amenity_cost"] else 0
+    if settings:
+        sc["what_if"] += 2
+    if targets:
+        sc["goal_seek"] += 2
+        sc["predict_price"] -= 1
+    if not amen:
+        sc["get_amenity_cost"] = 0          # a cost lookup needs an amenity
+    if not (amen or settings):
+        sc["what_if"] = min(sc["what_if"], 1)
+    return sc
+
+
 def route(question, goals):
-    """Pick (tool name, arguments without the listing) for a question, or (None, reply text)."""
+    """Pick (tool, arguments without the listing) for a question.
+    Returns (None, reply text) for help and out-of-scope questions, and ("clarify", [tools]) when unsure."""
     q = question.strip()
     if OUT_OF_SCOPE.search(q):
         return None, ("I can't help with legal, tax or insurance questions. I can estimate prices, test changes "
                       "and plan upgrades for your listing.")
+    if HELP.search(q):
+        return None, "Here is what I can do. Pick one below, or ask in your own words."
     amen = find_amenities(q)
     money = dollars(q)
-    budget_m = re.search(r"(budget|under|spend|up to)\D{0,12}\$\s?([\d,]+)\s*(k)?", q, re.I)
+    budget_m = re.search(r"(budget|under|spend|up to|with)\D{0,12}\$\s?([\d,]+)\s*(k)?", q, re.I)
     budget = None
     if budget_m:
         budget = float(budget_m.group(2).replace(",", "")) * (1000 if budget_m.group(3) else 1)
     targets = [v for pos, v in money if not budget_m or pos < budget_m.start() or pos > budget_m.end()]
-
-    if re.search(r"\bcost\b|how much (does|would|is|are)", q, re.I) and amen and not re.search(r"payback|roi", q, re.I):
-        return "get_amenity_cost", {"name": amen[0][1]}
-    goal_words = r"\b(reach|get to|target|hit|goal|raise .* to|want|charge|make|earn|possible|achieve|get)\b"
-    if (targets and re.search(goal_words, q, re.I)) or \
-            (re.search(r"\b(reach|target|goal)\b", q, re.I) and goals.get("target_price")):
-        return "goal_seek", {"target_price": targets[0] if targets else goals["target_price"],
-                             "budget": budget if budget is not None else goals.get("budget", 2000)}
-    if re.search(r"\broi\b|best value|pay ?back|worth (it|investing)|invest|upgrade|which amenit|improve|increase|"
-                 r"raise my|boost|what should i (change|add|do)", q, re.I):
-        return "roi_rank", {"budget": budget if budget is not None else goals.get("budget")}
     settings = parse_settings(q)
-    if re.search(r"what if|\badd\b|install|\bget a\b|remove|without|minimum|licen|regist|superhost|monthly", q, re.I) \
-            and (amen or settings):
+
+    sc = score_intents(q, amen, settings, targets)
+    ranked = sorted(sc, key=sc.get, reverse=True)
+    best, second = ranked[0], ranked[1]
+    clear_winner = sc[best] >= 2 and sc[best] - sc[second] >= 1
+    only_match = sc[best] >= 1 and sc[second] <= 0
+    if not (clear_winner or only_match):
+        return "clarify", [t for t in ranked if sc[t] > 0][:3] or ranked[:3]
+
+    if best == "get_amenity_cost":
+        return best, {"name": amen[0][1]}
+    if best == "goal_seek":
+        target = targets[0] if targets else goals.get("target_price")
+        if not target:
+            return "clarify", ["goal_seek"]
+        return best, {"target_price": target, "budget": budget if budget is not None else goals.get("budget", 2000)}
+    if best == "roi_rank":
+        return best, {"budget": budget if budget is not None else goals.get("budget")}
+    if best == "what_if":
         rm = REMOVE_WORDS.search(q)
-        add = [p for pos, p in amen if not rm or pos < rm.start()]
-        remove = [p for pos, p in amen if rm and pos > rm.start()]
-        args = {"add": add, "remove": remove}
+        args = {"add": [p for pos, p in amen if not rm or pos < rm.start()],
+                "remove": [p for pos, p in amen if rm and pos > rm.start()]}
         if settings:
             args["settings"] = settings
-        return "what_if", args
-    if re.search(r"price|charge|worth|rate|how much should|estimate", q, re.I):
-        return "predict_price", {}
-    return None, ("Try: \"What should I charge?\", \"What if I add a dishwasher?\", \"What if I set a 1-night minimum?\", "
-                  "\"How do I get to $450 with a $2,000 budget?\" or \"Which upgrades pay back fastest?\"")
+        return best, args
+    return "predict_price", {}
 
 
 def usd(v):
@@ -128,6 +170,9 @@ def narrate(tool, result):
         return s
     if tool == "what_if":
         extra = _unsupported(d)
+        if not d["changes"] and not d["already_present"] and not d.get("unsupported"):
+            return (f"Here is your what-if panel at {usd(d['base']['price'])} a night (range {_range(d['base'])}). "
+                    "Click amenities or change the levers to re-price.")
         if not d["changes"]:
             already = ", ".join(d["already_present"])
             return " ".join(x for x in [f"Already in place: {already}." if already else "", extra] if x) or \

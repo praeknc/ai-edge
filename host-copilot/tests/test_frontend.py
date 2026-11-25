@@ -65,5 +65,35 @@ class Frontend(unittest.TestCase):
         self.assertIn("closest", at.chat_message[-1].markdown[0].value)
 
 
+class Flow(unittest.TestCase):
+    """Capability cards, next-step buttons, clarification and new conversations."""
+
+    def click(self, at, label):
+        next(b for b in at.button if b.label == label).click().run()
+        self.assertFalse(at.exception)
+        return at
+
+    def test_capability_card_runs_tool_and_offers_next_steps(self):
+        at = start()
+        self.assertTrue(any("What I can do" in m.value for m in at.markdown))
+        at = self.click(at, "What should I charge?")
+        self.assertIn("90% range", at.chat_message[-1].markdown[0].value)
+        labels = [b.label for b in at.button]
+        self.assertIn("Which upgrades pay back fastest?", labels)        # a next step under the answer
+        at = self.click(at, "Which upgrades pay back fastest?")
+        self.assertIn("payback", at.chat_message[-1].markdown[0].value.lower())
+
+    def test_unclear_question_gets_options(self):
+        at = ask(start(), "tell me about boston")
+        self.assertIn("not sure", at.chat_message[-1].markdown[0].value)
+        self.assertIn("What should I charge?", [b.label for b in at.button])
+
+    def test_new_conversation_shows_cards_again(self):
+        at = ask(start(), "What should I charge?")
+        at = self.click(at, "＋ New conversation")
+        self.assertEqual(len(at.chat_message), 0)
+        self.assertTrue(any("What I can do" in m.value for m in at.markdown))
+
+
 if __name__ == "__main__":
     unittest.main()

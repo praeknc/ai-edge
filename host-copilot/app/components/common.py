@@ -14,7 +14,7 @@ def usd(v):
 def signed_usd(v):
     """+$13 / −$8."""
     v = int(round(v))
-    return f"{'+' if v >= 0 else '−'}${abs(v):,}"
+    return f"{'+' if v >= 0 else '-'}${abs(v):,}"          # ASCII minus: Streamlit reads it as a decrease
 
 
 def interval_text(p):

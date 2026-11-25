@@ -1,8 +1,8 @@
 """Host Copilot: Streamlit front end.
 
 Run from host-copilot/:   streamlit run app/frontend.py
-Free-text chat goes to the agent (mock LLM in this step). Sliders, toggles and buttons inside the
-answers call the Python tools directly and never go back through the LLM.
+Free-text chat goes to the agent (Claude, or the offline mock router). Capability cards, suggestion buttons,
+sliders, toggles and buttons inside the answers call the Python tools directly and never go through the LLM.
 """
 import json
 import sys
@@ -15,19 +15,18 @@ if str(ROOT) not in sys.path:
 import streamlit as st  # noqa: E402
 
 from app import agent  # noqa: E402
+from app.suggestions import CAPABILITIES, capability_actions, follow_ups  # noqa: E402
 from app.components import render_block  # noqa: E402
 from app.components.common import add_block, add_message, blocks  # noqa: E402
 from model import vocab  # noqa: E402
 from model.loader import PROPERTY_GROUPS, ROOM_TYPES, get_model  # noqa: E402
 
 SAMPLE = json.loads((ROOT / "data" / "sample_listing.json").read_text())
-EXAMPLES = ["What should I charge?", "What if I add a dishwasher and a hot tub?",
-            "How do I get to $560 with a budget of $2,000?", "Which upgrades pay back fastest?",
-            "What if I set a 1-night minimum?"]
 CSS = """
 <style>
 .block-container {padding-top: 2rem; max-width: 1100px;}
 [data-testid="stMetricValue"] {font-size: 1.6rem;}
+.cap-title {font-weight: 600; font-size: 1.05rem;}
 </style>
 """
 
@@ -72,42 +71,111 @@ def sidebar_listing():
     return listing, goals
 
 
-def ask(question, listing, goals):
-    """Send free text to the agent and store its answer and UI blocks."""
-    add_message("user", question)
-    history = st.session_state.setdefault("llm_history", [])      # Claude mode: append-only conversation
-    result = agent.respond(question, listing, goals, history=history)
+def _with_flag(result):
+    """Narration plus a visible flag for any dollar figure no tool returned."""
     text = result["text"]
     if result.get("unverified"):
         text += ("\n\n:orange[Unverified figure(s) not found in any tool result: "
                  + ", ".join(f"${v:,.0f}" for v in result["unverified"]) + ".]")
-    add_message("assistant", text, [add_block(b) for b in result["blocks"]])
+    return text
+
+
+def ask(question, listing, goals):
+    """Send free text to the agent and store its answer, UI blocks and suggested next steps."""
+    add_message("user", question)
+    history = st.session_state.setdefault("llm_history", [])      # Claude mode: append-only conversation
+    result = agent.respond(question, listing, goals, history=history)
+    _store_answer(result, goals)
+
+
+def run(act, listing, goals):
+    """A clicked card or suggestion: call the tool directly, no language model involved."""
+    add_message("user", act["label"])
+    _store_answer(agent.run_action(act, listing, goals), goals)
+
+
+def _store_answer(result, goals):
+    ids = [add_block(b) for b in result["blocks"]]
+    if result.get("suggestions") is not None:
+        nxt = result["suggestions"]
+    elif result["blocks"]:
+        nxt = follow_ups(result["blocks"][-1], goals)
+    else:
+        nxt = capability_actions(goals)[:3]
+    add_message("assistant", _with_flag(result), ids)
+    st.session_state["messages"][-1]["suggestions"] = nxt
+
+
+def new_conversation():
+    for k in ("messages", "blocks", "llm_history"):
+        st.session_state.pop(k, None)
+
+
+def capability_box(listing, goals):
+    """'What I can do' cards, shown at the start of every conversation."""
+    st.markdown("#### What I can do")
+    st.caption("Click a card to run it on the listing in the sidebar, or type a question below.")
+    acts = capability_actions(goals)
+    rows = [st.columns(3), st.columns(3)]
+    cells = [c for row in rows for c in row]
+    for cell, (title, desc, icon), act in zip(cells, CAPABILITIES, acts):
+        with cell.container(border=True, height=190):
+            st.markdown(f"<div class='cap-title'>{icon} {title}</div>", unsafe_allow_html=True)
+            st.caption(desc)
+            if st.button(act["label"], key=f"cap-{title}", width="stretch"):
+                run(act, listing, goals)
+                st.rerun()
+    with cells[5].container(border=True, height=190):
+        st.markdown("<div class='cap-title'>💬 Ask in your own words</div>", unsafe_allow_html=True)
+        st.caption("For example: \"Is a dishwasher worth it?\", \"Can I make $650 a night?\", "
+                   "\"What if I set a 1-night minimum and register?\"")
+
+
+def suggestion_buttons(msg_index, acts, listing, goals):
+    """Next-step buttons under the latest answer."""
+    if not acts:
+        return
+    st.caption("Next steps")
+    cols = st.columns(len(acts))
+    for i, (col, act) in enumerate(zip(cols, acts)):
+        if col.button(act["label"], key=f"sug-{msg_index}-{i}", width="stretch"):
+            run(act, listing, goals)
+            st.rerun()
+
+
+def mode_notice():
+    """Say plainly how free text is understood in the current mode."""
+    if agent.mock_mode():
+        st.info("**Offline mode.** Typed questions are matched with keyword rules, so wording outside a few patterns "
+                "gets a 'did you mean' choice. The cards and next-step buttons always work. For full chat, set "
+                "ANTHROPIC_API_KEY and run with MOCK_LLM=0.", icon="ℹ️")
 
 
 def main():
     st.set_page_config(page_title="Host Copilot", page_icon="🏠", layout="wide")
     st.markdown(CSS, unsafe_allow_html=True)
     listing, goals = sidebar_listing()
+    st.sidebar.button("＋ New conversation", on_click=new_conversation, width="stretch")
     st.title("Host Copilot")
-    mode = "Mock LLM (offline keyword routing)" if agent.mock_mode() else f"Claude ({agent.model_name()})"
-    st.caption(f"Ask about your Boston Airbnb's price. Numbers come from the pricing model, never from the chat model. · {mode}")
+    mode = "Offline mock (keyword rules)" if agent.mock_mode() else f"Claude ({agent.model_name()})"
+    st.caption(f"Pricing help for Boston Airbnb hosts. Numbers come from the pricing model, never from the chat model. "
+               f"· Chat: {mode}")
 
-    prompt = st.chat_input("Ask about your price, upgrades or a target…")
+    prompt = st.chat_input("Ask about your price, an upgrade, or a target…")
     if prompt:
         ask(prompt, listing, goals)
     messages = st.session_state.get("messages", [])
     if not messages:
-        st.markdown("**Try one of these:**")
-        cols = st.columns(len(EXAMPLES))
-        for col, q in zip(cols, EXAMPLES):
-            if col.button(q, width="stretch"):
-                ask(q, listing, goals)
-                st.rerun()
-    for msg in st.session_state.get("messages", []):
+        mode_notice()
+        capability_box(listing, goals)
+    last_assistant = max((i for i, m in enumerate(messages) if m["role"] == "assistant"), default=None)
+    for i, msg in enumerate(messages):
         with st.chat_message(msg["role"]):
             st.markdown(msg["text"])
             for bid in msg["blocks"]:
                 render_block(bid, blocks()[bid])
+            if i == last_assistant:
+                suggestion_buttons(i, msg.get("suggestions"), listing, goals)
 
 
 main()
