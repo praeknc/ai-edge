@@ -121,6 +121,10 @@ def _request(client, messages):
     )
 
 
+class Refused(Exception):
+    """The model declined the request (stop_reason "refusal")."""
+
+
 def run_claude_turn(client, history, question, listing, goals):
     """Run one user turn through the tool-use loop.
 
