@@ -75,8 +75,13 @@ def sidebar_listing():
 def ask(question, listing, goals):
     """Send free text to the agent and store its answer and UI blocks."""
     add_message("user", question)
-    result = agent.respond(question, listing, goals)
-    add_message("assistant", result["text"], [add_block(b) for b in result["blocks"]])
+    history = st.session_state.setdefault("llm_history", [])      # Claude mode: append-only conversation
+    result = agent.respond(question, listing, goals, history=history)
+    text = result["text"]
+    if result.get("unverified"):
+        text += ("\n\n:orange[Unverified figure(s) not found in any tool result: "
+                 + ", ".join(f"${v:,.0f}" for v in result["unverified"]) + ".]")
+    add_message("assistant", text, [add_block(b) for b in result["blocks"]])
 
 
 def main():
@@ -84,7 +89,7 @@ def main():
     st.markdown(CSS, unsafe_allow_html=True)
     listing, goals = sidebar_listing()
     st.title("Host Copilot")
-    mode = "Mock LLM (offline keyword routing)" if agent.mock_mode() else "Claude"
+    mode = "Mock LLM (offline keyword routing)" if agent.mock_mode() else f"Claude ({agent.model_name()})"
     st.caption(f"Ask about your Boston Airbnb's price. Numbers come from the pricing model, never from the chat model. · {mode}")
 
     prompt = st.chat_input("Ask about your price, upgrades or a target…")
