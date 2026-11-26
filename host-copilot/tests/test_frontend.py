@@ -13,11 +13,16 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 os.environ["MOCK_LLM"] = "1"
 APP = str(ROOT / "app" / "frontend.py")
+IDS = [item["id"] for item in __import__("json").loads((ROOT / "data" / "host_portfolio.json").read_text())["listings"]]
 
 
-def start():
+def start(listing=0):
+    """Open the app, sign in as the demo host and open one of the 5 listings (0 = South End condo)."""
     at = AppTest.from_file(APP, default_timeout=60)
     at.run()
+    assert not at.exception, at.exception
+    next(b for b in at.button if b.label.startswith("Sign in as")).click().run()
+    at.button(key=f"open-{IDS[listing]}").click().run()
     assert not at.exception, at.exception
     return at
 
@@ -65,6 +70,47 @@ class Frontend(unittest.TestCase):
         self.assertIn("closest", at.chat_message[-1].markdown[0].value)
 
 
+class HostFlow(unittest.TestCase):
+    """Sign in, choose a listing, switch listings, restart, reset, and come back after a refresh."""
+
+    def test_portfolio_has_five_synthetic_listings(self):
+        at = AppTest.from_file(APP, default_timeout=60)
+        at.run()
+        next(b for b in at.button if b.label.startswith("Sign in as")).click().run()
+        self.assertEqual(len([b for b in at.button if b.label == "Open copilot →"]), 5)
+        self.assertTrue(any("Your listings (5)" in t.value for t in at.title))
+
+    def test_each_listing_keeps_its_chat(self):
+        at = ask(start(0), "What should I charge?")
+        n = len(at.chat_message)
+        next(b for b in at.button if b.label == "← My listings").click().run()
+        at.button(key=f"open-{IDS[2]}").click().run()                               # Dorchester room
+        self.assertEqual(len(at.chat_message), 0)
+        self.assertEqual(at.session_state["p_hood"], "Dorchester")
+        next(b for b in at.button if b.label == "← My listings").click().run()
+        at.button(key=f"open-{IDS[0]}").click().run()                               # back to South End
+        self.assertEqual(len(at.chat_message), n)
+        self.assertEqual(at.session_state["p_hood"], "South End")
+
+    def test_restart_and_reset(self):
+        at = ask(start(0), "What should I charge?")
+        at.number_input(key="p_bed").set_value(3).run()
+        next(b for b in at.button if b.label == "⟲ Reset details").click().run()
+        self.assertEqual(at.session_state["p_bed"], 2)
+        self.assertGreater(len(at.chat_message), 0)                                   # reset keeps the chat
+        next(b for b in at.button if b.label == "↻ Restart chat").click().run()
+        self.assertEqual(len(at.chat_message), 0)
+        self.assertTrue(any("What I can do" in m.value for m in at.markdown))
+
+    def test_refresh_returns_to_listing_in_url(self):
+        at = AppTest.from_file(APP, default_timeout=60)
+        at.query_params["host"] = "demo"
+        at.query_params["listing"] = "990000000000000003"
+        at.run()
+        self.assertFalse(at.exception)
+        self.assertTrue(any("Dorchester room" in t.value for t in at.title))
+
+
 class Flow(unittest.TestCase):
     """Capability cards, next-step buttons, clarification and new conversations."""
 
@@ -90,7 +136,7 @@ class Flow(unittest.TestCase):
 
     def test_new_conversation_shows_cards_again(self):
         at = ask(start(), "What should I charge?")
-        at = self.click(at, "＋ New conversation")
+        at = self.click(at, "↻ Restart chat")
         self.assertEqual(len(at.chat_message), 0)
         self.assertTrue(any("What I can do" in m.value for m in at.markdown))
 

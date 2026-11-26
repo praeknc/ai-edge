@@ -1,9 +1,14 @@
 """Host Copilot: Streamlit front end.
 
 Run from host-copilot/:   streamlit run app/frontend.py
+
+Flow: sign in as the demo host -> "Your listings" (5 synthetic listings, data/host_portfolio.json) -> the copilot
+for one listing. Each listing keeps its own chat while you switch; the open listing is kept in the URL so a
+browser refresh returns to it.
 Free-text chat goes to the agent (Claude, or the offline mock router). Capability cards, suggestion buttons,
 sliders, toggles and buttons inside the answers call the Python tools directly and never go through the LLM.
 """
+import math
 import json
 import os
 import sys
@@ -40,7 +45,8 @@ from app.components.common import add_block, add_message, blocks  # noqa: E402
 from model import vocab  # noqa: E402
 from model.loader import PROPERTY_GROUPS, ROOM_TYPES, get_model  # noqa: E402
 
-SAMPLE = json.loads((ROOT / "data" / "sample_listing.json").read_text())
+PORTFOLIO = json.loads((ROOT / "data" / "host_portfolio.json").read_text())
+LISTINGS = {item["id"]: item for item in PORTFOLIO["listings"]}
 CSS = """
 <style>
 .block-container {padding-top: 2rem; max-width: 1100px;}
@@ -48,44 +54,143 @@ CSS = """
 .cap-title {font-weight: 600; font-size: 1.05rem;}
 </style>
 """
+FORM = {  # widget key -> host-listing field
+    "p_hood": "neighbourhood", "p_room": "room_type", "p_prop": "property_group", "p_bed": "bedrooms",
+    "p_guests": "accommodates", "p_beds": "beds", "p_baths": "baths", "p_shared": "baths_shared", "p_am": "amenities",
+    "p_min": "minimum_nights", "p_lic": "license", "p_super": "superhost", "p_season": "season",
+    "p_price": "current_price", "p_nrev": "number_of_reviews", "p_score": "review_score", "p_hostn": "host_listings",
+}
+GOALS = ("g_target", "g_budget", "g_nights")
 
 
-def sidebar_listing():
-    """Listing profile and host goals from the sidebar form (kept in st.session_state by widget keys)."""
+# ---------------------------------------------------------------- per-listing state
+def chats():
+    """listing id -> {"messages", "llm_history", "form"}: each listing keeps its own conversation and edits."""
+    return st.session_state.setdefault("chats", {})
+
+
+@st.cache_data(show_spinner=False)
+def estimate(listing_id):
+    """Model estimate for a portfolio listing as stored (for the listing cards)."""
+    return agent.call_tool("predict_price", {}, LISTINGS[listing_id]["listing"])["data"]
+
+
+def form_values(listing_id):
+    """Widget values for a listing straight from the portfolio, plus a default goal about 10% above the estimate."""
+    L = LISTINGS[listing_id]["listing"]
+    vals = {k: L[f] for k, f in FORM.items()}
+    vals["p_am"] = vocab.resolve_many(L["amenities"])[0]
+    vals["p_baths"] = float(vals["p_baths"])
+    est = estimate(listing_id)["price"]
+    vals.update({"g_target": int(math.ceil(est * 1.1 / 10) * 10), "g_budget": 2000, "g_nights": 200})
+    return vals
+
+
+def _save_open_listing():
+    lid = st.session_state.get("open_listing")
+    if lid:
+        chats()[lid] = {"messages": st.session_state.get("messages", []),
+                        "llm_history": st.session_state.get("llm_history", []),
+                        "form": {k: st.session_state[k] for k in list(FORM) + list(GOALS) if k in st.session_state}}
+
+
+def open_listing(listing_id):
+    """Switch the copilot to a listing: keep the current listing's chat, restore (or start) the new one's."""
+    _save_open_listing()
+    saved = chats().get(listing_id, {})
+    st.session_state["messages"] = saved.get("messages", [])
+    st.session_state["llm_history"] = saved.get("llm_history", [])
+    for k, v in (saved.get("form") or form_values(listing_id)).items():
+        st.session_state[k] = v
+    st.session_state["open_listing"] = listing_id
+    st.query_params.update({"host": "demo", "listing": listing_id})
+
+
+def back_to_listings():
+    _save_open_listing()
+    st.session_state["open_listing"] = None
+    st.query_params.clear()
+    st.query_params["host"] = "demo"
+
+
+def restart_chat():
+    """New conversation for the open listing (its details and goals stay)."""
+    st.session_state["messages"], st.session_state["llm_history"] = [], []
+
+
+def reset_details():
+    """Put the open listing's details and goals back to what is stored on the platform."""
+    for k, v in form_values(st.session_state["open_listing"]).items():
+        st.session_state[k] = v
+
+
+def sign_in():
+    st.session_state["signed_in"] = True
+    st.query_params["host"] = "demo"
+
+
+def sign_out():
+    for k in ("signed_in", "open_listing", "chats", "messages", "llm_history", "blocks"):
+        st.session_state.pop(k, None)
+    st.query_params.clear()
+
+
+def restore_from_url():
+    """After a browser refresh, return to the signed-in host and the listing in the URL."""
+    if st.session_state.get("signed_in") or st.query_params.get("host") != "demo":
+        return
+    st.session_state["signed_in"] = True
+    lid = st.query_params.get("listing")
+    if lid in LISTINGS:
+        open_listing(lid)
+
+
+# ---------------------------------------------------------------- sidebar: listing details and goals
+def sidebar_listing(listing_id):
+    """Editable details of the open listing and the host's goals (values live in st.session_state)."""
     model = get_model()
-    hoods = model.neighbourhoods()
+    base = LISTINGS[listing_id]["listing"]
     sb = st.sidebar
-    sb.header("Your listing")
-    hood = sb.selectbox("Neighbourhood", hoods, index=hoods.index(SAMPLE["neighbourhood"]), key="p_hood")
-    room = sb.selectbox("Room type", ROOM_TYPES, index=ROOM_TYPES.index(SAMPLE["room_type"]), key="p_room")
-    prop = sb.selectbox("Property type", PROPERTY_GROUPS, index=PROPERTY_GROUPS.index(SAMPLE["property_group"]), key="p_prop")
+    sb.caption(f"Signed in as **{PORTFOLIO['host']['host_name']}**")
+    sb.header("Listing details")
+    sb.caption("Prefilled from the platform. Edit to test a scenario; ⟲ Reset details restores them.")
+    hood = sb.selectbox("Neighbourhood", model.neighbourhoods(), key="p_hood")
+    room = sb.selectbox("Room type", ROOM_TYPES, key="p_room")
+    prop = sb.selectbox("Property type", PROPERTY_GROUPS, key="p_prop")
     c1, c2 = sb.columns(2)
-    bedrooms = c1.number_input("Bedrooms", 0, 8, SAMPLE["bedrooms"], key="p_bed")
-    guests = c2.number_input("Guests", 1, 16, SAMPLE["accommodates"], key="p_guests")
-    beds = c1.number_input("Beds", 0, 16, SAMPLE["beds"], key="p_beds")
-    baths = c2.number_input("Baths", 0.0, 8.0, float(SAMPLE["baths"]), 0.5, key="p_baths")
-    shared = sb.toggle("Shared bathroom", SAMPLE["baths_shared"], key="p_shared")
-    default_am = vocab.resolve_many(SAMPLE["amenities"])[0]
-    amen = sb.multiselect("Current amenities", list(vocab.AMENITIES), default=default_am, format_func=vocab.label, key="p_am")
+    bedrooms = c1.number_input("Bedrooms", 0, 8, key="p_bed")
+    guests = c2.number_input("Guests", 1, 16, key="p_guests")
+    beds = c1.number_input("Beds", 0, 16, key="p_beds")
+    baths = c2.number_input("Baths", 0.0, 8.0, step=0.5, key="p_baths")
+    shared = sb.toggle("Shared bathroom", key="p_shared")
+    amen = sb.multiselect("Amenities", list(vocab.AMENITIES), format_func=vocab.label, key="p_am")
     c1, c2 = sb.columns(2)
-    min_n = c1.number_input("Minimum nights", 1, 365, SAMPLE["minimum_nights"], key="p_min")
+    min_n = c1.number_input("Minimum nights", 1, 365, key="p_min")
     lic = c2.selectbox("Licence", ["licensed", "exempt", "none"], key="p_lic")
-    superhost = sb.toggle("Superhost", SAMPLE["superhost"], key="p_super")
+    superhost = sb.toggle("Superhost", key="p_super")
     season = sb.radio("Season to price", ["fall", "summer"], horizontal=True, key="p_season")
-    price = sb.number_input("Your current price ($/night)", 0, 5000, SAMPLE["current_price"], 5, key="p_price")
+    price = sb.number_input("Your listed price ($/night)", 0, 5000, step=5, key="p_price")
     with sb.expander("Reviews and history"):
-        n_rev = st.number_input("Number of reviews", 0, 2000, SAMPLE["number_of_reviews"], key="p_nrev")
-        score = st.slider("Average rating", 1.0, 5.0, SAMPLE["review_score"], 0.05, key="p_score")
-        host_n = st.number_input("Listings you host", 1, 500, SAMPLE["host_listings"], key="p_hostn")
+        n_rev = st.number_input("Number of reviews", 0, 2000, key="p_nrev")
+        score = st.slider("Average rating", 1.0, 5.0, step=0.05, key="p_score")
+        host_n = st.number_input("Listings you host", 1, 500, key="p_hostn")
     sb.header("Your goals")
-    target = sb.number_input("Target price ($/night)", 0, 5000, 600, 10, key="g_target")
-    budget = sb.number_input("Upgrade budget ($)", 0, 100000, 2000, 100, key="g_budget")
-    nights = sb.slider("Booked nights per year", 30, 365, 200, 5, key="g_nights")
-    listing = {**SAMPLE, "neighbourhood": hood, "room_type": room, "property_group": prop, "bedrooms": int(bedrooms),
+    target = sb.number_input("Target price ($/night)", 0, 5000, step=10, key="g_target")
+    budget = sb.number_input("Upgrade budget ($)", 0, 100000, step=100, key="g_budget")
+    nights = sb.slider("Booked nights per year", 30, 365, step=5, key="g_nights")
+    sb.divider()
+    sb.button("Sign out", on_click=sign_out, width="stretch")
+
+    base_keys = set(vocab.resolve_many(base["amenities"])[0])
+    listing = {**base, "neighbourhood": hood, "room_type": room, "property_group": prop, "bedrooms": int(bedrooms),
                "accommodates": int(guests), "beds": int(beds), "baths": float(baths), "baths_shared": shared,
                "amenities": amen, "minimum_nights": int(min_n), "license": lic, "superhost": superhost,
                "season": season, "current_price": int(price) or None, "number_of_reviews": int(n_rev),
-               "review_score": float(score), "host_listings": int(host_n), "amenity_count": None}
+               "review_score": float(score), "host_listings": int(host_n),
+               "amenity_count": base["amenity_count"] + len(set(amen) - base_keys) - len(base_keys - set(amen))}
+    if hood != base["neighbourhood"]:                 # moved: use the new neighbourhood's typical location
+        listing.pop("latitude", None)
+        listing.pop("longitude", None)
     goals = {"target_price": int(target), "budget": int(budget), "nights_per_year": int(nights)}
     return listing, goals
 
@@ -123,11 +228,6 @@ def _store_answer(result, goals):
         nxt = capability_actions(goals)[:3]
     add_message("assistant", _with_flag(result), ids)
     st.session_state["messages"][-1]["suggestions"] = nxt
-
-
-def new_conversation():
-    for k in ("messages", "blocks", "llm_history"):
-        st.session_state.pop(k, None)
 
 
 def capability_box(listing, goals):
@@ -170,17 +270,61 @@ def mode_notice():
                 "ANTHROPIC_API_KEY and run with MOCK_LLM=0.", icon="ℹ️")
 
 
-def main():
-    st.set_page_config(page_title="Host Copilot", page_icon="🏠", layout="wide")
-    st.markdown(CSS, unsafe_allow_html=True)
-    listing, goals = sidebar_listing()
-    st.sidebar.button("＋ New conversation", on_click=new_conversation, width="stretch")
-    st.title("Host Copilot")
-    mode = "Offline mock (keyword rules)" if agent.mock_mode() else f"Claude ({agent.model_name()})"
-    st.caption(f"Pricing help for Boston Airbnb hosts. Numbers come from the pricing model, never from the chat model. "
-               f"· Chat: {mode}")
+# ---------------------------------------------------------------- pages
+def login_page():
+    st.title("🏠 Host Copilot")
+    st.caption("Pricing help for Boston Airbnb hosts, built on a model trained on 7,039 Boston listings.")
+    with st.container(border=True):
+        st.markdown("#### Sign in")
+        st.text_input("Host account", PORTFOLIO["host"]["host_name"], disabled=True)
+        st.caption("Demo sign-in, no password. The account's 5 listings are synthetic: made for this demo, "
+                   "not part of the data the model was trained on.")
+        st.button(f"Sign in as {PORTFOLIO['host']['host_name']}", on_click=sign_in, type="primary")
 
-    prompt = st.chat_input("Ask about your price, an upgrade, or a target…")
+
+def price_status(current, est):
+    """Card line comparing the listed price with the model estimate (15% either way counts as off)."""
+    gap = current - est["price"]
+    if gap <= -0.15 * est["price"]:
+        return f":orange[${-gap:,} below the model estimate]" + (" (below its 90% range)" if current < est["low"] else "")
+    if gap >= 0.15 * est["price"]:
+        return f":orange[${gap:,} above the model estimate]" + (" (above its 90% range)" if current > est["high"] else "")
+    return ":green[Close to the model estimate]"
+
+
+def portfolio_page():
+    st.title(f"Your listings ({len(LISTINGS)})")
+    st.caption(f"Signed in as {PORTFOLIO['host']['host_name']}. Choose a listing to open its copilot.")
+    cols = st.columns(2)
+    for i, (lid, item) in enumerate(LISTINGS.items()):
+        L, est = item["listing"], estimate(lid)
+        room = "Entire home" if L["room_type"] == "Entire home/apt" else L["room_type"]
+        with cols[i % 2].container(border=True):
+            st.markdown(f"**{item['nickname']}**  \n{item['title']}")
+            st.caption(f"📍 {L['neighbourhood']} · {room} · {L['bedrooms']} bedroom(s) · ★ {L['review_score']} "
+                       f"({L['number_of_reviews']} reviews)" + (" · Superhost" if L["superhost"] else ""))
+            c1, c2 = st.columns(2)
+            c1.metric("Your price", f"${L['current_price']:,}")
+            c2.metric("Model estimate", f"${est['price']:,}")
+            c2.caption(f"90% range ${est['low']:,}–${est['high']:,}")
+            st.markdown(f"{price_status(L['current_price'], est)}  \n{item['story']}")
+            if any(m["role"] == "user" for m in chats().get(lid, {}).get("messages", [])):
+                st.caption("💬 Conversation in progress")
+            st.button("Open copilot →", key=f"open-{lid}", on_click=open_listing, args=(lid,), width="stretch")
+
+
+def copilot_page(listing_id):
+    item = LISTINGS[listing_id]
+    listing, goals = sidebar_listing(listing_id)
+    nav1, nav2, nav3, _ = st.columns([1.2, 1.2, 1.2, 3])
+    nav1.button("← My listings", on_click=back_to_listings, width="stretch")
+    nav2.button("↻ Restart chat", on_click=restart_chat, width="stretch")
+    nav3.button("⟲ Reset details", on_click=reset_details, width="stretch")
+    st.title(item["nickname"])
+    mode = "Offline mock (keyword rules)" if agent.mock_mode() else f"Claude ({agent.model_name()})"
+    st.caption(f"{item['title']} · Numbers come from the pricing model, never from the chat model. · Chat: {mode}")
+
+    prompt = st.chat_input(f"Ask about {item['nickname']}: price, an upgrade, or a target…")
     if prompt:
         ask(prompt, listing, goals)
     messages = st.session_state.get("messages", [])
@@ -195,6 +339,18 @@ def main():
                 render_block(bid, blocks()[bid])
             if i == last_assistant:
                 suggestion_buttons(i, msg.get("suggestions"), listing, goals)
+
+
+def main():
+    st.set_page_config(page_title="Host Copilot", page_icon="🏠", layout="wide")
+    st.markdown(CSS, unsafe_allow_html=True)
+    restore_from_url()
+    if not st.session_state.get("signed_in"):
+        login_page()
+    elif st.session_state.get("open_listing") in LISTINGS:
+        copilot_page(st.session_state["open_listing"])
+    else:
+        portfolio_page()
 
 
 main()

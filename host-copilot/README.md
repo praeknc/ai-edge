@@ -27,6 +27,19 @@ MOCK_LLM=1 streamlit run app/frontend.py          # offline: keyword routing, no
 ANTHROPIC_API_KEY=... MOCK_LLM=0 streamlit run app/frontend.py   # Claude (model: CLAUDE_MODEL, default claude-sonnet-5-5)
 ```
 
+## Demo host and synthetic listings
+
+The app opens as a host would: sign in as the demo host, choose one of 5 listings, then chat with the copilot
+about that listing. Each listing keeps its own conversation; **← My listings**, **↻ Restart chat** and
+**⟲ Reset details** move around without starting over, and the open listing is kept in the URL so a browser
+refresh returns to it.
+
+The 5 listings are **synthetic**: designed for the demo, not taken from Inside Airbnb and not used for training.
+`scripts/make_synthetic_listings.py` writes them as `data/synthetic_listings.csv` (the same 90 columns as the
+Inside Airbnb detailed files) and `data/host_portfolio.json` (what the app loads). It checks that the project's
+own pipeline reads each CSV row into exactly the features the app builds, and that no id, host or location
+coincides with a training listing (`tests/test_synthetic.py` repeats these checks).
+
 ## Settings and secrets
 
 Settings come from environment variables or from Streamlit secrets (copied into the environment at start-up):
